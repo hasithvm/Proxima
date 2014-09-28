@@ -1,0 +1,144 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[cm]{fullpage}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+
+\newcommand{\MPB}{\textbf{MPB}\,}
+
+
+
+\title{Project Dueling Banjos Proposal}
+
+\author{
+Robert Nelson - 100845913 \\
+Darren Stahl - 100858939\\
+Hasith Vidanamadura - 100871538
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This is a proposal for The Robotic Peripheral Board for SCE Teaching. The project is an ARM based robotics platform designed for teaching at Carleton. The project will run from September 2014 to May 2015. The group consists of Hasith Vidanamadura, Robert Nelson, and Darren Stahl, and will be supervised by Professor Pearce.
+
+\section{Objective}
+
+The objective of this project is to provide a consistent and modern hardware platform for use in courses throughout Carleton. This platform will be designed to provide a wide range of functionality, enabling multiple courses to base their lab work around it.
+
+\section{Motivation}
+Currently many of the courses taught by the SCE department use fairly out of date technologies; the Motorola 68000 and Intel 8086 both first appeared in the late 70s. While they are still useful for learning because of their simplicity, the technology and techniques they employ are significantly out of date. Currently, there are two major processor architectures, x86 and ARM. Of these two architectures, ARM is gaining market share at a very significant rate, primarily in the embedded space. Not exposing students to embedded development with ARM puts them at a significant disadvantage in their careers, and this project aims to provide a pathway and a platform for teaching  modern embedded technologies. 
+
+In addition to the modernization of the course content, the platform will also help recruitment by providing a very tangible and visible product that Carleton can take to school fairs, and demonstrate to prospective students. Finally, by keeping the cost of the board low, it will potentially allow students to purchase their own board, which they can then use throuought their entire program. This will give them extensive experience with a now prolific architecture, and teach them many modern embedded techniques that are largely neglected in the current course layout.
+\section{Technical Overview}
+The robotics platform will have two primary hardware components, the wireless monitor, and the main peripheral board. Users interact with the \MPB by plugging in a primary microcontroller board that contains an ARM-based microcontroller running user-written programs. The pluggable interface allows flexibility in the selection of the primary microcontroller board, and the end user is not constrained to a single interface or a vendor for their needs. This strategy also maximizes the usable lifetime of the platform, as a vendor making a specific development board obsolete will affect the usability of the platform.
+
+
+\subsection{\MPB}
+The main peripheral board (\MPB) will be a host for the primary microcontroller board and the wireless monitor. Additionally, sensors on the \MPB could potentially include:
+
+\begin{itemize}
+\item An accelerometer
+\item A gyroscope
+\item A magnetometer
+\item An IrDA communication link
+\item Ultrasonic sensors
+\item Bump sensors
+\item Microphone
+
+\end{itemize}
+
+
+These sensors will be chosen to maximize teachability, as these are common sensors the future engineer would interact with, as well as to maximize practicality, as these sensors provide useful data about the robotics platform's operating environment
+
+The sensors are connected using bus standards that are commonly used in modern embedded development contexts, and will provide students with experience and familiarity with said standards. Potential bus standards include SPI (Serial Peripheral Interface), I$^2$C (Inter-Integrated Circuit), parallel, and UART (universal asynchronous receiver/transmitter).
+
+All electrical buses are also broken out onto easily accessible headers, so a user can add on functionality without modifying the \MPB.
+
+A two-channel brushed-DC motor controller capable of driving a small pair of motors is provided on the \MPB for the user's convenience, and should suffice for the vast majority of the use cases. If the user wishes to control more motors, expansion interfaces will be provided.
+
+The MPB handles power regulation and management for all the components in the system, and will be capable of providing current draw information and configurable battery monitoring.
+
+
+\subsection{Wireless Monitor}
+The wireless monitor is a self-contained module designed to sit on top of all the electrical buses that connect the \MPB to various sensors. Wireless connectivity is provided via IEEE 802.11b\/g\/n in a variety of modes.
+
+\label{ss:operational-modes}
+\subsubsection{Operational Modes}
+There are two primary modes of functionality planned.
+
+\begin{itemize}
+\item{Wireless Monitoring}
+The wireless monitor provides a browser accessible web portal through which the user can monitor sensors, control  each device, and interact with the platform directly without writing any code. This provides an easy verification of system status - the students can eliminate incorrect device functionality as a cause during debugging and can observe examples of incoming and outgoing data. 
+
+The wireless monitor can electrically disconnect the primary microcontroller board from all the buses to eliminate the requirement for the student to perform bus arbitration with the wireless controller, and if required, can drive the entire platform sans a primary microcontroller board.
+
+
+\item {Wireless Communication}
+The wireless monitor will also provide a communication channel for the end-user to interact with. Instead of forcing the end-user to understand the complexities of wireless connectivity, a user will be able to talk directly to the wireless monitor and have it act as a dumb pipe for transferring information to a host device (desktop computer or a smartphone connected to the wireless monitor) or to other instances of this robotics platform via a multicast system.  This opens up a range of possible communications methods and a variety of teaching outcomes.
+\end{itemize}
+
+\subsubsection{Design and Implementation}
+The wireless monitor module will be designed and implemented as part of this project as a module-on-board, where the module is on a separate PCB, but soldered directly to the \MPB as a permanent component. The software stack enabling the functionality described in \ref{ss:operational-modes} will be a permanent part of the firmware and is not user accessible for modification easily to reduce the chance of an end user irrevocably rendering a key module unusable.
+
+
+
+\section{Milestones}
+
+The tentative project milestones are defined below.
+\begin{table}[htp!]
+\centering
+\begin{tabular}{lcp{0.8\textwidth}}
+
+\toprule
+Milestone & Date & Description\\
+\midrule
+
+M0 & October 1 & Finalizing hardware description and configuration. This includes an extensive literature search, and experiments with all the components to verify that the proposed goals are feasible. \\
+M0.5 & October 10 & First revisions of PCBs sent out after extensive verification. Budgeting a one-month turnaround time, the development of the firmware will continue with existing development kits.\\
+M1 & November 15 & Completion of first prototype and design verification. If identified, flaws in the hardware design and manufacture will be noted for correction, and a second prototype run submitted. Wireless monitor can sniff signals on SPI and I$^2$C busses. Software to hardware interfacing begins.\\
+M2 & December 15 & Completion of second prototype and design verification. If identified, flaws in the hardware design and manufacture will be noted for correction, and a third prototype run submitted. At this point, the wireless monitor should be able to report the status of all sensors.\\
+M3 & Jan 31 & Completion of third prototype and design verification. Hardware design should now be complete. If any major flaws are identified, a fourth prototype run submitted. At this point, the wireless monitor should be able to control all peripherals.\\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\section{Benefits}
+This project has the potential to have a positive impact on the school, the professors and the students, each in a unique way. The sections below will discuss how this project will positively impact each group.
+
+\subsection{School}
+The construction of a robotics teaching platform designed and built by Carleton students will be a very useful recruiting tool for the CSE and DOE departments. The robot will be portable enough to take to recruiting events, allowing potential students to see the possibilities that are available to them if they enroll. Several key features of the platform, such as the wireless controllability, also allow for some appealing demonstration possibilities to capture the interest of potential high school students.
+
+\subsection{Professors}
+If there is one consistent platform that many different courses will use, professors will be able to share notes and code amongst themselves reducing the preparation burden on any one person. In addition, having one platform service multiple courses will allow for more realistic labs to be designed, because the students will already be familiar with the environment, eliminating the need to re-teach how to accomplish basic tasks on it. 
+\subsection{Students}
+ARM is a very prominent player in the embedded market currently, so learning to develop on an ARM platform is very beneficial when job hunting. In addition, the low cost of the \textbf{MPB} will allow students to purchase the equipment once and use it for several courses, reducing their term over term costs. It will also, once purchased, be an environment that will be familiar and flexible enough to be used in projects in third and fourth year.
+\section{Budget}
+This project will require building several revisions of a hardware platform, and as such will require funding to purchase the components and have the PCB manufactured. Several revisions are planned for to ensure that a quality product is developed and that any mistakes made in early revisions are fixed before the final project is complete.
+\subsection{Cost Estimates}
+The cost estimates below are for each revision, and are rough approximations of costs, because board sizes and components have not been chosen.
+\begin{itemize}
+	\item Peripherals (Sensors, LEDs, etc.) - \$10.00
+    \item WiFi processor - \$15.00
+    \item LCD Module - \$10.00
+    \item Supporting Passive Components - \$10.00
+    \item 2 Motors - \$5.00
+    \item Keypad - \$5.00
+    \item Main PCB - \$10.00
+    \item WiFi PCB - \$10.00
+    \item Power supply - \$5.00
+    \item Battery - \$10.00
+\end{itemize}
+
+This comes to a total of approximately \$90.00 for each revision if no mistakes are made. To account for the reality that mistakes will be made, this cost will be doubled during the prototyping phase to ensure that if a problem arises or a mistake is made during the assembly of a revision's protoype, that a backup can be made. The current plan for assembly calls for three main revisions, and one backup revision, bringing the total cost up to approximately \$800.00. In addition to the actual prototypes, in order to allow for the software suite to be developed in parallel, some pre-built dev boards will be purchased. The approximate cost of each of these dev boards is \$25.00 and two different boards will be required for each team member (one for main processor, one for WiFi processor.) This additional cost brings the total budget up to \$950.00.
+\end{document}
