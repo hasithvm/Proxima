@@ -7,7 +7,7 @@
 
 ARCH:=arm-none-eabi
 CC:=$(ARCH)-gcc
-CXX:=$(ARCH)-g++	
+CXX:=$(ARCH)-g++
 AS:=$(ARCH)-as
 
 PROJECT_ROOT:=.
@@ -18,7 +18,7 @@ OBJDIR:=$(PROJECT_ROOT)/obj
 BINDIR:=$(PROJECT_ROOT)/bin
 
 HOMEDIR:=${HOME}
-CC3200SDK:=$(HOMEDIR)/.wine/drive_c/ti/CC3200-SDK/cc3200-sdk
+CC3200SDK:=$(HOMEDIR)/.wine/drive_c/ti/CC3200SDK_1.0.0/cc3200-sdk
 SIMPLELINK:=$(CC3200SDK)/simplelink/
 DRIVERLIB:=$(CC3200SDK)/driverlib/
 
@@ -38,7 +38,7 @@ CCFLAGS=-ffunction-sections -fdata-sections -g -Wall -Wextra #-nostartfiles
 CXXFLAGS=-fno-exceptions -fno-rtti -g -Wall -Wextra #-nostartfiles
 
 LD:=$(ARCH)-ld
-LDFLAGS:=--entry ResetISR --gc-sections -L$(DRIVERLIB)/gcc/exe/ -L$(SIMPLELINK)/gcc/exe -lsimplelink_nonos -ldriver 
+LDFLAGS:=--entry ResetISR --gc-sections -L$(DRIVERLIB)/gcc/exe/ -L$(SIMPLELINK)/gcc/exe -lsimplelink_nonos -ldriver
 
 INCLUDE=$(INCLUDE_PATHS:%=-I%)
 
