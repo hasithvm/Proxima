@@ -11,8 +11,10 @@
 #include "rom_map.h"
 
 #include "hw_types.h"
+#include "hw_gpio.h"
 #include "hw_ints.h"
 #include "hw_memmap.h"
+#include "hw_nvic.h"
 
 #include "gpio.h"
 #include "interrupt.h"
@@ -69,21 +71,13 @@ BoardInit(void)
     MAP_PinTypeGPIO(PIN_02, PIN_MODE_0, false);
     MAP_PinTypeGPIO(PIN_64, PIN_MODE_0, false);
 
-    MAP_GPIODirModeSet(GPIOA1_BASE, 0x2, GPIO_DIR_MODE_OUT);
+    // Setup SW3
+    MAP_PinTypeGPIO(PIN_04, PIN_MODE_0, false);
+
+    MAP_GPIODirModeSet(GPIOA1_BASE, 0x20, GPIO_DIR_MODE_IN);
+    MAP_GPIODirModeSet(GPIOA1_BASE, 0x2, GPIO_DIR_MODE_OUT); // GPIO9 = A1 bit 0x02
     MAP_GPIODirModeSet(GPIOA1_BASE, 0x4, GPIO_DIR_MODE_OUT);
     MAP_GPIODirModeSet(GPIOA1_BASE, 0x8, GPIO_DIR_MODE_OUT);
-
-    MAP_PRCMPeripheralClkEnable(PRCM_I2CA0, PRCM_RUN_MODE_CLK);
-    //
-    // Configure PIN_01 for I2C0 I2C_SCL
-    //
-    MAP_PinTypeI2C(PIN_03, PIN_MODE_5);
-
-    //
-    // Configure PIN_02 for I2C0 I2C_SDA
-    //
-    MAP_PinTypeI2C(PIN_04, PIN_MODE_5);
-
 }
 
 //****************************************************************************
@@ -105,11 +99,7 @@ main()
     // Initialize Board configurations
     //
     BoardInit();
-    
-    //
-    // Power on the corresponding GPIO port B for 9,10,11.
-    // Set up the GPIO lines to mode 0 (GPIO)
-    //
+
     GPIO_IF_LedConfigure(LED1|LED2|LED3);
 
 	GPIO_IF_LedOff(MCU_ALL_LED_IND);
@@ -119,17 +109,38 @@ main()
     EnableUart();
 
     GPIO_IF_LedOff(MCU_ORANGE_LED_GPIO);
+    //
+    // Power on the corresponding GPIO port B for 9,10,11.
+    // Set up the GPIO lines to mode 0 (GPIO)
+    //
+
+    if (!(HWREG(GPIOA1_BASE + GPIO_O_GPIO_DATA + 0x80) & 0x20)) {
+        GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+        GPIO_IF_LedOn(MCU_ORANGE_LED_GPIO);
+
+        if (LoadFile((uint8_t*)"/usr/appimg.bin", 0x20009000)) {
+            UartWrite("Successfully loaded user application.\n");
+
+        } else {
+            UartWrite("Failed to load user application.\n");
+        }
+
+        HWREG(NVIC_VTABLE) = 0x20009000;
+
+        __asm("ldr r1, [r0]\n"
+              "mov sp, r1");
+
+        __asm("ldr r0, [r0, #4]\n"
+              "bx  r0");
+        return 0;
+    }
+
 
     while(1) {
         GPIO_IF_LedOn(MCU_GREEN_LED_GPIO);
         GPIO_IF_LedOff(MCU_RED_LED_GPIO);
 
-        long choice = UartReadCharNonBlock();
-
-        if (choice == -1) {
-            _SlNonOsMainLoopTask();
-            continue;
-        }
+        long choice = UartReadChar();
 
         GPIO_IF_LedOff(MCU_GREEN_LED_GPIO);
         GPIO_IF_LedOn(MCU_RED_LED_GPIO);

@@ -47,7 +47,7 @@ void ReadFile() {
 
 // Round up to next step of 512
 uint32_t fileSize(uint32_t v) {
-    if (v == 0) { 
+    if (v == 0) {
         return 0;
     }
 
@@ -134,6 +134,11 @@ void WriteFile() {
         UartWrite("\n");
     }
 
+    // delete mcuimg before flashing
+    if (!memcmp(fname, "/sys/mcuimg.bin", 16)) {
+        sl_FsDel(fname, 0);
+    }
+
     if (!(err = sl_FsOpen(fname, FS_MODE_OPEN_CREATE(fileSize(v), 0), NULL, &fh))) {
         while (v) {
             if (v > sizeof(buf)) {
@@ -164,4 +169,36 @@ void WriteFile() {
     }
 }
 
+bool LoadFile(uint8_t* fname, uint32_t loc) {
+    SlFsFileInfo_t info;
+    int32_t fh;
+    uint32_t len;
 
+    // Ensure file exists
+    if (!sl_FsGetInfo(fname, 0, &info)) {
+
+        // Open file and output section by section
+        if (sl_FsOpen(fname, FS_MODE_OPEN_READ, NULL, &fh)) {
+            return false;
+        } else {
+            for(uint32_t i = 0; i < info.FileLen; i += sizeof(buf)) {
+                if (info.FileLen - i > sizeof(buf)) {
+                    len = sizeof(buf);
+                } else {
+                    len = info.FileLen - i;
+                }
+                len = sl_FsRead(fh, i, buf, len);
+                memcpy((void*)(loc + i), buf, len);
+            }
+            sl_FsClose(fh, NULL, NULL, 0);
+
+            if (len != info.FileLen) {
+                return false;
+            }
+        }
+    } else {
+        return false;
+    }
+
+    return true;
+}
