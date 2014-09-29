@@ -3,7 +3,7 @@ import os
 import sys
 import serial
 
-if len(sys.argv) < 3 or (len(sys.argv) == 3 and sys.argv[1] != "-f"):
+if len(sys.argv) < 2 or (len(sys.argv) == 3 and sys.argv[1] != "-f") or len(sys.argv) > 3:
     print "Usage: write.py [-f] infile"
     print "\t-f\tFlash the system image"
     exit()
