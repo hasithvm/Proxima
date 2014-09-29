@@ -1,0 +1,13 @@
+target extended-remote :3333
+
+load payload.bin
+file payload.bin
+
+break main
+define reset
+    set $sp = g_pfnVectors[0]
+    set $pc = g_pfnVectors[1]
+    continue
+end
+
+reset
