@@ -33,9 +33,20 @@ ARMFLAGS+=-mcpu=cortex-m4
 #ARMFLAGS+=-DTARGET_IS_CC3200
 ARMFLAGS+=-Dgcc
 
-CFLAGS=-std=c99 -g
-CCFLAGS=-ffunction-sections -fdata-sections -g -Wall -Wextra #-nostartfiles
-CXXFLAGS=-fno-exceptions -fno-rtti -g -Wall -Wextra #-nostartfiles
+DBGFLAGS=-g -g3
+CFLAGS=-std=c99
+CCFLAGS=-ffunction-sections -fdata-sections -Wall -Wextra #-nostartfiles
+CXXFLAGS=-fno-exceptions -fno-rtti -Wall -Wextra #-nostartfiles
+
+ifeq ($(strip $(OFLAGS)),)
+	CFLAGS:=$(CFLAGS) $(DBGFLAGS)
+	CCFLAGS:=$(CCFLAGS) $(DBGFLAGS)
+	CXXFLAGS:=$(CXXFLAGS) $(DBGFLAGS)
+else
+	CFLAGS:=$(CFLAGS) $(OFLAGS)
+	CCFLAGS:=$(CCFLAGS) $(OFLAGS)
+	CXXFLAGS:=$(CXXFLAGS) $(OFLAGS)
+endif
 
 LD:=$(ARCH)-ld
 LDFLAGS:=--entry ResetISR --gc-sections -L$(DRIVERLIB)/gcc/exe/ -L$(SIMPLELINK)/gcc/exe -lsimplelink_nonos -ldriver
