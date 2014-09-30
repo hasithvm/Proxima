@@ -3,9 +3,15 @@ import serial
 import sys
 
 ser = serial.Serial('/dev/cc1', 921600)
+ser.flushInput();
+ser.setTimeout(2)
+print "Waiting for response"
 ser.write("d")
-readConf = ser.readline()
-if readConf != "delete OK\n":
+delConf = ser.readline()
+if delConf == "":
+    print "No response, please ensure the device is in bootloader mode."
+    exit()
+elif delConf != "delete OK\n":
     print "Error establishing delete"
     exit()
 
@@ -19,3 +25,5 @@ if resp == "DONE\n":
     print "File deleted"
 else:
     print "Error encountered:", resp
+
+ser.close()

@@ -3,10 +3,16 @@ import serial
 import sys
 
 ser = serial.Serial('/dev/cc1', 921600)
+print "Waiting for response"
+ser.flushInput()
+ser.setTimeout(2)
 ser.write("i")
-readConf = ser.readline()
-if readConf != "info OK\n":
-    print "Error establishing info", readConf,
+infoConf = ser.readline()
+if infoConf == "":
+    print "No response, please ensure the device is in bootloader mode."
+    exit()
+if infoConf != "info OK\n":
+    print "Error establishing info", infoConf,
     exit()
 
 print "Please enter the filename to get info: "

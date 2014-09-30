@@ -3,9 +3,15 @@ import serial
 import sys
 
 ser = serial.Serial('/dev/cc1', 921600)
+ser.flushInput()
+ser.setTimeout(2)
+print "Waiting for response"
 ser.write("r")
 readConf = ser.readline()
-if readConf != "read OK\n":
+if readConf == "":
+    print "No response, please ensure the device is in bootloader mode."
+    exit()
+elif readConf != "read OK\n":
     print "Error establishing read"
     exit()
 
@@ -19,3 +25,4 @@ b = ser.read(l)
 f = open(sys.argv[1], "wb")
 f.write(b)
 f.close()
+ser.close()
