@@ -42,52 +42,82 @@ HEAP_SIZE = 0x00010000;
 MEMORY
 {
     SRAM (rwx) : ORIGIN = 0x20004000, LENGTH = 0x00030000
+    BLOAD (rwx) : ORIGIN = 0x20020000, LENGTH = 0x00010000
 }
 
 SECTIONS
 {
+    .inittext :
+    {
+        __bootload_sram_start = .;
+        __vector_start = .;
+        KEEP(*(.intvecs))
+        __vector_end = .;
+        *(.inittext*)
+        __bootload_text_start = .;
+    } > SRAM
+
+    .newvector :
+    {
+        _newvector = .;
+        . += __vector_end - __vector_start;
+    } > BLOAD
+
     .text :
     {
         _text = .;
-        KEEP(*(.intvecs))
         *(.text*)
         *(.rodata*)
 	*(.ARM.extab* .gnu.linkonce.armextab.*)
 	. = ALIGN(8);
         _etext = .;
-    } > SRAM
+    } > BLOAD AT > SRAM
 
     .ARM : {
     __exidx_start = .;
       *(.ARM.exidx*)
       __exidx_end = .;
+    } > BLOAD AT > SRAM
+
+    .datastart :
+    {
+        __init_data = .;
     } > SRAM
 
-    __init_data = .;
-
-    .data : AT(__init_data)
+    .data :
     {
         _data = .;
         *(.data*)
 	. = ALIGN (8);
         _edata = .;
+    } > BLOAD AT > SRAM
+
+    .dataend :
+    {
+        __end_data = .;
     } > SRAM
 
+    .bootloader :
+    {
+        __bootload_text_end = .;
+    } > SRAM
+        
     .bss :
     {
         _bss = .;
         *(.bss*)
         *(COMMON)
         _ebss = .;
-    } > SRAM
+    } > BLOAD AT > SRAM
 
-    .heap :
+
+    /*.heap :
     {
 	_heap = .;
 	. = . + HEAP_SIZE;
 	. = ALIGN(8);
 	_eheap = .;
 
-    }
+    }*/
 }
 

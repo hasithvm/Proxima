@@ -59,6 +59,7 @@ static void NmiSR(void);
 static void FaultISR(void);
 static void IntDefaultHandler(void);
 static void BusFaultHandler(void);
+static void NwpHandler(void);
 
 //*****************************************************************************
 //
@@ -190,6 +191,7 @@ extern uint32_t _edata;
 extern uint32_t _bss;
 extern uint32_t _ebss;
 extern uint32_t __init_data;
+extern uint32_t __end_data;
 
 //*****************************************************************************
 //
@@ -201,6 +203,7 @@ extern uint32_t __init_data;
 // application.
 //
 //*****************************************************************************
+__attribute__ ((section (".inittext")))
 void
 ResetISR(void)
 {
@@ -210,7 +213,7 @@ ResetISR(void)
     // Copy the data segment initializers
     //
     pui32Src = &__init_data;
-    for(pui32Dest = &_data; pui32Dest < &_edata; )
+    for(pui32Dest = &_data; pui32Dest < &__end_data; )
     {
         *pui32Dest++ = *pui32Src++;
     }

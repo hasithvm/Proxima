@@ -30,6 +30,14 @@
 
 extern void (* const g_pfnVectors[])(void);
 
+extern uint8_t _text;
+extern uint8_t _newvector;
+extern uint8_t __vector_start;
+extern uint8_t __vector_end;
+extern uint8_t __bootload_sram_start;
+extern uint8_t __bootload_text_start;
+extern uint8_t __bootload_text_end;
+
 /****************************************************************************/
 /*                      LOCAL FUNCTION PROTOTYPES                           */
 /****************************************************************************/
@@ -51,11 +59,7 @@ static void BoardInit(void);
 static void
 BoardInit(void)
 {
-    MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
-    //
-    // Enable Processor Interrupts
-    //
-    MAP_IntMasterEnable();
+    //MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 
     PRCMCC3200MCUInit();
 
@@ -85,16 +89,43 @@ BoardInit(void)
 //! Main function
 //!
 //! \param none
-//! 
-//! This function  
+//!
+//! This function
 //!    1. Invokes the LEDBlinkyTask
 //!
 //! \return None.
 //
 //****************************************************************************
+
+void BootloaderMain();
+
+__attribute__ ((section (".inittext")))
 int
 main()
 {
+    // Copy the main bootloader into place at the end of RAM
+    uint8_t* dst = &_newvector;
+    uint8_t* src = &__vector_start;
+
+    // Copy the vector table
+    while(src < &__vector_end) {
+        *dst++ = *src++;
+    }
+    // Update the nvic
+    HWREG(NVIC_VTABLE) = (uint32_t)&_newvector;
+
+    // Copy the program code
+    src = &__bootload_text_start;
+    while(src < &__bootload_text_end) {
+        *dst++ = *src++;
+    }
+
+    BootloaderMain();
+
+    return 0;
+}
+
+void BootloaderMain() {
     //
     // Initialize Board configurations
     //
@@ -118,23 +149,25 @@ main()
         GPIO_IF_LedOn(MCU_RED_LED_GPIO);
         GPIO_IF_LedOn(MCU_ORANGE_LED_GPIO);
 
-        if (LoadFile((uint8_t*)"/usr/appimg.bin", 0x20009000)) {
+        if (LoadFile((uint8_t*)"/usr/appimg.bin", &__bootload_sram_start)) {
             UartWrite("Successfully loaded user application.\n");
 
         } else {
             UartWrite("Failed to load user application.\n");
         }
 
-        HWREG(NVIC_VTABLE) = 0x20009000;
+        HWREG(NVIC_VTABLE) = (uint32_t)&__bootload_sram_start;
+        uint32_t addr = (uint32_t)&__bootload_sram_start;
 
-        __asm("ldr r1, [r0]\n"
-              "mov sp, r1");
+        __asm("ldr r1, [%0]\n"
+              "mov sp, r1" :: "r"(addr) :);
 
-        __asm("ldr r0, [r0, #4]\n"
-              "bx  r0");
-        return 0;
+        addr += 4;
+
+        __asm("ldr r0, [%0]\n"
+              "bx  r0" :: "r"(addr) :);
+        while(1);
     }
-
 
     while(1) {
         GPIO_IF_LedOn(MCU_GREEN_LED_GPIO);
@@ -161,8 +194,6 @@ main()
             UartWrite("Unknown Command\n");
         }
     }
-
-    return 0;
 }
 
 void SimpleLinkWlanEventHandler(SlWlanEvent_t *s) {

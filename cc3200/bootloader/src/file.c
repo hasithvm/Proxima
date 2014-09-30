@@ -169,10 +169,10 @@ void WriteFile() {
     }
 }
 
-bool LoadFile(uint8_t* fname, uint32_t loc) {
+bool LoadFile(uint8_t* fname, uint8_t* loc) {
     SlFsFileInfo_t info;
     int32_t fh;
-    uint32_t len;
+    int32_t len;
 
     // Ensure file exists
     if (!sl_FsGetInfo(fname, 0, &info)) {
@@ -187,14 +187,13 @@ bool LoadFile(uint8_t* fname, uint32_t loc) {
                 } else {
                     len = info.FileLen - i;
                 }
-                len = sl_FsRead(fh, i, buf, len);
-                memcpy((void*)(loc + i), buf, len);
+                if (len != sl_FsRead(fh, i, buf, len)) {
+                    return false;
+                }
+                memcpy((loc + i), buf, len);
             }
             sl_FsClose(fh, NULL, NULL, 0);
 
-            if (len != info.FileLen) {
-                return false;
-            }
         }
     } else {
         return false;
