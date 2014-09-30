@@ -59,7 +59,6 @@ static void NmiSR(void);
 static void FaultISR(void);
 static void IntDefaultHandler(void);
 static void BusFaultHandler(void);
-static void NwpHandler(void);
 
 //*****************************************************************************
 //

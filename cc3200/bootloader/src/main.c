@@ -125,6 +125,30 @@ main()
     return 0;
 }
 
+void BootloadFile() {
+    GPIO_IF_LedOn(MCU_RED_LED_GPIO);
+    GPIO_IF_LedOn(MCU_ORANGE_LED_GPIO);
+
+    if (LoadFile((uint8_t*)"/usr/appimg.bin", &__bootload_sram_start)) {
+        UartWrite("Successfully loaded user application.\n");
+
+    } else {
+        UartWrite("Failed to load user application.\n");
+    }
+
+    HWREG(NVIC_VTABLE) = (uint32_t)&__bootload_sram_start;
+    uint32_t addr = (uint32_t)&__bootload_sram_start;
+
+    __asm("ldr r1, [%0]\n"
+          "mov sp, r1" :: "r"(addr) :);
+
+    addr += 4;
+
+    __asm("ldr r0, [%0]\n"
+          "bx  r0" :: "r"(addr) :);
+    while(1);
+}
+
 void BootloaderMain() {
     //
     // Initialize Board configurations
@@ -146,27 +170,7 @@ void BootloaderMain() {
     //
 
     if (!(HWREG(GPIOA1_BASE + GPIO_O_GPIO_DATA + 0x80) & 0x20)) {
-        GPIO_IF_LedOn(MCU_RED_LED_GPIO);
-        GPIO_IF_LedOn(MCU_ORANGE_LED_GPIO);
-
-        if (LoadFile((uint8_t*)"/usr/appimg.bin", &__bootload_sram_start)) {
-            UartWrite("Successfully loaded user application.\n");
-
-        } else {
-            UartWrite("Failed to load user application.\n");
-        }
-
-        HWREG(NVIC_VTABLE) = (uint32_t)&__bootload_sram_start;
-        uint32_t addr = (uint32_t)&__bootload_sram_start;
-
-        __asm("ldr r1, [%0]\n"
-              "mov sp, r1" :: "r"(addr) :);
-
-        addr += 4;
-
-        __asm("ldr r0, [%0]\n"
-              "bx  r0" :: "r"(addr) :);
-        while(1);
+        BootloadFile();
     }
 
     while(1) {
@@ -190,6 +194,9 @@ void BootloaderMain() {
         } else if (choice == 'i') {
             UartWrite("info OK\n");
             InfoFile();
+        } else if (choice == 'q') {
+            UartWrite("quit OK\n");
+            BootloadFile();
         } else {
             UartWrite("Unknown Command\n");
         }
