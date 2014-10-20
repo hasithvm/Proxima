@@ -1,6 +1,6 @@
 #format 1.2
 #name S35390A
-#id S35390A
+#id S35390A_TSSOP8
 #desc RTC
 
 footprint = () ->
