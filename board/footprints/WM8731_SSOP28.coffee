@@ -36,4 +36,8 @@ footprint = () ->
   l2 = adjust_y l2, pad_vadj
   l2 = generate_names l2, n_down
 
-  combine [l1, l2, r1, r2, name]
+  pin1 = new Disc(0.25)
+  pin1.x = -module_dx/2
+  pin1.y = -module_dy/2 - 1
+
+  combine [l1, l2, r1, r2, name, pin1]
