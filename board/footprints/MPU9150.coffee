@@ -9,7 +9,7 @@ footprint = () ->
 
   pad_dx = 0.35
   land_dx = 0.8
-  pad_dy = 0.25
+  pad_dy = 0.35
 
   pad_hadj = (3.06+land_dx)/2
 
