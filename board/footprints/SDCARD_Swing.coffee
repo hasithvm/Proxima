@@ -1,10 +1,10 @@
 #format 1.2
 #name SDCARD
 #id SDCARD
-#desc MicroSD Card socket
+#desc Swing cover MicroSD Card socket (47219-2001)
 
 footprint = () ->
-  
+
   module_dx = 13.75
   module_dy = 14.5
 
