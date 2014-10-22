@@ -33,3 +33,4 @@
 # KiCad file
 *.bak
 *.bck
+*-cache.lib
