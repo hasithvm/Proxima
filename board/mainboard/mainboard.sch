@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:mainboard
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,13 +30,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:mainboard-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "20 oct 2014"
+Date "22 oct 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -43,15 +45,4 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L DRV8830 MC?
-U 1 1 54459832
-P 5600 3300
-F 0 "MC?" H 5600 3150 60  0000 C CNN
-F 1 "DRV8830" H 5600 3400 60  0000 C CNN
-F 2 "" H 5550 3500 60  0000 C CNN
-F 3 "" H 5550 3500 60  0000 C CNN
-	1    5600 3300
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC
