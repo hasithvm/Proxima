@@ -30,12 +30,11 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:mainboard-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date "22 oct 2014"
 Rev ""
@@ -45,4 +44,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 800  900  2350 1400
+U 5447238D
+F0 "Peripherals" 50
+F1 "peripherals.sch" 50
+$EndSheet
 $EndSCHEMATC
