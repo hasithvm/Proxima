@@ -28,7 +28,7 @@
 *.hex
 
 # Temp files
-/$*
+*$*.sch*
 
 # KiCad file
 *.bak
