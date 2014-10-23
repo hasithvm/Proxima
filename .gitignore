@@ -26,6 +26,7 @@
 *.i*86
 *.x86_64
 *.hex
+*.bin
 
 # KiCad file
 *.bak
@@ -33,3 +34,7 @@
 *-cache.lib
 *_autosave-*
 *$*.sch*
+
+# Vim Files
+*.swo
+*.swp
