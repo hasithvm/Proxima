@@ -47,7 +47,7 @@ $EndDescr
 $Sheet
 S 800  900  2350 1400
 U 5447238D
-F0 "Peripherals" 50
-F1 "peripherals.sch" 50
+F0 "I2C Peripherals" 50
+F1 "i2c_peripherals.sch" 50
 $EndSheet
 $EndSCHEMATC
