@@ -30,11 +30,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:mainboard-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date "23 oct 2014"
 Rev ""
@@ -49,5 +50,11 @@ S 800  900  2350 1400
 U 5447238D
 F0 "I2C Peripherals" 50
 F1 "i2c_peripherals.sch" 50
+$EndSheet
+$Sheet
+S 800  2700 2350 1450
+U 54487774
+F0 "SPI Peripherals" 50
+F1 "SPI_peripherals.sch" 50
 $EndSheet
 $EndSCHEMATC
