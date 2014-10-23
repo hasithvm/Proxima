@@ -278,9 +278,9 @@ F 3 "~" H 8950 4450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 10150 4150 2    60   Input ~ 0
-MOTOR1-
+MOTOR2-
 Text GLabel 10150 4000 2    60   Input ~ 0
-MOTOR1+
+MOTOR2+
 $Comp
 L 3V3 #PWR?
 U 1 1 544871AE
@@ -349,7 +349,7 @@ Motor 1 Driver Circuit\nI2C ADDR = 0xC0-0xC1
 Text GLabel 7700 2300 0    60   Input ~ 0
 MOTOR1F
 Text GLabel 7700 4700 0    60   Input ~ 0
-MOTOR1F
+MOTOR2F
 Wire Wire Line
 	1850 1450 1400 1450
 Wire Wire Line
