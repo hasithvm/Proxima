@@ -184,7 +184,6 @@ F 3 "" H 3850 2950 60  0000 C CNN
 	1    3850 2950
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3750 3600
 Text GLabel 4000 3450 2    60   Input ~ 0
 I2C_CL
 Text GLabel 4000 3300 2    60   Input ~ 0
@@ -232,7 +231,6 @@ F 3 "" H 7900 2550 60  0000 C CNN
 	1    7900 2550
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8150 2300
 $Comp
 L GND #PWR?
 U 1 1 54486B7F
@@ -307,7 +305,6 @@ F 3 "" H 7900 4950 60  0000 C CNN
 	1    7900 4950
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8150 4700
 $Comp
 L GND #PWR?
 U 1 1 544871C5
