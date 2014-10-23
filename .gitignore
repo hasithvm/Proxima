@@ -27,10 +27,9 @@
 *.x86_64
 *.hex
 
-# Temp files
-*$*.sch*
-
 # KiCad file
 *.bak
 *.bck
 *-cache.lib
+*_autosave-*
+*$*.sch*
