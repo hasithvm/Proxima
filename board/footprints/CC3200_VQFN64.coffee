@@ -1,51 +1,44 @@
 #format 1.2
-#name CC3200-VQFN64
-#id 77501a0593f840328192e7d69a549941
+#name N25Q128A13ESE40E-WSOP8-208
+#id 723c6e43d3114f94a08a1c5cd6c949f2
 #desc TODO
 
+
 footprint = () ->
-    module_dx = 9.8
-    module_dy = 9.8
-    module_inner = 9.15
-    gnd_pad_side = 7.25
-    pad_dx = 0.85
-    pad_dy = 0.28
-    pad_spacing = 0.5
-    pads_per_side = 16
-    r1 = make_rect module_dx, module_dy, 0.1, 'docu'
-    r2 = make_rect module_inner, module_inner, 0.1, 'silk'
-    mask_open = make_rect module_inner , module_inner, 0.1, 'stop'
-    
-    pin_1 = new Circle 0.1
-    pin_1.x = -module_dx / 2
-    pin_1.y = module_dy / 2
-    pin_1.r = 0.2
 
-    gnd_pad = new Smd
-    gnd_pad.dx = gnd_pad_side
-    gnd_pad.dy = gnd_pad_side
-    gnd_pad.name = 65
+  module_dx = 4.4
+  module_dy = 3
 
-    pad = new Smd 
-    pad.dx = pad_dx
-    pad.dy = pad_dy
-    pad.ro = 100
+  pad_dx = 1.8
+  pad_dy = 0.45
 
-    
-    top = single pad, pads_per_side, pad_spacing
-    top = rotate90 top
-    top = adjust_y top, module_dy/2 - 0.5
+  n_left = 4
+  n_right = 4
 
-    right = single pad, pads_per_side, pad_spacing
-    right = adjust_x right, module_dx/2 - 0.5
-    right = generate_names right, pads_per_side+1
+  pad_between = 0.65
 
-    bt = rot_single (rotate90pad clone pad), pads_per_side, pad_spacing
-    bt = adjust_y bt, -module_dy/2 + 0.5
-    bt = generate_names bt, 2*16 +1
+  r1 = make_rect module_dx, module_dy, 0.1, "docu"
+  r2 = make_rect module_dx+0.2, module_dy+0.2, 0.1, "silk"
 
-    left = single pad, pads_per_side, pad_spacing
-    left = adjust_x left, -module_dx/2 + 0.5
-    left = generate_names left, 2*pads_per_side + 1
+  pad = new Smd
+  pad.dx = pad_dx
+  pad.dy = pad_dy
+  pad.ro = 0
 
-    combine [r1, r2, top, right, bt, left, mask_open, pin_1, gnd_pad]
+  pad_hadj = 2.08 + (pad_dx/2)
+
+  l1 = single pad, n_left, pad_between
+  l1 = adjust_x l1, -pad_hadj
+
+  l2 = single pad, n_right, pad_between
+  l2 = reverse l2
+  l2 = adjust_x l2, pad_hadj
+  l2 = generate_names l2, n_right
+
+  pin1 = new Disc(0.25)
+  pin1.x = -module_dx
+  pin1.y = module_dy/2
+
+  name = new Name(module_dy)
+
+  combine [r1, r2, l1, l2, pin1, name]
