@@ -1,9 +1,18 @@
-EESchema-DOCLIB  Version 2.0  Date: Thu 23 Oct 2014 03:04:15 AM EDT
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 4-PIN_XTAL
+D 4 Pin Crystal
+$ENDCMP
 #
 $CMP CC3200R1M2RGCR
 D CC3200R1M2RGCR
 K CC3200 Wireless LAN SoC ARM Cortex M4
 F http://www.ti.com/lit/gpn/cc3200
+$ENDCMP
+#
+$CMP FLT24
+D 2.4GHz Filter
+K Filter, 2.4G
 $ENDCMP
 #
 #End Doc Library
