@@ -35,7 +35,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date "31 oct 2014"
 Rev ""
@@ -1160,4 +1160,12 @@ Connection ~ 8250 1850
 Wire Wire Line
 	8100 2700 8250 2700
 Connection ~ 8250 2700
+$Sheet
+S 9950 700  500  750 
+U 5452FF59
+F0 "cc3200-io" 60
+F1 "cc3200board-io.sch" 60
+$EndSheet
+Text Label 6325 5650 0    60   ~ 0
+IMP_50OOHM
 $EndSCHEMATC
