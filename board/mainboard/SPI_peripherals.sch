@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title ""
-Date "23 oct 2014"
+Date "1 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -122,6 +122,88 @@ F 3 "" H 2450 700 60  0000 C CNN
 	1    2450 700 
 	1    0    0    -1  
 $EndComp
+$Comp
+L GND #PWR?
+U 1 1 54487D03
+P 2450 4150
+F 0 "#PWR?" H 2450 4150 30  0001 C CNN
+F 1 "GND" H 2450 4080 30  0001 C CNN
+F 2 "" H 2450 4150 60  0000 C CNN
+F 3 "" H 2450 4150 60  0000 C CNN
+	1    2450 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 1000 2200 0    60   Input ~ 0
+SPI_CS1
+Text GLabel 1000 2650 0    60   Input ~ 0
+SPI_SCK
+Text GLabel 1000 2350 0    60   Input ~ 0
+SPI_MOSI
+Text GLabel 1000 2950 0    60   Input ~ 0
+SPI_MISO
+Text GLabel 1900 3400 0    60   Input ~ 0
+SD_SWITCH
+$Comp
+L R R?
+U 1 1 544883FE
+P 2250 3750
+F 0 "R?" V 2330 3750 40  0000 C CNN
+F 1 "50k" V 2257 3751 40  0000 C CNN
+F 2 "~" V 2180 3750 30  0000 C CNN
+F 3 "~" H 2250 3750 30  0000 C CNN
+	1    2250 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 6950 1700 0    60   Input ~ 0
+SPI_CS2
+Text GLabel 6950 1550 0    60   Input ~ 0
+SPI_SCK
+Text GLabel 6950 1400 0    60   Input ~ 0
+SPI_MOSI
+$Comp
+L MCP4902-E/SL DAC?
+U 1 1 54555CC0
+P 8250 1650
+F 0 "DAC?" H 8400 2050 40  0000 L BNN
+F 1 "MCP4902-E/SL" H 8400 2000 40  0000 L BNN
+F 2 "SO14" H 8250 1650 30  0000 C CIN
+F 3 "" H 8250 1650 60  0000 C CNN
+	1    8250 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P?
+U 1 1 54555DA8
+P 9300 1650
+F 0 "P?" V 9250 1650 40  0000 C CNN
+F 1 "CONN_2" V 9350 1650 40  0000 C CNN
+F 2 "" H 9300 1650 60  0000 C CNN
+F 3 "" H 9300 1650 60  0000 C CNN
+	1    9300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 3V3 #PWR?
+U 1 1 54555E65
+P 8150 900
+F 0 "#PWR?" H 8150 1000 40  0001 C CNN
+F 1 "3V3" H 8150 1025 40  0000 C CNN
+F 2 "" H 8150 900 60  0000 C CNN
+F 3 "" H 8150 900 60  0000 C CNN
+	1    8150 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54555F87
+P 8150 2400
+F 0 "#PWR?" H 8150 2400 30  0001 C CNN
+F 1 "GND" H 8150 2330 30  0001 C CNN
+F 2 "" H 8150 2400 60  0000 C CNN
+F 3 "" H 8150 2400 60  0000 C CNN
+	1    8150 2400
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	1250 950  1250 850 
 Wire Wire Line
@@ -135,17 +217,6 @@ Connection ~ 1750 850
 Wire Wire Line
 	2250 850  2250 950 
 Connection ~ 2000 850 
-$Comp
-L GND #PWR?
-U 1 1 54487D03
-P 2450 4150
-F 0 "#PWR?" H 2450 4150 30  0001 C CNN
-F 1 "GND" H 2450 4080 30  0001 C CNN
-F 2 "" H 2450 4150 60  0000 C CNN
-F 3 "" H 2450 4150 60  0000 C CNN
-	1    2450 4150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1100 850  2450 850 
 Wire Wire Line
@@ -178,37 +249,16 @@ Wire Wire Line
 	2550 2050 2250 2050
 Wire Wire Line
 	2250 2050 2250 1450
-Text GLabel 1000 2200 0    60   Input ~ 0
-SPI_CS1
 Connection ~ 2000 2200
-Text GLabel 1000 2650 0    60   Input ~ 0
-SPI_SCK
 Wire Wire Line
 	2550 2650 1000 2650
-Text GLabel 1000 2350 0    60   Input ~ 0
-SPI_MOSI
 Connection ~ 1750 2350
-Text GLabel 1000 2950 0    60   Input ~ 0
-SPI_MISO
 Connection ~ 1500 2950
 Wire Wire Line
 	2550 3250 1100 3250
 Wire Wire Line
 	1100 3250 1100 850 
 Connection ~ 1250 850 
-Text GLabel 1900 3400 0    60   Input ~ 0
-SD_SWITCH
-$Comp
-L R R?
-U 1 1 544883FE
-P 2250 3750
-F 0 "R?" V 2330 3750 40  0000 C CNN
-F 1 "50k" V 2257 3751 40  0000 C CNN
-F 2 "~" V 2180 3750 30  0000 C CNN
-F 3 "~" H 2250 3750 30  0000 C CNN
-	1    2250 3750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2250 4000 2450 4000
 Connection ~ 2450 4000
@@ -217,4 +267,57 @@ Wire Wire Line
 Wire Wire Line
 	1900 3400 2550 3400
 Connection ~ 2250 3400
+Wire Wire Line
+	7700 1550 6950 1550
+Wire Wire Line
+	8800 1800 8850 1800
+Wire Wire Line
+	8850 1800 8850 1750
+Wire Wire Line
+	8800 1500 8850 1500
+Wire Wire Line
+	8850 1500 8850 1550
+Wire Wire Line
+	8300 2100 8300 2150
+Wire Wire Line
+	8150 1000 9500 1000
+Wire Wire Line
+	8300 1000 8300 1200
+Wire Wire Line
+	8150 1200 8150 900 
+Connection ~ 8150 1000
+Connection ~ 8300 1000
+Wire Wire Line
+	8850 1550 8950 1550
+Wire Wire Line
+	8850 1750 8950 1750
+Wire Wire Line
+	9500 1000 9500 2150
+Wire Wire Line
+	8150 2100 8150 2400
+Wire Wire Line
+	7700 1750 7600 1750
+Wire Wire Line
+	7600 1750 7600 2200
+Wire Wire Line
+	7600 2200 8150 2200
+Connection ~ 8150 2200
+Wire Wire Line
+	6950 1700 7100 1700
+Wire Wire Line
+	7100 1700 7100 1650
+Wire Wire Line
+	7100 1650 7700 1650
+Wire Wire Line
+	6950 1400 7100 1400
+Wire Wire Line
+	7100 1400 7100 1450
+Wire Wire Line
+	7100 1450 7700 1450
+Wire Wire Line
+	9500 2150 8300 2150
+Text GLabel 6950 1850 0    60   Input ~ 0
+~RST
+Wire Wire Line
+	6950 1850 7700 1850
 $EndSCHEMATC
