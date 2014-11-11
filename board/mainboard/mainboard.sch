@@ -58,9 +58,9 @@ F0 "SPI Peripherals" 50
 F1 "SPI_peripherals.sch" 50
 $EndSheet
 Text GLabel 9650 1200 0    60   Input ~ 0
-RST
-Text GLabel 10900 1200 2    60   Input ~ 0
 ~RST
+Text GLabel 10900 1200 2    60   Input ~ 0
+RST
 $Comp
 L GND #PWR?
 U 1 1 54556D99
