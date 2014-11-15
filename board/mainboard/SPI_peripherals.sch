@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title ""
-Date "11 nov 2014"
+Date "15 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -160,17 +160,6 @@ Text GLabel 7400 1750 0    60   Input ~ 0
 SPI_SCK
 Text GLabel 7400 1600 0    60   Input ~ 0
 SPI_MOSI
-$Comp
-L MCP4902-E/SL DAC?
-U 1 1 54555CC0
-P 8700 1850
-F 0 "DAC?" H 8850 2250 40  0000 L BNN
-F 1 "MCP4902-E/SL" H 8850 2200 40  0000 L BNN
-F 2 "SO14" H 8700 1850 30  0000 C CIN
-F 3 "" H 8700 1850 60  0000 C CNN
-	1    8700 1850
-	1    0    0    -1  
-$EndComp
 $Comp
 L CONN_2 P?
 U 1 1 54555DA8
@@ -527,4 +516,21 @@ F 3 "" H 7050 3600 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	7050 3600 7050 3800
+Text Notes 3200 1700 0    60   ~ 0
+SD Card
+Text Notes 8150 1350 0    60   ~ 0
+DAC
+Text Notes 8050 3350 0    60   ~ 0
+Graphic LCD
+$Comp
+L MCP4902 DAC?
+U 1 1 5467E291
+P 8700 1850
+F 0 "DAC?" H 8850 2250 40  0000 L BNN
+F 1 "MCP4902" H 8850 2200 40  0000 L BNN
+F 2 "SO14" H 8700 1850 30  0000 C CIN
+F 3 "" H 8700 1850 60  0000 C CNN
+	1    8700 1850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
