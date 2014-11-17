@@ -2,17 +2,17 @@ Peripherals List:
 -----------------
 
 I2C: (2 pins) (PA6,7) (I2C1) - Total cost: 14.12 -> 23.29
- * Accelerometer/Gyroscope/Magnetometer (Invesense - MPU9150)
+ * Accelerometer/Gyroscope/Magnetometer (Invesense - MPU9150) Addr = 1101000x (D0-D1)
     * Digikey (1428-1009-1-ND) - 12.70
     * CDI (MPU-9150) - 6.62
     * Invesense - 6.62
- * RTC (SII - S-35390A)
+ * RTC (SII - S-35390A) Addr = 0110xxxx (60-6F)
     * Digikey (728-1007-1-ND) - 1.61
     * Mouser (s-35390A-T8T1G) - 1.61
- * Temperature sensor (TI - TMP100)
+ * Temperature sensor (TI - TMP100) Addr = 1001???x (90-91)
     * Digikey (296-12749-6-ND) - 3.12
     * Mouser (TMP100NA/250) - 2.59
- * 2x Motor controller (TI - DRV8830)
+ * 2x Motor controller (TI - DRV8830) Addr = 110????x (C0-C1, C2-C3)
     * Digikey (296-33278-5-ND) - 2.93
     * Arrow (DRV8830DGQ) - 1.65
 
