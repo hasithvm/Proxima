@@ -9,7 +9,7 @@ footprint = () ->
   module_dy =3.2
   module_dx = 1.6
 
-  gnd_pad_dx = 1.2
+  gnd_pad_dx = 1.20
   gnd_pad_dy =1
 
 

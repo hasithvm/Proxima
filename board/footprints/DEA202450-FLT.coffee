@@ -1,7 +1,7 @@
 #format 1.2
-#name DEA202450BT-1294C1-H
-#id DEA202450BT-1294C1-H
-#desc DEA WLAN/BT FLT 2.5GHz
+#name DEA202450B
+#id DEA202450BT
+#desc DEA WLAN/BT FLT 2.4GHz
 
 
 footprint = () ->
