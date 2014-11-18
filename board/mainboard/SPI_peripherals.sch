@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 5
 Title ""
-Date "15 nov 2014"
+Date "18 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -533,4 +533,154 @@ F 3 "" H 8700 1850 60  0000 C CNN
 	1    8700 1850
 	1    0    0    -1  
 $EndComp
+$Comp
+L 74LS138 U?
+U 1 1 546AA00B
+P 2800 5800
+F 0 "U?" H 2900 6300 60  0000 C CNN
+F 1 "74LS138" H 2950 5251 60  0000 C CNN
+F 2 "~" H 2800 5800 60  0000 C CNN
+F 3 "~" H 2800 5800 60  0000 C CNN
+	1    2800 5800
+	1    0    0    -1  
+$EndComp
+Text GLabel 1200 5400 0    60   Input ~ 0
+SPI_SEL0
+Text GLabel 1200 5550 0    60   Input ~ 0
+SPI_SEL1
+Text GLabel 1200 5700 0    60   Input ~ 0
+SPI_SEL2
+Wire Wire Line
+	1200 5550 2200 5550
+Wire Wire Line
+	1200 5400 2050 5400
+Wire Wire Line
+	2050 5400 2050 5450
+Wire Wire Line
+	2050 5450 2200 5450
+Wire Wire Line
+	1200 5700 2050 5700
+Wire Wire Line
+	2050 5700 2050 5650
+Wire Wire Line
+	2050 5650 2200 5650
+Text GLabel 3700 5550 2    60   Input ~ 0
+SPI_CS1
+Text GLabel 4150 5650 2    60   Input ~ 0
+SPI_CS2
+Text GLabel 3700 5750 2    60   Input ~ 0
+SPI_CS3
+Text GLabel 4150 5850 2    60   Input ~ 0
+SPI_CS4
+Text GLabel 3700 5950 2    60   Input ~ 0
+SPI_CS5
+Text GLabel 4150 6050 2    60   Input ~ 0
+SPI_CS6
+Text GLabel 3700 6150 2    60   Input ~ 0
+SPI_CS7
+Wire Wire Line
+	3400 5550 3700 5550
+Wire Wire Line
+	3400 5650 4150 5650
+Wire Wire Line
+	3400 5750 3700 5750
+Wire Wire Line
+	3400 5850 4150 5850
+Wire Wire Line
+	3400 5950 3700 5950
+Wire Wire Line
+	3400 6050 4150 6050
+Wire Wire Line
+	3400 6150 3700 6150
+$Comp
+L DIODESCH D?
+U 1 1 546AA578
+P 1600 5950
+F 0 "D?" H 1600 6050 40  0000 C CNN
+F 1 "DIODESCH" H 1600 5850 40  0000 C CNN
+F 2 "~" H 1600 5950 60  0000 C CNN
+F 3 "~" H 1600 5950 60  0000 C CNN
+	1    1600 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L DIODESCH D?
+U 1 1 546AA5F2
+P 1300 5950
+F 0 "D?" H 1300 6050 40  0000 C CNN
+F 1 "DIODESCH" H 1300 5850 40  0000 C CNN
+F 2 "~" H 1300 5950 60  0000 C CNN
+F 3 "~" H 1300 5950 60  0000 C CNN
+	1    1300 5950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 5750 1300 5400
+Connection ~ 1300 5400
+Wire Wire Line
+	1600 5750 1600 5550
+Connection ~ 1600 5550
+$Comp
+L DIODESCH D?
+U 1 1 546AA823
+P 1900 5950
+F 0 "D?" H 1900 6050 40  0000 C CNN
+F 1 "DIODESCH" H 1900 5850 40  0000 C CNN
+F 2 "~" H 1900 5950 60  0000 C CNN
+F 3 "~" H 1900 5950 60  0000 C CNN
+	1    1900 5950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 5750 1900 5700
+Connection ~ 1900 5700
+Wire Wire Line
+	1300 6150 1300 6200
+Wire Wire Line
+	1900 6200 1900 6150
+Wire Wire Line
+	1600 6150 1600 6300
+Connection ~ 1600 6200
+$Comp
+L GND #PWR?
+U 1 1 546AA98C
+P 1600 6900
+F 0 "#PWR?" H 1600 6900 30  0001 C CNN
+F 1 "GND" H 1600 6830 30  0001 C CNN
+F 2 "" H 1600 6900 60  0000 C CNN
+F 3 "" H 1600 6900 60  0000 C CNN
+	1    1600 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 546AA99B
+P 1600 6550
+F 0 "R?" V 1680 6550 40  0000 C CNN
+F 1 "47k" V 1607 6551 40  0000 C CNN
+F 2 "~" V 1530 6550 30  0000 C CNN
+F 3 "~" H 1600 6550 30  0000 C CNN
+	1    1600 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 6800 1600 6900
+Wire Wire Line
+	2050 6200 2050 5950
+Wire Wire Line
+	2050 5950 2200 5950
+Connection ~ 1900 6200
+Wire Wire Line
+	2200 6050 2150 6050
+Wire Wire Line
+	2150 6050 2150 6850
+Wire Wire Line
+	2150 6150 2200 6150
+Wire Wire Line
+	2150 6850 1600 6850
+Connection ~ 1600 6850
+Connection ~ 2150 6150
+Wire Wire Line
+	1300 6200 2050 6200
+NoConn ~ 3400 5450
 $EndSCHEMATC

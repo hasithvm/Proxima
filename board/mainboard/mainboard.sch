@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 5
 Title ""
 Date "15 nov 2014"
 Rev ""
@@ -56,5 +56,17 @@ S 800  2700 2350 1450
 U 54487774
 F0 "SPI Peripherals" 50
 F1 "SPI_peripherals.sch" 50
+$EndSheet
+$Sheet
+S 3450 900  2350 1400
+U 5467DA0A
+F0 "Launchpad Connections" 50
+F1 "LaunchpadConnection.sch" 50
+$EndSheet
+$Sheet
+S 3450 2700 2350 1450
+U 546817DF
+F0 "Audio Codec" 50
+F1 "AudioCodec.sch" 50
 $EndSheet
 $EndSCHEMATC
