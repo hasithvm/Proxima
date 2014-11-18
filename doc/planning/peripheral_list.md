@@ -46,6 +46,8 @@ GPIO: (4 + 2 + 2 + 1)
 AD Converter - Internal (
  * 2xPot (PE1-2) 
  * 2xPhoto Resistors (PD2-3)
+   * Resistance 16K-33K <-> 500K
+   * Digikey (PDV-P8103-ND) - 1.08
  * 2xExposed (PE5, PB5)
  * Breathalyzer?
  * Ultrasonic sensor?
