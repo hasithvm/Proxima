@@ -506,4 +506,6 @@ Wire Wire Line
 Wire Wire Line
 	7250 5250 7100 5250
 Connection ~ 7100 5400
+Text Notes 7050 5100 0    60   ~ 0
+Mounting Holes
 $EndSCHEMATC
