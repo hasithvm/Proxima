@@ -1,0 +1,87 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 11/17/2014 7:42:40 PM
+
+BeginCmp
+TimeStamp = /54682090;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54680EA8;
+Reference = P1;
+ValeurCmp = CONN_5;
+IdModule  = PIN_ARRAY_5x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54681008;
+Reference = R1;
+ValeurCmp = 56;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /546810BF;
+Reference = R2;
+ValeurCmp = 56;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /546810F5;
+Reference = R3;
+ValeurCmp = 56;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54681044;
+Reference = R4;
+ValeurCmp = 8.2k;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /546810CE;
+Reference = R5;
+ValeurCmp = 8.2k;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54681104;
+Reference = R6;
+ValeurCmp = 8.2k;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54682081;
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /54680E59;
+Reference = U1;
+ValeurCmp = QRE1113;
+IdModule  = QRE1113;
+EndCmp
+
+BeginCmp
+TimeStamp = /546810A9;
+Reference = U2;
+ValeurCmp = QRE1113;
+IdModule  = QRE1113;
+EndCmp
+
+BeginCmp
+TimeStamp = /546810DF;
+Reference = U3;
+ValeurCmp = QRE1113;
+IdModule  = QRE1113;
+EndCmp
+
+EndListe
