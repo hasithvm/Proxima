@@ -438,7 +438,7 @@ F 3 "~" H 7700 4650 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8000 4200 8700 4200
+	8000 4200 8750 4200
 Wire Wire Line
 	8150 4200 8150 4400
 Wire Wire Line
@@ -469,7 +469,7 @@ Connection ~ 7700 4950
 Wire Wire Line
 	7700 5400 7700 5450
 Wire Wire Line
-	6800 5450 8650 5450
+	8750 5450 6800 5450
 Wire Wire Line
 	8150 5450 8150 4900
 Wire Wire Line
@@ -566,12 +566,23 @@ $EndComp
 Text GLabel 1850 3050 0    60   Input ~ 0
 SPI_CS4
 Connection ~ 2000 3050
-Text GLabel 8700 4200 2    60   Input ~ 0
-MIC_IN
-Text GLabel 8650 5450 2    60   Input ~ 0
-MIC_GND
 Connection ~ 8150 4200
 Connection ~ 8150 5450
 NoConn ~ 4750 4500
 NoConn ~ 4750 4350
+$Comp
+L CMA-4544PF-W MIC?
+U 1 1 546AC917
+P 8700 4800
+F 0 "MIC?" H 8700 4550 60  0000 C CNN
+F 1 "CMA-4544PF-W" H 8650 5050 60  0001 C CNN
+F 2 "" H 8650 5050 60  0000 C CNN
+F 3 "" H 8650 5050 60  0000 C CNN
+	1    8700 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8750 4200 8750 4500
+Wire Wire Line
+	8750 5100 8750 5450
 $EndSCHEMATC
