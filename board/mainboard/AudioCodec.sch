@@ -572,4 +572,6 @@ Text GLabel 8650 5450 2    60   Input ~ 0
 MIC_GND
 Connection ~ 8150 4200
 Connection ~ 8150 5450
+NoConn ~ 4750 4500
+NoConn ~ 4750 4350
 $EndSCHEMATC
