@@ -465,4 +465,6 @@ Text Label 9175 4575 0    60   ~ 0
 SOP0
 Text Label 9175 4675 0    60   ~ 0
 SOP2
+Text HLabel 1250 4575 0    60   Input ~ 0
+GPIO31
 $EndSCHEMATC
