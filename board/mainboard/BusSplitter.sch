@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 6 7
 Title ""
 Date "23 nov 2014"
 Rev ""
@@ -334,8 +334,6 @@ Wire Wire Line
 	7950 5550 7950 5700
 Wire Wire Line
 	7900 5450 8050 5450
-Wire Wire Line
-	2250 1350 2250 6050
 Connection ~ 2250 1750
 $Comp
 L 3V3 #PWR?
@@ -465,4 +463,27 @@ Wire Wire Line
 	8950 3050 8950 3100
 Wire Wire Line
 	8950 3100 8750 3100
+Text GLabel 2000 6850 0    60   Input ~ 0
+GPIO_A0_LP
+Text GLabel 3600 6850 2    60   Input ~ 0
+GPIO_A0
+Wire Wire Line
+	3600 6850 3350 6850
+Wire Wire Line
+	2000 6850 2450 6850
+$Comp
+L 74LS126 U?
+U 1 1 547262C6
+P 2900 6850
+F 0 "U?" H 3000 7050 60  0000 C CNN
+F 1 "74ALVC126" H 3150 6700 60  0000 C CNN
+F 2 "~" H 2900 6850 60  0000 C CNN
+F 3 "~" H 2900 6850 60  0000 C CNN
+	1    2900 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 7150 2900 7150
+Wire Wire Line
+	2250 7150 2250 1350
 $EndSCHEMATC

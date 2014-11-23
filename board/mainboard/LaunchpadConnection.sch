@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date "23 nov 2014"
 Rev ""
@@ -94,7 +94,6 @@ NoConn ~ 4550 3350
 NoConn ~ 4550 4100
 NoConn ~ 4550 4250
 NoConn ~ 6850 4250
-NoConn ~ 6850 3800
 NoConn ~ 6850 3350
 $Comp
 L GND #PWR?
@@ -650,4 +649,8 @@ Wire Wire Line
 	5200 6100 5200 6000
 Wire Wire Line
 	5200 6000 5350 6000
+Text GLabel 7150 3800 2    60   Input ~ 0
+GPIO_A0_LP
+Wire Wire Line
+	6850 3800 7150 3800
 $EndSCHEMATC
