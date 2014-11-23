@@ -1,7 +1,7 @@
 #format 1.2
 #name PCA9515B
 #id PCA9515B_DGK8
-#desc Temperature Sensor
+#desc I2C Bus Transceiver
 
 footprint = () ->
   
