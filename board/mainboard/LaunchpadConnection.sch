@@ -455,22 +455,22 @@ Wire Wire Line
 $Comp
 L CONN_2 P?
 U 1 1 546A9114
-P 10300 2900
-F 0 "P?" V 10250 2900 40  0000 C CNN
-F 1 "BUMPERS" V 10350 2900 40  0000 C CNN
-F 2 "" H 10300 2900 60  0000 C CNN
-F 3 "" H 10300 2900 60  0000 C CNN
-	1    10300 2900
+P 10250 2250
+F 0 "P?" V 10200 2250 40  0000 C CNN
+F 1 "BUMPERS" V 10300 2250 40  0000 C CNN
+F 2 "" H 10250 2250 60  0000 C CNN
+F 3 "" H 10250 2250 60  0000 C CNN
+	1    10250 2250
 	1    0    0    -1  
 $EndComp
-Text GLabel 9750 2800 0    60   Input ~ 0
+Text GLabel 9700 2150 0    60   Input ~ 0
 BUMP1
-Text GLabel 9750 3000 0    60   Input ~ 0
+Text GLabel 9700 2350 0    60   Input ~ 0
 BUMP2
 Wire Wire Line
-	9750 2800 9950 2800
+	9700 2150 9900 2150
 Wire Wire Line
-	9750 3000 9950 3000
+	9700 2350 9900 2350
 $Comp
 L CONN_5 P?
 U 1 1 546BE6CC
@@ -595,20 +595,59 @@ Wire Wire Line
 Connection ~ 10000 6700
 Wire Wire Line
 	8050 1250 8050 1350
-Text GLabel 3550 5400 0    60   Input ~ 0
-SPI_MISO_LP
-Text GLabel 3550 5250 0    60   Input ~ 0
-SPI_MOSI_LP
-Text GLabel 3550 5850 0    60   Input ~ 0
-SPI_SEL0_LP
-Text GLabel 3550 5700 0    60   Input ~ 0
-SPI_SEL1_LP
-Text GLabel 3550 5550 0    60   Input ~ 0
-SPI_SEL2_LP
-Text GLabel 3550 5100 0    60   Input ~ 0
-SPI_SCK_LP
-Text GLabel 3550 6000 0    60   Input ~ 0
-I2C_CL_LP
-Text GLabel 3550 6150 0    60   Input ~ 0
-I2C_DA_LP
+Text GLabel 4900 5350 0    60   Input ~ 0
+RTCINT1
+Text GLabel 4900 5500 0    60   Input ~ 0
+RTCINT2
+Text GLabel 4900 5650 0    60   Input ~ 0
+MPUINT
+Text GLabel 4900 5800 0    60   Input ~ 0
+SD_SWITCH
+$Comp
+L CONN_6 P?
+U 1 1 54724B44
+P 5700 5750
+F 0 "P?" V 5650 5750 60  0000 C CNN
+F 1 "INT_GPIO" V 5750 5750 60  0000 C CNN
+F 2 "" H 5700 5750 60  0000 C CNN
+F 3 "" H 5700 5750 60  0000 C CNN
+	1    5700 5750
+	1    0    0    -1  
+$EndComp
+Text GLabel 4900 5950 0    60   Input ~ 0
+MOTOR1F
+Text GLabel 4900 6100 0    60   Input ~ 0
+MOTOR2F
+Wire Wire Line
+	4900 5350 5300 5350
+Wire Wire Line
+	5300 5350 5300 5500
+Wire Wire Line
+	5300 5500 5350 5500
+Wire Wire Line
+	4900 5500 5200 5500
+Wire Wire Line
+	5200 5500 5200 5600
+Wire Wire Line
+	5200 5600 5350 5600
+Wire Wire Line
+	4900 5650 5100 5650
+Wire Wire Line
+	5100 5650 5100 5700
+Wire Wire Line
+	5100 5700 5350 5700
+Wire Wire Line
+	4900 5800 5350 5800
+Wire Wire Line
+	4900 5950 5100 5950
+Wire Wire Line
+	5100 5950 5100 5900
+Wire Wire Line
+	5100 5900 5350 5900
+Wire Wire Line
+	4900 6100 5200 6100
+Wire Wire Line
+	5200 6100 5200 6000
+Wire Wire Line
+	5200 6000 5350 6000
 $EndSCHEMATC
