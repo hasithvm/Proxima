@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title ""
-Date "19 nov 2014"
+Date "23 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -68,5 +68,11 @@ S 3450 2700 2350 1450
 U 546817DF
 F0 "Audio Codec" 50
 F1 "AudioCodec.sch" 50
+$EndSheet
+$Sheet
+S 6150 900  2350 1400
+U 54722340
+F0 "Bus Splitter" 50
+F1 "BusSplitter.sch" 50
 $EndSheet
 $EndSCHEMATC
