@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date "23 nov 2014"
 Rev ""
@@ -85,17 +85,11 @@ Text GLabel 7150 2450 2    60   Input ~ 0
 SPI_SEL1_LP
 Text GLabel 7150 2300 2    60   Input ~ 0
 SPI_SEL2_LP
-NoConn ~ 6850 1550
-NoConn ~ 4550 1850
-NoConn ~ 4550 2300
 NoConn ~ 4550 2900
 NoConn ~ 4550 3200
 NoConn ~ 4550 3350
 NoConn ~ 4550 4100
 NoConn ~ 4550 4250
-NoConn ~ 6850 4250
-NoConn ~ 6850 3800
-NoConn ~ 6850 3350
 $Comp
 L GND #PWR?
 U 1 1 5468095A
@@ -595,59 +589,134 @@ Wire Wire Line
 Connection ~ 10000 6700
 Wire Wire Line
 	8050 1250 8050 1350
-Text GLabel 4900 5350 0    60   Input ~ 0
+Text GLabel 3500 5150 0    60   Input ~ 0
 RTCINT1
-Text GLabel 4900 5500 0    60   Input ~ 0
+Text GLabel 3500 5300 0    60   Input ~ 0
 RTCINT2
-Text GLabel 4900 5650 0    60   Input ~ 0
+Text GLabel 3500 5450 0    60   Input ~ 0
 MPUINT
-Text GLabel 4900 5800 0    60   Input ~ 0
+Text GLabel 3500 5600 0    60   Input ~ 0
 SD_SWITCH
-$Comp
-L CONN_6 P?
-U 1 1 54724B44
-P 5700 5750
-F 0 "P?" V 5650 5750 60  0000 C CNN
-F 1 "INT_GPIO" V 5750 5750 60  0000 C CNN
-F 2 "" H 5700 5750 60  0000 C CNN
-F 3 "" H 5700 5750 60  0000 C CNN
-	1    5700 5750
-	1    0    0    -1  
-$EndComp
-Text GLabel 4900 5950 0    60   Input ~ 0
+Text GLabel 3500 5750 0    60   Input ~ 0
 MOTOR1F
-Text GLabel 4900 6100 0    60   Input ~ 0
+Text GLabel 3500 5900 0    60   Input ~ 0
 MOTOR2F
 Wire Wire Line
-	4900 5350 5300 5350
+	3500 5150 3900 5150
 Wire Wire Line
-	5300 5350 5300 5500
+	3900 5150 3900 5300
 Wire Wire Line
-	5300 5500 5350 5500
+	3900 5300 3950 5300
 Wire Wire Line
-	4900 5500 5200 5500
+	3500 5300 3800 5300
 Wire Wire Line
-	5200 5500 5200 5600
+	3800 5300 3800 5400
 Wire Wire Line
-	5200 5600 5350 5600
+	3800 5400 3950 5400
 Wire Wire Line
-	4900 5650 5100 5650
+	3500 5450 3700 5450
 Wire Wire Line
-	5100 5650 5100 5700
+	3700 5450 3700 5500
 Wire Wire Line
-	5100 5700 5350 5700
+	3700 5500 3950 5500
 Wire Wire Line
-	4900 5800 5350 5800
+	3500 5600 3950 5600
 Wire Wire Line
-	4900 5950 5100 5950
+	3500 5750 3700 5750
 Wire Wire Line
-	5100 5950 5100 5900
+	3700 5750 3700 5700
 Wire Wire Line
-	5100 5900 5350 5900
+	3700 5700 3950 5700
 Wire Wire Line
-	4900 6100 5200 6100
+	3500 5900 3800 5900
 Wire Wire Line
-	5200 6100 5200 6000
+	3800 5900 3800 5800
 Wire Wire Line
-	5200 6000 5350 6000
+	3800 5800 3950 5800
+Text GLabel 7150 3800 2    60   Input ~ 0
+GPIO_A0_LP
+Wire Wire Line
+	6850 3800 7150 3800
+$Comp
+L CONN_7 P?
+U 1 1 547268C8
+P 4300 5600
+F 0 "P?" V 4270 5600 60  0000 C CNN
+F 1 "INT_SRC" V 4370 5600 60  0000 C CNN
+F 2 "" H 4300 5600 60  0000 C CNN
+F 3 "" H 4300 5600 60  0000 C CNN
+	1    4300 5600
+	1    0    0    -1  
+$EndComp
+Text GLabel 3500 6050 0    60   Input ~ 0
+WIFI_INT
+Wire Wire Line
+	3500 6050 3900 6050
+Wire Wire Line
+	3900 6050 3900 5900
+Wire Wire Line
+	3900 5900 3950 5900
+Text GLabel 7150 1550 2    60   Input ~ 0
+PE0
+Wire Wire Line
+	6850 1550 7150 1550
+Text GLabel 7150 3350 2    60   Input ~ 0
+PC4
+Wire Wire Line
+	6850 3350 7150 3350
+Text GLabel 7150 4250 2    60   Input ~ 0
+PF4
+Wire Wire Line
+	6850 4250 7150 4250
+Text GLabel 4050 1850 0    60   Input ~ 0
+PE4
+Wire Wire Line
+	4050 1850 4550 1850
+Text GLabel 4050 2300 0    60   Input ~ 0
+PA5
+Wire Wire Line
+	4050 2300 4550 2300
+$Comp
+L CONN_5 P?
+U 1 1 54726AA3
+P 6850 5650
+F 0 "P?" V 6800 5650 50  0000 C CNN
+F 1 "GPIO" V 6900 5650 50  0000 C CNN
+F 2 "" H 6850 5650 60  0000 C CNN
+F 3 "" H 6850 5650 60  0000 C CNN
+	1    6850 5650
+	1    0    0    -1  
+$EndComp
+Text GLabel 6150 5350 0    60   Input ~ 0
+PA5
+Text GLabel 6150 5500 0    60   Input ~ 0
+PC4
+Text GLabel 6150 5650 0    60   Input ~ 0
+PE0
+Text GLabel 6150 5800 0    60   Input ~ 0
+PE4
+Text GLabel 6150 5950 0    60   Input ~ 0
+PF4
+Wire Wire Line
+	6150 5350 6450 5350
+Wire Wire Line
+	6450 5350 6450 5450
+Wire Wire Line
+	6150 5500 6400 5500
+Wire Wire Line
+	6400 5500 6400 5550
+Wire Wire Line
+	6400 5550 6450 5550
+Wire Wire Line
+	6150 5650 6450 5650
+Wire Wire Line
+	6150 5800 6400 5800
+Wire Wire Line
+	6400 5800 6400 5750
+Wire Wire Line
+	6400 5750 6450 5750
+Wire Wire Line
+	6150 5950 6450 5950
+Wire Wire Line
+	6450 5950 6450 5850
 $EndSCHEMATC

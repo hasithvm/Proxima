@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date "23 nov 2014"
 Rev ""
@@ -74,5 +74,11 @@ S 6150 900  2350 1400
 U 54722340
 F0 "Bus Splitter" 50
 F1 "BusSplitter.sch" 50
+$EndSheet
+$Sheet
+S 6150 2700 2350 1450
+U 54725E9B
+F0 "Daughterboard Connections" 50
+F1 "WifiConnections.sch" 50
 $EndSheet
 $EndSCHEMATC
