@@ -100,15 +100,15 @@ F 3 "" H 2450 4150 60  0000 C CNN
 	1    2450 4150
 	1    0    0    -1  
 $EndComp
-Text GLabel 1900 2200 0    60   Input ~ 0
+Text GLabel 1650 2200 0    60   Input ~ 0
 SPI_CS1
-Text GLabel 1900 2650 0    60   Input ~ 0
+Text GLabel 1650 2650 0    60   Input ~ 0
 SPI_SCK
-Text GLabel 1900 2350 0    60   Input ~ 0
+Text GLabel 1650 2350 0    60   Input ~ 0
 SPI_MOSI
-Text GLabel 1900 2950 0    60   Input ~ 0
+Text GLabel 1650 2950 0    60   Input ~ 0
 SPI_MISO
-Text GLabel 1900 3400 0    60   Input ~ 0
+Text GLabel 1650 3400 0    60   Input ~ 0
 SD_SWITCH
 $Comp
 L R R?
@@ -680,7 +680,7 @@ Wire Wire Line
 	8150 1750 7400 1750
 Connection ~ 2250 3400
 Wire Wire Line
-	1900 3400 2550 3400
+	1650 3400 2550 3400
 Wire Wire Line
 	2250 3500 2250 3400
 Connection ~ 2450 4000
@@ -731,7 +731,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 2500 2300 1300
 Wire Wire Line
-	2000 1300 2450 1300
+	1850 1300 2450 1300
 Connection ~ 2450 1300
 Wire Wire Line
 	2550 3100 2150 3100
@@ -746,11 +746,28 @@ Wire Wire Line
 	2000 3250 2000 1300
 Connection ~ 2150 1300
 Wire Wire Line
-	1900 2200 2550 2200
+	1650 2200 2550 2200
 Wire Wire Line
-	2550 2350 1900 2350
+	1650 2350 2550 2350
 Wire Wire Line
-	1900 2650 2550 2650
+	1650 2650 2550 2650
 Wire Wire Line
-	2550 2950 1900 2950
+	1650 2950 2550 2950
+$Comp
+L R R?
+U 1 1 5472863C
+P 1850 1700
+F 0 "R?" V 1930 1700 40  0000 C CNN
+F 1 "50k" V 1857 1701 40  0000 C CNN
+F 2 "~" V 1780 1700 30  0000 C CNN
+F 3 "~" H 1850 1700 30  0000 C CNN
+	1    1850 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1450 1850 1300
+Connection ~ 2000 1300
+Wire Wire Line
+	1850 2200 1850 1950
+Connection ~ 1850 2200
 $EndSCHEMATC
