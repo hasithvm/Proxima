@@ -7,7 +7,7 @@ footprint = () ->
 
   pad_between = 100mil
 
-  outer_sep = 1200mil
+  outer_sep = 1400mil
   inner_hadj = outer_sep/2 - 100mil
 
   module_dx = outer_sep + pad_between

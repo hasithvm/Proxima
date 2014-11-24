@@ -1,6 +1,6 @@
 #format 1.2
 #name CC3200R1M2RGCR
-#id VQFN64-RGC
+#id VQFN64
 #desc Footprint for CC3200R1M2RGCR
 
 footprint = () ->
@@ -13,7 +13,7 @@ footprint = () ->
     pad_spacing = 0.5
     pads_per_side = 16
     r1 = make_rect module_dx, module_dy, 0.1, 'docu'
-    r2 = make_rect module_inner, module_inner, 0.1, 'silk'
+    r2 = make_rect module_dy, module_dx, 0.1, 'silk'
     mask_open = make_rect module_inner , module_inner, 0.1, 'stop'
     
     pin_1 = new Disc(1)
@@ -33,21 +33,23 @@ footprint = () ->
 
     
     top = single pad, pads_per_side, pad_spacing
-    top = rotate90 top
+    top = rotate270 top
     top = adjust_y top, module_dy/2 - 0.5
-    top = generate_names top, 3*pads_per_side
+    #top = generate_names top, 3*pads_per_side
 
     right = single pad, pads_per_side, pad_spacing
+    right = reverse right
     right = adjust_x right, module_dx/2 - 0.5
+    right = generate_names right, 48
 
-    bt = rot_single (rotate90pad clone pad), pads_per_side, pad_spacing
-    bt = reverse bt		    
+    bt = rot_single (rotate90pad clone pad), pads_per_side, pad_spacing    
     bt = adjust_y bt, -module_dy/2 + 0.5
-    bt = generate_names bt, pads_per_side
+    bt = generate_names bt, pads_per_side*2
 
     left = single pad, pads_per_side, pad_spacing
-    left = reverse left
     left = adjust_x left, -module_dx/2 + 0.5
-    left = generate_names left, 2*pads_per_side
+    left = generate_names left, pads_per_side
+
+
     name = new Name(module_dy * 0.75)
     combine [r1, r2, top, right, bt, left, mask_open, pin_1, gnd_pad, name]
