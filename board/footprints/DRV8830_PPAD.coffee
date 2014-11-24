@@ -4,53 +4,68 @@
 #desc TI Motor Driver
 
 footprint = () ->
-
-  module_dx = 3  
+  module_dx = 3
   module_dy = 3
 
-  pad_dx = 0.27
-  pad_dy = 0.7
+  pad_dx = (3.8 - 2.1)/2
+  land_dx = 0.3
+  pad_dy = (3.8 - 2.1)/2
 
-  thermal_dx = 2.1
-  thermal_dy = 1.83
+  pad_hadj = (3.06+land_dx)/2
 
   pad_between = 0.5
-  pad_sep = 0.275
 
-  pad_vadj = module_dy/2 + pad_dy / 2 + pad_sep
+  n_left = 5
+  n_right = 5
 
-  n_up = 5
-  n_down = 5
+  lr_pad_from_bottom = 0.75
+  ud_pad_from_bottom = 0.125
+
+  lrpad_vadj = pad_dy/2 + 2.1/2
 
   r1 = make_rect module_dx, module_dy, 0.1, 'docu'
-  r2 = make_rect module_dx+0.2, module_dy+0.2, 0.1, 'silk'
 
   pad = new Smd
-  pad.dx = pad_dx
+  pad.dx = land_dx
   pad.dy = pad_dy
   pad.ro = 0
 
-  thermal = new Smd
-  thermal.dx = thermal_dx
-  thermal.dy = thermal_dy
-  thermal.ro = 0
+  tpad = new Smd
+  tpad.dx = 2.4
+  tpad.dy = 1.65
 
-  l1 = rot_single pad, n_up, pad_between
-  l1 = reverse l1
-  l1 = generate_names l1, 0
-  l1 = adjust_y l1, pad_vadj
+  tpad_arm = new Smd
+  tpad_arm.dx = 0.7
+  tpad_arm.dy = 0.28
 
-  l2 = rot_single pad, n_down, pad_between
-  l2 = generate_names l2, n_up
-  l2 = adjust_y l2, -pad_vadj
+  l1 = rot_single pad, n_left, -pad_between
+  l1 = adjust_y l1, lrpad_vadj
 
-  t1 = single thermal, 1, 0
-  t1 = generate_names t1, 4
+  l3 = rot_single pad, n_left, -pad_between
+  l3 = reverse l3
+  l3 = adjust_y l3, -lrpad_vadj
+  l3 = generate_names l3, n_left
 
-  name = new Name(module_dy + 0.5)
+  t1 = single tpad, 1, 0
+  t1 = generate_names t1, n_left - 1
 
-  pin1 = new Disc(0.25)
-  pin1.x = module_dx/2 + 0.25
-  pin1.y = module_dy/2 + 0.75
+  arm_between = 2.4 + tpad_arm.dx
+  t2 = dual tpad_arm, 4, 0.5, arm_between
 
-  combine [l1, l2, r1, r2, name, t1, pin1]
+  for smd in t2
+    smd.name = n_left
+
+  sline = new Line(0.1)
+  sline.y1=-0.4
+  sline.y2=0.4
+
+  sline_gap = module_dy - (sline.y2 - sline.y1)
+  s1 = dual sline, 4, sline_gap, module_dx
+
+  name= new Name (module_dy)
+
+  pin1 = new Disc (0.25)
+  pin1.x = (module_dx / 2) + 6*ud_pad_from_bottom
+  pin1.y = (module_dy / 2) - 6*ud_pad_from_bottom
+
+  combine [r1, l1, l3, name, pin1, t1, t2, s1]
