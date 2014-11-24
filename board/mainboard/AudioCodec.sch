@@ -222,10 +222,6 @@ Text GLabel 1850 1650 0    60   Input ~ 0
 SPI_MOSI
 Text GLabel 1850 2200 0    60   Input ~ 0
 AUD_DAC_CL
-Text GLabel 3250 3900 0    60   Input ~ 0
-AUD_LEFT_OUT
-Text GLabel 3250 4150 0    60   Input ~ 0
-AUD_RIGHT_OUT
 $Comp
 L CP C?
 U 1 1 546A78E2
@@ -531,9 +527,9 @@ Wire Wire Line
 Wire Wire Line
 	4450 4150 4350 4150
 Wire Wire Line
-	3950 3900 3250 3900
+	2850 3900 3950 3900
 Wire Wire Line
-	3950 4150 3250 4150
+	3100 4150 3950 4150
 Wire Wire Line
 	3350 4250 3350 4150
 Connection ~ 3350 4150
@@ -545,7 +541,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 4750 3350 4850
 Wire Wire Line
-	3350 4850 3500 4850
+	3000 4850 3500 4850
 Connection ~ 3500 4850
 Wire Wire Line
 	7400 4200 7600 4200
@@ -661,4 +657,24 @@ Wire Wire Line
 Connection ~ 4550 1700
 Wire Wire Line
 	4550 1600 4550 2700
+$Comp
+L HP_JACK HP?
+U 1 1 5472A284
+P 2500 3900
+F 0 "HP?" H 2500 4100 60  0000 C CNN
+F 1 "HP_JACK" H 2500 3700 60  0000 C CNN
+F 2 "" H 2500 4100 60  0000 C CNN
+F 3 "" H 2500 4100 60  0000 C CNN
+	1    2500 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 4150 3100 4050
+Wire Wire Line
+	3100 4050 2850 4050
+Wire Wire Line
+	2850 3800 3000 3800
+Wire Wire Line
+	3000 3800 3000 4850
+Connection ~ 3350 4850
 $EndSCHEMATC
