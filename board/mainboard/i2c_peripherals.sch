@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 7
 Title ""
-Date "19 nov 2014"
+Date "24 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -265,7 +265,7 @@ Text GLabel 7700 2300 0    60   Input ~ 0
 MOTOR1F
 Text GLabel 7700 4700 0    60   Input ~ 0
 MOTOR2F
-Text GLabel 3950 2100 2    60   Input ~ 0
+Text GLabel 4600 2100 2    60   Input ~ 0
 RTCINT2
 $Comp
 L MPU-9150 MPU?
@@ -571,7 +571,7 @@ Wire Wire Line
 Wire Wire Line
 	7700 4700 8150 4700
 Wire Wire Line
-	3700 2100 3950 2100
+	3700 2100 4600 2100
 Wire Wire Line
 	2650 3200 2650 3650
 Wire Wire Line
@@ -680,45 +680,14 @@ Wire Wire Line
 	6200 6700 6200 6550
 Wire Wire Line
 	6200 6550 6300 6550
-$Comp
-L CONN_4 P?
-U 1 1 546AB530
-P 9900 6300
-F 0 "P?" V 9850 6300 50  0000 C CNN
-F 1 "MOTORS" V 9950 6300 50  0000 C CNN
-F 2 "" H 9900 6300 60  0000 C CNN
-F 3 "" H 9900 6300 60  0000 C CNN
-	1    9900 6300
-	1    0    0    -1  
-$EndComp
-Text GLabel 9150 6200 0    60   Input ~ 0
+Text GLabel 9150 6250 0    60   Input ~ 0
 MOTOR1-
 Text GLabel 9150 6050 0    60   Input ~ 0
 MOTOR1+
-Text GLabel 9150 6500 0    60   Input ~ 0
+Text GLabel 9150 6750 0    60   Input ~ 0
 MOTOR2-
-Text GLabel 9150 6350 0    60   Input ~ 0
+Text GLabel 9150 6550 0    60   Input ~ 0
 MOTOR2+
-Wire Wire Line
-	9150 6050 9350 6050
-Wire Wire Line
-	9350 6050 9350 6150
-Wire Wire Line
-	9350 6150 9550 6150
-Wire Wire Line
-	9150 6200 9250 6200
-Wire Wire Line
-	9250 6200 9250 6250
-Wire Wire Line
-	9250 6250 9550 6250
-Wire Wire Line
-	9150 6350 9550 6350
-Wire Wire Line
-	9150 6500 9250 6500
-Wire Wire Line
-	9250 6500 9250 6450
-Wire Wire Line
-	9250 6450 9550 6450
 $Comp
 L CRYSTAL X?
 U 1 1 546AD855
@@ -737,4 +706,88 @@ Wire Wire Line
 Wire Wire Line
 	1600 2400 1600 1950
 Connection ~ 1850 1950
+$Comp
+L R R?
+U 1 1 54727DCC
+P 4450 1700
+F 0 "R?" V 4530 1700 40  0000 C CNN
+F 1 "10K" V 4457 1701 40  0000 C CNN
+F 2 "~" V 4380 1700 30  0000 C CNN
+F 3 "~" H 4450 1700 30  0000 C CNN
+	1    4450 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 3V3 #PWR?
+U 1 1 54727DD2
+P 4450 1250
+F 0 "#PWR?" H 4450 1350 40  0001 C CNN
+F 1 "3V3" H 4450 1375 40  0000 C CNN
+F 2 "" H 4450 1250 60  0000 C CNN
+F 3 "" H 4450 1250 60  0000 C CNN
+	1    4450 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 54727DD8
+P 1950 1300
+F 0 "R?" V 2030 1300 40  0000 C CNN
+F 1 "10K" V 1957 1301 40  0000 C CNN
+F 2 "~" V 1880 1300 30  0000 C CNN
+F 3 "~" H 1950 1300 30  0000 C CNN
+	1    1950 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 3V3 #PWR?
+U 1 1 54727DDE
+P 1950 850
+F 0 "#PWR?" H 1950 950 40  0001 C CNN
+F 1 "3V3" H 1950 975 40  0000 C CNN
+F 2 "" H 1950 850 60  0000 C CNN
+F 3 "" H 1950 850 60  0000 C CNN
+	1    1950 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1450 4450 1250
+Wire Wire Line
+	1950 1050 1950 850 
+Wire Wire Line
+	1950 1550 1950 1650
+Connection ~ 1950 1650
+Wire Wire Line
+	4450 1950 4450 2100
+Connection ~ 4450 2100
+$Comp
+L CONN_2 P?
+U 1 1 5472816B
+P 9650 6150
+F 0 "P?" V 9600 6150 40  0000 C CNN
+F 1 "Motor1" V 9700 6150 40  0000 C CNN
+F 2 "" H 9650 6150 60  0000 C CNN
+F 3 "" H 9650 6150 60  0000 C CNN
+	1    9650 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 6050 9300 6050
+Wire Wire Line
+	9150 6250 9300 6250
+$Comp
+L CONN_2 P?
+U 1 1 54728242
+P 9650 6650
+F 0 "P?" V 9600 6650 40  0000 C CNN
+F 1 "Motor2" V 9700 6650 40  0000 C CNN
+F 2 "" H 9650 6650 60  0000 C CNN
+F 3 "" H 9650 6650 60  0000 C CNN
+	1    9650 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 6550 9300 6550
+Wire Wire Line
+	9150 6750 9300 6750
 $EndSCHEMATC
