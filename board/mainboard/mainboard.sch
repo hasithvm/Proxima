@@ -35,7 +35,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title ""
 Date "24 nov 2014"
 Rev ""
@@ -80,5 +80,11 @@ S 6150 2700 2350 1450
 U 54725E9B
 F0 "Daughterboard Connections" 50
 F1 "WifiConnections.sch" 50
+$EndSheet
+$Sheet
+S 800  4550 2350 1450
+U 5472C13B
+F0 "Power Regulator" 50
+F1 "Power.sch" 50
 $EndSheet
 $EndSCHEMATC
