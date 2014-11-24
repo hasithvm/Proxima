@@ -398,25 +398,14 @@ F 3 "" H 2050 5950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_8 P4
-U 1 1 54726C0B
-P 6200 4450
-F 0 "P4" V 6150 4450 60  0000 C CNN
-F 1 "CONN_8" V 6250 4450 60  0000 C CNN
-F 2 "" H 6200 4450 60  0000 C CNN
-F 3 "" H 6200 4450 60  0000 C CNN
-	1    6200 4450
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR035
 U 1 1 54726C24
-P 5700 5050
-F 0 "#PWR035" H 5700 5050 30  0001 C CNN
-F 1 "GND" H 5700 4980 30  0001 C CNN
-F 2 "" H 5700 5050 60  0000 C CNN
-F 3 "" H 5700 5050 60  0000 C CNN
-	1    5700 5050
+P 5700 4950
+F 0 "#PWR035" H 5700 4950 30  0001 C CNN
+F 1 "GND" H 5700 4880 30  0001 C CNN
+F 2 "" H 5700 4950 60  0000 C CNN
+F 3 "" H 5700 4950 60  0000 C CNN
+	1    5700 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -430,21 +419,19 @@ F 3 "" H 5800 3100 60  0000 C CNN
 	1    5800 3100
 	1    0    0    -1  
 $EndComp
-Text GLabel 5300 3950 0    60   Input ~ 0
+Text GLabel 5300 4000 0    60   Input ~ 0
 SPI_SCK
-Text GLabel 5300 4100 0    60   Input ~ 0
+Text GLabel 5300 4150 0    60   Input ~ 0
 SPI_MOSI
-Text GLabel 5300 4250 0    60   Input ~ 0
+Text GLabel 5300 4300 0    60   Input ~ 0
 SPI_MISO
-Text GLabel 5300 4400 0    60   Input ~ 0
-SPI_CS5
 Text GLabel 4200 6950 0    60   Input ~ 0
-SPI_CS4
+SPI_CS5
 Text GLabel 4550 6950 2    60   Input ~ 0
 SPI_CS_CC
-Text GLabel 5300 4550 0    60   Input ~ 0
+Text GLabel 5300 4450 0    60   Input ~ 0
 SPI_CS6
-Text GLabel 5300 4700 0    60   Input ~ 0
+Text GLabel 5300 4600 0    60   Input ~ 0
 SPI_CS7
 Wire Wire Line
 	5550 3300 5550 3200
@@ -457,43 +444,17 @@ Connection ~ 5700 4200
 Wire Wire Line
 	5700 3800 5700 4200
 Wire Wire Line
-	5500 4100 5850 4100
+	5450 4100 5850 4100
 Wire Wire Line
-	5500 3950 5500 4100
+	5400 4200 5850 4200
 Wire Wire Line
-	5300 3950 5500 3950
-Wire Wire Line
-	5450 4200 5850 4200
-Wire Wire Line
-	5450 4100 5450 4200
-Wire Wire Line
-	5300 4100 5450 4100
-Wire Wire Line
-	5400 4300 5850 4300
-Wire Wire Line
-	5400 4250 5400 4300
-Wire Wire Line
-	5300 4250 5400 4250
-Wire Wire Line
-	5300 4400 5850 4400
-Wire Wire Line
-	5400 4500 5850 4500
-Wire Wire Line
-	5400 4550 5400 4500
-Wire Wire Line
-	5300 4550 5400 4550
-Wire Wire Line
-	5450 4600 5850 4600
-Wire Wire Line
-	5450 4700 5450 4600
-Wire Wire Line
-	5300 4700 5450 4700
+	5300 4300 5850 4300
 Wire Wire Line
 	4200 6950 4550 6950
 Wire Wire Line
-	5700 4800 5700 5050
+	5700 4700 5700 4950
 Wire Wire Line
-	5850 4800 5700 4800
+	5850 4700 5700 4700
 Connection ~ 1550 6750
 Wire Wire Line
 	1300 6750 1300 6700
@@ -664,10 +625,6 @@ Wire Wire Line
 Wire Wire Line
 	2450 2800 2550 2800
 Wire Wire Line
-	5800 4700 5850 4700
-Wire Wire Line
-	5800 3100 5800 4700
-Wire Wire Line
 	5550 3200 5800 3200
 Connection ~ 5700 3200
 Connection ~ 5800 3200
@@ -819,4 +776,39 @@ F 3 "" H 8600 2900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 8600 2800
+$Comp
+L CONN_7 P?
+U 1 1 5472B1C0
+P 6200 4400
+F 0 "P?" V 6170 4400 60  0000 C CNN
+F 1 "CONN_7" V 6270 4400 60  0000 C CNN
+F 2 "" H 6200 4400 60  0000 C CNN
+F 3 "" H 6200 4400 60  0000 C CNN
+	1    6200 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4600 5800 4600
+Wire Wire Line
+	5800 4600 5800 3100
+Wire Wire Line
+	5400 4200 5400 4150
+Wire Wire Line
+	5400 4150 5300 4150
+Wire Wire Line
+	5450 4100 5450 4000
+Wire Wire Line
+	5450 4000 5300 4000
+Wire Wire Line
+	5850 4400 5400 4400
+Wire Wire Line
+	5400 4400 5400 4450
+Wire Wire Line
+	5400 4450 5300 4450
+Wire Wire Line
+	5850 4500 5450 4500
+Wire Wire Line
+	5450 4500 5450 4600
+Wire Wire Line
+	5450 4600 5300 4600
 $EndSCHEMATC
