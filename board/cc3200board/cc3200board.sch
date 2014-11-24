@@ -206,7 +206,7 @@ L CPsmall C13
 U 1 1 544620C5
 P 1250 3450
 F 0 "C13" H 1275 3500 30  0000 L CNN
-F 1 "0.1uF" H 1250 3350 30  0000 L CNN
+F 1 "10uF" H 1250 3350 30  0000 L CNN
 F 2 "" H 1250 3450 60  0000 C CNN
 F 3 "~" H 1250 3450 60  0000 C CNN
 	1    1250 3450
@@ -500,7 +500,7 @@ F 3 "" H 6700 6800 60  0000 C CNN
 $EndComp
 Text Label 5900 700  0    60   ~ 0
 3V3
-Text Label 4700 700  0    60   ~ 0
+Text Label 4700 650  0    60   ~ 0
 3V3
 $Comp
 L CPsmall C46
@@ -513,7 +513,7 @@ F 3 "~" H 6500 6800 60  0000 C CNN
 	1    6500 6800
 	0    -1   -1   0   
 $EndComp
-Text Label 1500 6200 0    60   ~ 0
+Text Label 2000 6150 0    60   ~ 0
 3V3
 $Comp
 L CC3200R1M2RGCR U1
@@ -537,7 +537,7 @@ F 3 "~" H 7350 2700 60  0000 C CNN
 	1    7550 2950
 	1    0    0    -1  
 $EndComp
-Text Label 7550 1800 0    60   ~ 0
+Text Label 7550 1700 0    60   ~ 0
 3V3
 $Comp
 L R R3
@@ -943,7 +943,7 @@ Wire Wire Line
 Connection ~ 1300 5000
 Connection ~ 1450 5200
 Wire Wire Line
-	2350 6150 1700 6150
+	2350 6150 2000 6150
 Wire Wire Line
 	1300 4500 1300 4400
 Wire Wire Line
@@ -1068,12 +1068,28 @@ Connection ~ 8250 1850
 Wire Wire Line
 	8100 2700 8250 2700
 Connection ~ 8250 2700
+Text Label 6325 5650 0    60   ~ 0
+IMP_50OHM
+Wire Wire Line
+	2000 5650 2350 5650
+Text Label 2000 5650 0    60   ~ 0
+GPIO31
+Wire Wire Line
+	9950 1100 9550 1100
+Text Label 9550 1100 0    60   ~ 0
+GPIO31
 $Sheet
-S 9950 700  500  750 
+S 9950 700  775  1225
 U 5452FF59
 F0 "cc3200-io" 60
 F1 "cc3200board-io.sch" 60
+F2 "GPIO31" I L 9950 1100 60 
+F3 "nRESET" I L 9950 1200 60 
 $EndSheet
-Text Label 6325 5650 0    60   ~ 0
-IMP_50OHM
+Wire Wire Line
+	9950 1200 9575 1200
+Text Label 6350 1300 0    60   ~ 0
+nRESET
+Text Label 9575 1200 0    60   ~ 0
+nRESET
 $EndSCHEMATC
