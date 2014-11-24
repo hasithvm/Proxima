@@ -100,13 +100,13 @@ F 3 "" H 2450 4150 60  0000 C CNN
 	1    2450 4150
 	1    0    0    -1  
 $EndComp
-Text GLabel 1900 2200 0    60   Input ~ 0
+Text GLabel 1000 2200 0    60   Input ~ 0
 SPI_CS1
-Text GLabel 1900 2650 0    60   Input ~ 0
+Text GLabel 1000 2650 0    60   Input ~ 0
 SPI_SCK
-Text GLabel 1900 2350 0    60   Input ~ 0
+Text GLabel 1000 2350 0    60   Input ~ 0
 SPI_MOSI
-Text GLabel 1900 2950 0    60   Input ~ 0
+Text GLabel 1000 2950 0    60   Input ~ 0
 SPI_MISO
 Text GLabel 1900 3400 0    60   Input ~ 0
 SD_SWITCH
@@ -302,17 +302,6 @@ F 1 "GND" H 7050 4080 30  0001 C CNN
 F 2 "" H 7050 4150 60  0000 C CNN
 F 3 "" H 7050 4150 60  0000 C CNN
 	1    7050 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L 3V3 #PWR?
-U 1 1 5461AEF9
-P 7050 3600
-F 0 "#PWR?" H 7050 3700 40  0001 C CNN
-F 1 "3V3" H 7050 3725 40  0000 C CNN
-F 2 "" H 7050 3600 60  0000 C CNN
-F 3 "" H 7050 3600 60  0000 C CNN
-	1    7050 3600
 	1    0    0    -1  
 $EndComp
 Text Notes 3200 1700 0    60   ~ 0
@@ -574,8 +563,6 @@ Wire Wire Line
 Wire Wire Line
 	1200 5550 2200 5550
 Wire Wire Line
-	7050 3600 7050 3800
-Wire Wire Line
 	7050 3950 7050 4150
 Wire Wire Line
 	7850 4900 7850 5100
@@ -687,6 +674,12 @@ Connection ~ 2450 4000
 Wire Wire Line
 	2250 4000 2450 4000
 Wire Wire Line
+	2550 2650 1000 2650
+Wire Wire Line
+	1000 2200 2550 2200
+Wire Wire Line
+	1000 2350 2550 2350
+Wire Wire Line
 	2450 2800 2450 4150
 Wire Wire Line
 	2450 2800 2550 2800
@@ -721,6 +714,8 @@ F 3 "~" H 2150 1700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+	1000 2950 2550 2950
+Wire Wire Line
 	2300 2500 2550 2500
 Wire Wire Line
 	2550 2050 2450 2050
@@ -745,12 +740,30 @@ Wire Wire Line
 Wire Wire Line
 	2000 3250 2000 1300
 Connection ~ 2150 1300
+$Comp
+L CONN_2 J?
+U 1 1 54728756
+P 6700 3350
+F 0 "J?" V 6650 3350 40  0000 C CNN
+F 1 "BACKL" V 6750 3350 40  0000 C CNN
+F 2 "" H 6700 3350 60  0000 C CNN
+F 3 "" H 6700 3350 60  0000 C CNN
+	1    6700 3350
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	1900 2200 2550 2200
+	7050 3800 7050 3450
+$Comp
+L 3V3 #PWR?
+U 1 1 54728806
+P 7050 2900
+F 0 "#PWR?" H 7050 3000 40  0001 C CNN
+F 1 "3V3" H 7050 3025 40  0000 C CNN
+F 2 "" H 7050 2900 60  0000 C CNN
+F 3 "" H 7050 2900 60  0000 C CNN
+	1    7050 2900
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2550 2350 1900 2350
-Wire Wire Line
-	1900 2650 2550 2650
-Wire Wire Line
-	2550 2950 1900 2950
+	7050 3250 7050 2900
 $EndSCHEMATC
