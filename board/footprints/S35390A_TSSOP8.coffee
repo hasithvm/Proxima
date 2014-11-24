@@ -17,7 +17,7 @@ footprint = () ->
   pad_between = 0.65
 
   r1 = make_rect module_dx, module_dy, 0.1, "docu"
-  r2 = make_rect module_dx+0.2, module_dy+0.2, 0.1, "silk"
+  r2 = make_rect module_dx-0.75, module_dy+0.2, 0.1, "silk"
 
   pad = new Smd
   pad.dx = pad_dx
