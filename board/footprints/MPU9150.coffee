@@ -31,7 +31,7 @@ footprint = () ->
   udpad_vadj -= (pad_dx / 2) + ud_pad_from_bottom - (land_dx - pad_dx)/2
 
   r1 = make_rect module_dx, module_dy, 0.1, 'docu'
-  r2 = make_rect module_dx + 0.2, module_dy+0.2, 0.1, 'silk'
+  r2 = make_rect module_dx - land_dx-0.5, module_dy-land_dx-0.5, 0.1, 'silk'
 
   pad = new Smd
   pad.dx = land_dx
@@ -60,7 +60,7 @@ footprint = () ->
   name= new Name (module_dy-0.5)
 
   pin1 = new Disc (0.25)
-  pin1.x = -(module_dx / 2) - 6*ud_pad_from_bottom
-  pin1.y = (module_dy / 2) - 6*ud_pad_from_bottom
+  pin1.x = -(module_dx / 2) + 1
+  pin1.y = (module_dy / 2) - 1
 
   combine [r1, r2, l1, l2, l3, l4, name, pin1]
