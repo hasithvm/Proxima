@@ -18,9 +18,7 @@ footprint = () ->
   pad_voffset = silk_dy/2 - module_dy + pad_dy/2 - 0.3
 
   r1 = make_rect module_dx, silk_dy, 0.1, 'docu'
-  r2 = make_rect module_dx+0.2, silk_dy+0.2, 0.1, 'silk'
-  r3 = make_rect module_dx+0.2, module_dy+0.2, 0.1, 'silk'
-  r3 = adjust_y r3, (silk_dy - module_dy)/2
+  r2 = make_rect module_dx-2.2, silk_dy-2.5, 0.1, 'silk'
 
   pad = new Smd
   pad.dx = pad_dx

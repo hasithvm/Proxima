@@ -22,7 +22,7 @@ footprint = () ->
   pad_hadj = (4.4)/2
 
   r1 = make_rect module_dx, module_dy, 0.1, "docu"
-  r2 = make_rect module_dx + 0.2, module_dy+0.2, 0.1, "silk"
+  r2 = make_rect module_dx - 0.2, module_dy+0.2, 0.1, "silk"
 
   l1 = single pad, n_left, pad_between
   l1 = adjust_x l1, -pad_hadj
