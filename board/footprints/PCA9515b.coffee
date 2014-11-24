@@ -32,6 +32,10 @@ footprint = () ->
   l2 = adjust_x l2, pad_hadj
   l2 = generate_names l2, n_left
 
+  pin1 = new Disc(0.25)
+  pin1.x = -module_dx/3
+  pin1.y = module_dy/3
+
   name = new Name(module_dy)
 
-  combine [l1, l2, r1, r2, name]
+  combine [l1, l2, r1, r2, pin1, name]
