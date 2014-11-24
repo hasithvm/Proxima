@@ -51,5 +51,6 @@ footprint = () ->
   pin1.y = module_dy/2
 
   name = new Name(module_dy+1)
+  name.dy = 0.8
 
   combine [r1, r2, lp,gp1, rp,gp2, pin1, name]

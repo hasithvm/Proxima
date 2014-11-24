@@ -318,12 +318,34 @@ Text Label 4100 6750 0    60   ~ 0
 TCK
 Text Label 4300 6750 0    60   ~ 0
 TMS
+Text Label 8175 4575 0    60   ~ 0
+TDI
+Text Label 8175 4675 0    60   ~ 0
+TDO
+Text Label 8175 4775 0    60   ~ 0
+TCK
+Text Label 8175 4875 0    60   ~ 0
+TMS
+Text Label 9350 4575 2    60   ~ 0
+SOP0
+Text Label 9350 4675 2    60   ~ 0
+SOP2
+Text HLabel 1250 4575 0    60   Input ~ 0
+GPIO31
+Text Label 1400 4575 0    60   ~ 0
+GPIO31
+Text HLabel 1250 4725 0    60   Input ~ 0
+nRESET
+Text Label 1425 4725 0    60   ~ 0
+nRESET
+Text Label 9350 4775 2    60   ~ 0
+nRESET
 Wire Wire Line
 	2800 6450 2800 6650
 Wire Wire Line
 	2600 6450 2600 6650
 Wire Wire Line
-	3000 6650 3000 6450
+	3000 6450 3000 6650
 Wire Wire Line
 	3000 7300 3000 7150
 Wire Wire Line
@@ -453,18 +475,22 @@ Wire Wire Line
 	9150 4575 9350 4575
 Wire Wire Line
 	9150 4675 9350 4675
-Text Label 8225 4575 0    60   ~ 0
-TDI
-Text Label 8225 4675 0    60   ~ 0
-TDO
-Text Label 8225 4775 0    60   ~ 0
-TCK
-Text Label 8225 4875 0    60   ~ 0
-TMS
-Text Label 9175 4575 0    60   ~ 0
-SOP0
-Text Label 9175 4675 0    60   ~ 0
-SOP2
-Text HLabel 1250 4575 0    60   Input ~ 0
-GPIO31
+Wire Wire Line
+	1250 4575 1400 4575
+Wire Wire Line
+	1250 4725 1425 4725
+Wire Wire Line
+	9150 4775 9350 4775
+Wire Wire Line
+	5350 5100 5700 5100
+Wire Wire Line
+	5350 5750 5700 5750
+Text Label 5700 5750 2    60   ~ 0
+GPIO30
+Entry Wire Line
+	5700 5750 5800 5850
+Entry Wire Line
+	5700 5100 5800 5200
+Text Label 5700 5100 2    60   ~ 0
+GPIO22
 $EndSCHEMATC
