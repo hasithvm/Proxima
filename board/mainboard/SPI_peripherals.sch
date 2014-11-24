@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
 Title ""
-Date "23 nov 2014"
+Date "24 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -100,13 +100,13 @@ F 3 "" H 2450 4150 60  0000 C CNN
 	1    2450 4150
 	1    0    0    -1  
 $EndComp
-Text GLabel 1000 2200 0    60   Input ~ 0
+Text GLabel 1900 2200 0    60   Input ~ 0
 SPI_CS1
-Text GLabel 1000 2650 0    60   Input ~ 0
+Text GLabel 1900 2650 0    60   Input ~ 0
 SPI_SCK
-Text GLabel 1000 2350 0    60   Input ~ 0
+Text GLabel 1900 2350 0    60   Input ~ 0
 SPI_MOSI
-Text GLabel 1000 2950 0    60   Input ~ 0
+Text GLabel 1900 2950 0    60   Input ~ 0
 SPI_MISO
 Text GLabel 1900 3400 0    60   Input ~ 0
 SD_SWITCH
@@ -687,12 +687,6 @@ Connection ~ 2450 4000
 Wire Wire Line
 	2250 4000 2450 4000
 Wire Wire Line
-	2550 2650 1000 2650
-Wire Wire Line
-	1000 2200 2550 2200
-Wire Wire Line
-	1000 2350 2550 2350
-Wire Wire Line
 	2450 2800 2450 4150
 Wire Wire Line
 	2450 2800 2550 2800
@@ -727,8 +721,6 @@ F 3 "~" H 2150 1700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1000 2950 2550 2950
-Wire Wire Line
 	2300 2500 2550 2500
 Wire Wire Line
 	2550 2050 2450 2050
@@ -753,4 +745,12 @@ Wire Wire Line
 Wire Wire Line
 	2000 3250 2000 1300
 Connection ~ 2150 1300
+Wire Wire Line
+	1900 2200 2550 2200
+Wire Wire Line
+	2550 2350 1900 2350
+Wire Wire Line
+	1900 2650 2550 2650
+Wire Wire Line
+	2550 2950 1900 2950
 $EndSCHEMATC
