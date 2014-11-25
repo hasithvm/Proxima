@@ -13,7 +13,7 @@ footprint = () ->
   module_dx = outer_sep + pad_between
   module_dy = 8*pad_between
 
-  pad = new RoundPad(0.7, 0.7)
+  pad = new RoundPad(0.8,1)
   
   n_outer = 16
   n_inner = 8
