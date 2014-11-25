@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 11/24/2014 11:02:04 PM
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Tue 25 Nov 2014 12:52:35 AM EST
 
 BeginCmp
 TimeStamp = /546817DF/5468180C;
@@ -116,14 +116,14 @@ BeginCmp
 TimeStamp = /546817DF/546A78E2;
 Reference = C16;
 ValeurCmp = 330uF;
-IdModule  = CP8;
+IdModule  = CAP_8x6.2;
 EndCmp
 
 BeginCmp
 TimeStamp = /546817DF/546A78FF;
 Reference = C17;
 ValeurCmp = 330uF;
-IdModule  = CP8;
+IdModule  = CAP_8x6.2;
 EndCmp
 
 BeginCmp
@@ -358,17 +358,10 @@ IdModule  = PIN_ARRAY_5x1;
 EndCmp
 
 BeginCmp
-TimeStamp = /5467DA0A/546A9114;
+TimeStamp = /5467DA0A/54741374;
 Reference = P10;
 ValeurCmp = BUMPERS;
-IdModule  = PIN_ARRAY_2X1;
-EndCmp
-
-BeginCmp
-TimeStamp = /54722340/547257ED;
-Reference = P11;
-ValeurCmp = CC_ISO;
-IdModule  = 2x10_Headers;
+IdModule  = PIN_ARRAY_4x1;
 EndCmp
 
 BeginCmp

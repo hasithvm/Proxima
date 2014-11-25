@@ -446,17 +446,6 @@ Wire Wire Line
 Connection ~ 9550 5100
 Wire Wire Line
 	9550 4650 9550 6150
-$Comp
-L CONN_2 P10
-U 1 1 546A9114
-P 10250 2250
-F 0 "P10" V 10200 2250 40  0000 C CNN
-F 1 "BUMPERS" V 10300 2250 40  0000 C CNN
-F 2 "" H 10250 2250 60  0000 C CNN
-F 3 "" H 10250 2250 60  0000 C CNN
-	1    10250 2250
-	1    0    0    -1  
-$EndComp
 Text GLabel 9700 2150 0    60   Input ~ 0
 BUMP1
 Text GLabel 9700 2350 0    60   Input ~ 0
@@ -589,17 +578,17 @@ Wire Wire Line
 Connection ~ 10000 6700
 Wire Wire Line
 	8050 1250 8050 1350
-Text GLabel 3500 5150 0    60   Input ~ 0
-RTCINT1
-Text GLabel 3500 5300 0    60   Input ~ 0
-RTCINT2
 Text GLabel 3500 5450 0    60   Input ~ 0
-MPUINT
+RTCINT1
 Text GLabel 3500 5600 0    60   Input ~ 0
-SD_SWITCH
+RTCINT2
+Text GLabel 3500 5150 0    60   Input ~ 0
+MPUINT
 Text GLabel 3500 5750 0    60   Input ~ 0
-MOTOR1F
+SD_SWITCH
 Text GLabel 3500 5900 0    60   Input ~ 0
+MOTOR1F
+Text GLabel 3500 6050 0    60   Input ~ 0
 MOTOR2F
 Wire Wire Line
 	3500 5150 3900 5150
@@ -637,7 +626,7 @@ Text GLabel 7150 3800 2    60   Input ~ 0
 GLCD_A0_LP
 Wire Wire Line
 	6850 3800 7150 3800
-Text GLabel 3500 6050 0    60   Input ~ 0
+Text GLabel 3500 5300 0    60   Input ~ 0
 WIFI_INT
 Text GLabel 7150 1550 2    60   Input ~ 0
 PE0
@@ -725,4 +714,33 @@ Wire Wire Line
 	3950 5900 3900 5900
 Wire Wire Line
 	3900 5900 3900 6050
+$Comp
+L CONN_4 P10
+U 1 1 54741374
+P 10250 2300
+F 0 "P10" V 10200 2300 50  0000 C CNN
+F 1 "BUMPERS" V 10300 2300 50  0000 C CNN
+F 2 "" H 10250 2300 60  0000 C CNN
+F 3 "" H 10250 2300 60  0000 C CNN
+	1    10250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR052
+U 1 1 54741383
+P 9800 2600
+F 0 "#PWR052" H 9800 2600 30  0001 C CNN
+F 1 "GND" H 9800 2530 30  0001 C CNN
+F 2 "" H 9800 2600 60  0000 C CNN
+F 3 "" H 9800 2600 60  0000 C CNN
+	1    9800 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 2250 9800 2250
+Wire Wire Line
+	9800 2250 9800 2600
+Wire Wire Line
+	9900 2450 9800 2450
+Connection ~ 9800 2450
 $EndSCHEMATC

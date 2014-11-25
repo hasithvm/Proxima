@@ -47,13 +47,13 @@ footprint = () ->
   l3 = generate_names l3, n_left
 
   t1 = single tpad, 1, 0
-  t1 = generate_names t1, n_left - 1
+  t1 = generate_names t1, 2
 
   arm_between = 2.4 + tpad_arm.dx
   t2 = dual tpad_arm, 4, 0.5, arm_between
 
   for smd in t2
-    smd.name = n_left
+    smd.name = 3
 
   sline = new Line(0.1)
   sline.y1=-0.4
