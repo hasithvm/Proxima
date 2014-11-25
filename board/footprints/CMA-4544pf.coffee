@@ -21,7 +21,7 @@ footprint = () ->
 
   pad = new RoundPad 0.5, 0.5
 
-  pads = rot_single pad, 2, pad_between
+  pads = rot_single pad, 2, -pad_between
   pads = adjust_y pads, 2
 
   name = new Name(module_radius+1)
