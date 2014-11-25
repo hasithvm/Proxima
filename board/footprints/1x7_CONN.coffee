@@ -26,8 +26,11 @@ footprint = () ->
       col = single pad, nrows, pad_between
     col = generate_names col, i * nrows
     col = adjust_x col, i * pad_between
-
     cols = combine [cols, col]
+
+  cols[0].shape = "rect"
+  cols[0].dx = 1.4
+  cols[0].dy = 1.4
 
   hadj = (ncols - 1)*(pad_between/2)
 
