@@ -1,7 +1,7 @@
 #format 1.2
-#name 1x8 Headers
+#name 1x8_Headers
 #id 1x8_CONN
-#desc 1 column, 8 rows of 0.1" headers
+#desc 1 column, 8 rows of 0.1 headers
 
 footprint = () ->
 
