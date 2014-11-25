@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 4 8
 Title ""
-Date "24 nov 2014"
+Date "25 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -637,25 +637,8 @@ Text GLabel 7150 3800 2    60   Input ~ 0
 GLCD_A0_LP
 Wire Wire Line
 	6850 3800 7150 3800
-$Comp
-L CONN_7 P8
-U 1 1 547268C8
-P 4300 5600
-F 0 "P8" V 4270 5600 60  0000 C CNN
-F 1 "INT_SRC" V 4370 5600 60  0000 C CNN
-F 2 "" H 4300 5600 60  0000 C CNN
-F 3 "" H 4300 5600 60  0000 C CNN
-	1    4300 5600
-	1    0    0    -1  
-$EndComp
 Text GLabel 3500 6050 0    60   Input ~ 0
 WIFI_INT
-Wire Wire Line
-	3500 6050 3900 6050
-Wire Wire Line
-	3900 6050 3900 5900
-Wire Wire Line
-	3900 5900 3950 5900
 Text GLabel 7150 1550 2    60   Input ~ 0
 PE0
 Wire Wire Line
@@ -719,4 +702,27 @@ Wire Wire Line
 	6150 5950 6450 5950
 Wire Wire Line
 	6450 5950 6450 5850
+$Comp
+L CONN_8 P8
+U 1 1 5473C1EB
+P 4300 5650
+F 0 "P8" V 4250 5650 60  0000 C CNN
+F 1 "OPTIONAL_PERIPH" V 4350 5650 60  0000 C CNN
+F 2 "" H 4300 5650 60  0000 C CNN
+F 3 "" H 4300 5650 60  0000 C CNN
+	1    4300 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 6050 3900 6050
+Text GLabel 3500 6200 0    60   Input ~ 0
+AUD_DAC_CL
+Wire Wire Line
+	3500 6200 3950 6200
+Wire Wire Line
+	3950 6200 3950 6000
+Wire Wire Line
+	3950 5900 3900 5900
+Wire Wire Line
+	3900 5900 3900 6050
 $EndSCHEMATC
