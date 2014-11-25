@@ -19,7 +19,7 @@ footprint = () ->
   pad_vadj = module_dy/2 + pad_dy/2 + 0.15
 
   r1 = make_rect module_dx, module_dy, 0.1, 'docu'
-  r2 = make_rect module_dx+0.2, module_dy+0.2, 0.1, 'silk'
+  r2 = make_rect module_dx-0.2, module_dy-0.2, 0.1, 'silk'
 
   name = rotate90 (new Name(module_dx-2))
 
@@ -37,7 +37,7 @@ footprint = () ->
   l2 = generate_names l2, n_down
 
   pin1 = new Disc(0.25)
-  pin1.x = -module_dx/2
-  pin1.y = -module_dy/2 - 1
+  pin1.x = -module_dx/3 - 1
+  pin1.y = -module_dy/3
 
   combine [l1, l2, r1, r2, name, pin1]
