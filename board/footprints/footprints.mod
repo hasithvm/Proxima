@@ -33,6 +33,7 @@ HC-49US
 CMA-4544
 PTS645
 P090_Potentiometer
+CAP_8x6.2
 $EndINDEX
 $MODULE DRV8830
 Po 0 0 0 15 5472da77 00000000 ~~
@@ -2991,4 +2992,32 @@ DS 5.8 -5.6 -5.8 -5.6 0.1 21
 DS -5.8 -5.6 -5.8 8.1 0.1 21
 T0 0.0 -8.25 0.625 0.625 0 0.1 N V 21 N "NAME"
 $EndMODULE P090_Potentiometer
+$MODULE CAP_8x6.2
+Po 0 0 0 15 547417c8 00000000 ~~
+Li CAP_8x6.2
+Cd 8mm dia cap, 6.2mm long
+Sc 0
+Op 0 0 0
+DS -4.0 4.0 -4.0 -2.0 0.1 21
+DS -4.0 -2.0 -2.0 -4.0 0.1 21
+DS 4.0 4.0 4.0 -2.0 0.1 21
+DS 4.0 -2.0 2.0 -4.0 0.1 21
+DS -4.0 4.0 4.0 4.0 0.1 24
+DS 4.0 4.0 4.0 -4.0 0.1 24
+DS 4.0 -4.0 -4.0 -4.0 0.1 24
+DS -4.0 -4.0 -4.0 4.0 0.1 24
+$PAD
+Sh "1" R 2.5 4 0 0 0.0
+Po 0.0 -4.125
+At SMD N 00888000
+Ne 0 ""
+$ENDPAD
+$PAD
+Sh "2" R 2.5 4 0 0 0.0
+Po 0.0 4.125
+At SMD N 00888000
+Ne 0 ""
+$ENDPAD
+T0 0.0 -8.5 0.8 0.8 0 0.1 N V 21 N "NAME"
+$EndMODULE CAP_8x6.2
 $EndLIBRARY
