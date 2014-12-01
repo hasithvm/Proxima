@@ -49,7 +49,9 @@ footprint = () ->
     left = single pad, pads_per_side, pad_spacing
     left = adjust_x left, -module_dx/2 + 0.5
     left = generate_names left, pads_per_side
-
+    t_via = new SquarePad(0.254, 0.3556)
+    t_vias = single t_via, 7, 1
+ 
 
     name = new Name(module_dy * 0.75)
-    combine [r1, r2, top, right, bt, left, mask_open, pin_1, gnd_pad, name]
+    combine [r1, r2, top, right, bt, left, mask_open, pin_1, t_vias, name]

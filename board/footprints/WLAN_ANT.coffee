@@ -38,11 +38,14 @@ footprint = () ->
   gp2 = clone gp1
   gp2.y = -pad_vadj 
 
-
+  
+  gp3 = clone gp1
+  gp3.y = (pad_vadj - 0.5) + 2.3
+  gp3.dy = 3
   pin1 = new Disc(0.25)
   pin1.x = -module_dx
   pin1.y = module_dy/2
 
   name = new Name(module_dy+1)
 
-  combine [r1, r2, gp1, gp2, pin1, name]
+  combine [r1, r2, gp1, gp2, gp3, pin1, name]
