@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/hasith/development/Proxima/board/cc3200board/cc3200board.sch)
-    (date "Mon 01 Dec 2014 12:24:30 AM EST")
+    (date "Mon 01 Dec 2014 12:41:45 AM EST")
     (tool "Eeschema (2014-10-30 BZR 5240)-product"))
   (components
     (comp (ref C1)
@@ -130,13 +130,17 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5448AAE5))
     (comp (ref U1)
-      (value CC3200R1M2RGCR)
+      (value CC3200)
       (footprint VQFN64)
+      (fields
+        (field (name PartNum) CC3200R1M2RGCR))
       (libsource (lib cc3200board) (part CC3200R1M2RGCR))
       (sheetpath (names /) (tstamps /))
       (tstamp 5448A79E))
     (comp (ref U2)
-      (value N25Q128A13ESE40E)
+      (value 16MiB)
+      (fields
+        (field (name PartNum) N25Q128A13ESE40E))
       (libsource (lib cc3200board) (part N25Q128A13ESE40E))
       (sheetpath (names /) (tstamps /))
       (tstamp 5448A7AD))
@@ -161,7 +165,9 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5448BA2C))
     (comp (ref X2)
-      (value ABM3B-40.000MHZ-10-1-U-T)
+      (value 40M)
+      (fields
+        (field (name PartNumber) ABM3B-40.000MHZ-10-1-U-T))
       (libsource (lib cc3200board) (part 4-PIN_XTAL))
       (sheetpath (names /) (tstamps /))
       (tstamp 5452C7B3))
@@ -186,7 +192,9 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5452DD2A))
     (comp (ref E1)
-      (value AH316M245001-T)
+      (value 2.4GHz)
+      (fields
+        (field (name PartNum) AH316M245001-T))
       (libsource (lib cc3200board) (part ANT))
       (sheetpath (names /) (tstamps /))
       (tstamp 5452DFC3))
