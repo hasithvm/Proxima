@@ -1,7 +1,20 @@
-update=Sun 23 Nov 2014 08:24:48 PM EST
+update=Mon 01 Dec 2014 11:18:03 PM EST
 last_client=kicad
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
 [eeschema]
 version=1
 LibDir=../mainboard
@@ -38,16 +51,4 @@ LibName29=contrib
 LibName30=valves
 LibName31=cc3200board
 LibName32=/home/hasith/development/Proxima/board/mainboard/mainboard
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
+LibName33=cc3200board-extra
