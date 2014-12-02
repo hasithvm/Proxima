@@ -1,6 +1,6 @@
 #format 1.2
 #name QRE1113
-#id 7b17f32b0c2f4aeaa962b4badeef0048
+#id QRE1113-GR
 #desc Photodetector LED combo
 
 footprint = () ->
@@ -22,8 +22,8 @@ footprint = () ->
 
   pad_hadj = ((0.8 + pad_dy)/2)
 
-  body = make_rect module_dx, module_dy, 0.1, "docu"
-  gap = make_rect module_dx + 0.2, module_dy+0.2, 0.1, "silk"
+  body =make_rect module_dx-0.15, module_dy-0.15-0.5, 0.1, "docu"
+  gap = make_rect module_dx-0.05, module_dy-0.05-0.5, 0.1, "silk"
 
   right = single pad, n_right, pad_across + pad_dx
   left = single pad, n_left, pad_across + pad_dx
@@ -36,8 +36,8 @@ footprint = () ->
   left = generate_names left, n_right
 
   pin1 = new Disc(0.25)
-  pin1.x = module_dx/2 + 1
-  pin1.y = -(module_dy/2 + 1)
+  pin1.x = module_dx/2 - 0.5
+  pin1.y = -(module_dy/2 - 0.75)
 
   name = new Name(module_dy+1)
 
