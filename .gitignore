@@ -38,3 +38,7 @@
 # Vim Files
 *.swo
 *.swp
+
+# Generated Files
+bin/
+
