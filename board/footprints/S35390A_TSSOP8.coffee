@@ -35,8 +35,8 @@ footprint = () ->
   l2 = generate_names l2, n_right
 
   pin1 = new Disc(0.25)
-  pin1.x = -module_dx
-  pin1.y = module_dy/2
+  pin1.x = -module_dx/3
+  pin1.y = module_dy/3
 
   name = new Name(module_dy)
 
