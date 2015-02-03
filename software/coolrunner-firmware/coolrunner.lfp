@@ -1,0 +1,25 @@
+# begin LFP file C:\Users\Hasith\Repos\Proxima\software\coolrunner-firmware\coolrunner.lfp
+designfile toplevel.vhd
+parttype xc2c64a-vq44-5
+bus_delimiter 0;
+set_busdelim_onsave 0;
+IO_GROUP "spi_in"  ;
+IO_GROUP "spi_cs_in"  ;
+IO_GROUP "spi_out"  ;
+IO_GROUP "spi_cs"  ;
+NET "spi_in<2>" IO_GROUP="spi_in"  ;
+NET "spi_in<1>" IO_GROUP="spi_in"  ;
+NET "spi_in<0>" IO_GROUP="spi_in"  ;
+NET "spi_cs_in<2>" IO_GROUP="spi_cs_in"  ;
+NET "spi_cs_in<1>" IO_GROUP="spi_cs_in"  ;
+NET "spi_cs_in<0>" IO_GROUP="spi_cs_in"  ;
+NET "spi_out<2>" IO_GROUP="spi_out"  ;
+NET "spi_out<1>" IO_GROUP="spi_out"  ;
+NET "spi_out<0>" IO_GROUP="spi_out"  ;
+NET "spi_cs<6>" IO_GROUP="spi_cs"  ;
+NET "spi_cs<5>" IO_GROUP="spi_cs"  ;
+NET "spi_cs<4>" IO_GROUP="spi_cs"  ;
+NET "spi_cs<3>" IO_GROUP="spi_cs"  ;
+NET "spi_cs<2>" IO_GROUP="spi_cs"  ;
+NET "spi_cs<1>" IO_GROUP="spi_cs"  ;
+NET "spi_cs<0>" IO_GROUP="spi_cs"  ;
