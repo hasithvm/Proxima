@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 3 7
 Title ""
-Date "25 nov 2014"
+Date "13 feb 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -311,93 +311,6 @@ F 3 "" H 8700 1850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS138 U1
-U 1 1 546AA00B
-P 2800 5800
-F 0 "U1" H 2900 6300 60  0000 C CNN
-F 1 "74LS138" H 2950 5251 60  0000 C CNN
-F 2 "~" H 2800 5800 60  0000 C CNN
-F 3 "~" H 2800 5800 60  0000 C CNN
-	1    2800 5800
-	1    0    0    -1  
-$EndComp
-Text GLabel 1200 5400 0    60   Input ~ 0
-SPI_SEL0
-Text GLabel 1200 5550 0    60   Input ~ 0
-SPI_SEL1
-Text GLabel 1200 5700 0    60   Input ~ 0
-SPI_SEL2
-Text GLabel 3700 5550 2    60   Input ~ 0
-SPI_CS1
-Text GLabel 4150 5650 2    60   Input ~ 0
-SPI_CS2
-Text GLabel 3700 5750 2    60   Input ~ 0
-SPI_CS3
-Text GLabel 4150 5850 2    60   Input ~ 0
-SPI_CS4
-Text GLabel 3700 5950 2    60   Input ~ 0
-SPI_CS5
-Text GLabel 4150 6050 2    60   Input ~ 0
-SPI_CS6
-Text GLabel 3700 6150 2    60   Input ~ 0
-SPI_CS7
-NoConn ~ 3400 5450
-$Comp
-L GND #PWR033
-U 1 1 546AB116
-P 2150 6850
-F 0 "#PWR033" H 2150 6850 30  0001 C CNN
-F 1 "GND" H 2150 6780 30  0001 C CNN
-F 2 "" H 2150 6850 60  0000 C CNN
-F 3 "" H 2150 6850 60  0000 C CNN
-	1    2150 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R9
-U 1 1 546AB137
-P 1800 6450
-F 0 "R9" V 1880 6450 40  0000 C CNN
-F 1 "47k" V 1807 6451 40  0000 C CNN
-F 2 "~" V 1730 6450 30  0000 C CNN
-F 3 "~" H 1800 6450 30  0000 C CNN
-	1    1800 6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R8
-U 1 1 546AB13D
-P 1550 6450
-F 0 "R8" V 1630 6450 40  0000 C CNN
-F 1 "47k" V 1557 6451 40  0000 C CNN
-F 2 "~" V 1480 6450 30  0000 C CNN
-F 3 "~" H 1550 6450 30  0000 C CNN
-	1    1550 6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R7
-U 1 1 546AB143
-P 1300 6450
-F 0 "R7" V 1380 6450 40  0000 C CNN
-F 1 "47k" V 1307 6451 40  0000 C CNN
-F 2 "~" V 1230 6450 30  0000 C CNN
-F 3 "~" H 1300 6450 30  0000 C CNN
-	1    1300 6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 3V3 #PWR034
-U 1 1 546ABAD8
-P 2050 5950
-F 0 "#PWR034" H 2050 6050 40  0001 C CNN
-F 1 "3V3" H 2050 6075 40  0000 C CNN
-F 2 "" H 2050 5950 60  0000 C CNN
-F 3 "" H 2050 5950 60  0000 C CNN
-	1    2050 5950
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR035
 U 1 1 54726C24
 P 5700 4950
@@ -425,10 +338,6 @@ Text GLabel 5300 4150 0    60   Input ~ 0
 SPI_MOSI
 Text GLabel 5300 4300 0    60   Input ~ 0
 SPI_MISO
-Text GLabel 4200 6950 0    60   Input ~ 0
-SPI_CS5
-Text GLabel 4550 6950 2    60   Input ~ 0
-SPI_CS_CC
 Text GLabel 5300 4450 0    60   Input ~ 0
 SPI_CS6
 Text GLabel 5300 4600 0    60   Input ~ 0
@@ -450,68 +359,9 @@ Wire Wire Line
 Wire Wire Line
 	5300 4300 5850 4300
 Wire Wire Line
-	4200 6950 4550 6950
-Wire Wire Line
 	5700 4700 5700 4950
 Wire Wire Line
 	5850 4700 5700 4700
-Connection ~ 1550 6750
-Wire Wire Line
-	1300 6750 1300 6700
-Connection ~ 1800 6750
-Wire Wire Line
-	1550 6750 1550 6700
-Wire Wire Line
-	1800 6750 1800 6700
-Connection ~ 2150 6750
-Wire Wire Line
-	1300 6750 2150 6750
-Connection ~ 1800 5700
-Wire Wire Line
-	1800 6200 1800 5700
-Connection ~ 1550 5550
-Wire Wire Line
-	1550 6200 1550 5550
-Connection ~ 2150 6150
-Wire Wire Line
-	2150 6150 2200 6150
-Wire Wire Line
-	2150 6050 2150 6850
-Wire Wire Line
-	2200 6050 2150 6050
-Wire Wire Line
-	2050 5950 2200 5950
-Connection ~ 1300 5400
-Wire Wire Line
-	1300 5400 1300 6200
-Wire Wire Line
-	3400 6150 3700 6150
-Wire Wire Line
-	3400 6050 4150 6050
-Wire Wire Line
-	3400 5950 3700 5950
-Wire Wire Line
-	3400 5850 4150 5850
-Wire Wire Line
-	3400 5750 3700 5750
-Wire Wire Line
-	3400 5650 4150 5650
-Wire Wire Line
-	3400 5550 3700 5550
-Wire Wire Line
-	2050 5650 2200 5650
-Wire Wire Line
-	2050 5700 2050 5650
-Wire Wire Line
-	1200 5700 2050 5700
-Wire Wire Line
-	2050 5450 2200 5450
-Wire Wire Line
-	2050 5400 2050 5450
-Wire Wire Line
-	1200 5400 2050 5400
-Wire Wire Line
-	1200 5550 2200 5550
 Wire Wire Line
 	7050 3950 7050 4150
 Wire Wire Line

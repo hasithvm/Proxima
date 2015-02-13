@@ -30,13 +30,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:mainboard-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 5 7
 Title ""
-Date "26 jan 2015"
+Date "13 feb 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -48,226 +49,60 @@ Text GLabel 7900 5150 0    60   Input ~ 0
 I2C_DA_LP
 Text GLabel 7350 5050 0    60   Input ~ 0
 I2C_CL_LP
-Text GLabel 2000 1450 0    60   Input ~ 0
+Text GLabel 2750 4350 0    60   Input ~ 0
 SPI_SCK_LP
-Text GLabel 2000 2050 0    60   Input ~ 0
+Text GLabel 2750 3600 0    60   Input ~ 0
 SPI_MOSI_LP
-Text GLabel 2000 2600 0    60   Input ~ 0
+Text GLabel 2750 3450 0    60   Input ~ 0
 SPI_MISO_LP
-Text GLabel 2000 4000 0    60   Input ~ 0
+Text GLabel 2750 3000 0    60   Input ~ 0
 SPI_SEL0_LP
-Text GLabel 2000 4600 0    60   Input ~ 0
+Text GLabel 2750 3150 0    60   Input ~ 0
 SPI_SEL1_LP
-Text GLabel 2000 5150 0    60   Input ~ 0
+Text GLabel 2750 3300 0    60   Input ~ 0
 SPI_SEL2_LP
-Text GLabel 2000 3150 0    60   Input ~ 0
+Text GLabel 2750 4500 0    60   Input ~ 0
 UART_RX_LP
-Text GLabel 2000 5750 0    60   Input ~ 0
+Text GLabel 2750 4650 0    60   Input ~ 0
 UART_TX_LP
-Text GLabel 3600 1450 2    60   Input ~ 0
+Text GLabel 5250 3500 2    60   Input ~ 0
 SPI_SCK
-Text GLabel 3600 2050 2    60   Input ~ 0
+Text GLabel 5250 3650 2    60   Input ~ 0
 SPI_MOSI
-Text GLabel 3600 2600 2    60   Input ~ 0
+Text GLabel 5250 3800 2    60   Input ~ 0
 SPI_MISO
-Text GLabel 3600 3150 2    60   Input ~ 0
+Text GLabel 2900 5050 0    60   Input ~ 0
 UART_RX
-Text GLabel 3600 4000 2    60   Input ~ 0
-SPI_SEL0
-Text GLabel 3600 4600 2    60   Input ~ 0
-SPI_SEL1
-Text GLabel 3600 5150 2    60   Input ~ 0
-SPI_SEL2
-Text GLabel 3600 5750 2    60   Input ~ 0
+Text GLabel 2900 5200 0    60   Input ~ 0
 UART_TX
-Wire Wire Line
-	3350 4000 3600 4000
-Wire Wire Line
-	3600 4600 3350 4600
-Wire Wire Line
-	3350 5150 3600 5150
-Wire Wire Line
-	3600 5750 3350 5750
-Wire Wire Line
-	3350 3150 3600 3150
-Wire Wire Line
-	3600 2600 3350 2600
-Wire Wire Line
-	3350 2050 3600 2050
-Wire Wire Line
-	3600 1450 3350 1450
-Wire Wire Line
-	2900 1750 2250 1750
-Wire Wire Line
-	2250 2350 2900 2350
-Wire Wire Line
-	2250 2900 2900 2900
-Connection ~ 2250 2350
-Connection ~ 2250 2900
-Wire Wire Line
-	2250 4300 2900 4300
-Connection ~ 2250 3450
-Wire Wire Line
-	2250 4900 2900 4900
-Connection ~ 2250 4300
-Wire Wire Line
-	2250 5450 2900 5450
-Connection ~ 2250 4900
-Wire Wire Line
-	2250 6050 2900 6050
-Connection ~ 2250 5450
-Text GLabel 1300 3450 0    60   Input ~ 0
+Text GLabel 5250 4400 2    60   Input ~ 0
 CC_CONTROL
-$Comp
-L R R27
-U 1 1 54722583
-P 2250 1100
-F 0 "R27" V 2330 1100 40  0000 C CNN
-F 1 "47K" V 2257 1101 40  0000 C CNN
-F 2 "~" V 2180 1100 30  0000 C CNN
-F 3 "~" H 2250 1100 30  0000 C CNN
-	1    2250 1100
-	1    0    0    -1  
-$EndComp
-Connection ~ 2250 6050
-Wire Wire Line
-	2000 1450 2450 1450
-Wire Wire Line
-	2000 2050 2450 2050
-Wire Wire Line
-	2000 2600 2450 2600
-Wire Wire Line
-	2000 3150 2450 3150
-Wire Wire Line
-	1300 3450 2900 3450
-Wire Wire Line
-	2000 4000 2450 4000
-Wire Wire Line
-	2000 4600 2450 4600
-Wire Wire Line
-	2000 5150 2450 5150
-Wire Wire Line
-	2000 5750 2450 5750
-Text GLabel 7550 2750 0    60   Input ~ 0
+Text GLabel 8250 3450 0    60   Input ~ 0
 SPI_SCK_CC
-Text GLabel 7550 2900 0    60   Input ~ 0
+Text GLabel 8250 3600 0    60   Input ~ 0
 SPI_MOSI_CC
-Text GLabel 7550 3050 0    60   Input ~ 0
+Text GLabel 8250 3750 0    60   Input ~ 0
 SPI_MISO_CC
-Text GLabel 7550 3350 0    60   Input ~ 0
+Text GLabel 5250 3950 2    60   Input ~ 0
 SPI_SEL0_CC
-Text GLabel 7550 3500 0    60   Input ~ 0
+Text GLabel 5250 4100 2    60   Input ~ 0
 SPI_SEL1_CC
-Text GLabel 7550 3650 0    60   Input ~ 0
+Text GLabel 5250 4250 2    60   Input ~ 0
 SPI_SEL2_CC
-Text GLabel 7550 3200 0    60   Input ~ 0
+Text GLabel 8250 3900 0    60   Input ~ 0
 UART_RX_CC
-Text GLabel 7550 3800 0    60   Input ~ 0
+Text GLabel 8250 4050 0    60   Input ~ 0
 UART_TX_CC
-Text GLabel 9200 2750 2    60   Input ~ 0
+Text GLabel 8550 3450 2    60   Input ~ 0
 SPI_SCK
-Text GLabel 9200 2900 2    60   Input ~ 0
+Text GLabel 8550 3600 2    60   Input ~ 0
 SPI_MOSI
-Text GLabel 9200 3050 2    60   Input ~ 0
+Text GLabel 8550 3750 2    60   Input ~ 0
 SPI_MISO
-Text GLabel 9200 3200 2    60   Input ~ 0
+Text GLabel 8550 3900 2    60   Input ~ 0
 UART_RX
-Text GLabel 9200 3350 2    60   Input ~ 0
-SPI_SEL0
-Text GLabel 9200 3500 2    60   Input ~ 0
-SPI_SEL1
-Text GLabel 9200 3650 2    60   Input ~ 0
-SPI_SEL2
-Text GLabel 9200 3800 2    60   Input ~ 0
+Text GLabel 8550 4050 2    60   Input ~ 0
 UART_TX
-$Comp
-L 74LS126 U3
-U 1 1 54722780
-P 2900 1450
-F 0 "U3" H 3000 1650 60  0000 C CNN
-F 1 "74ALVC126" H 3150 1300 60  0000 C CNN
-F 2 "~" H 2900 1450 60  0000 C CNN
-F 3 "~" H 2900 1450 60  0000 C CNN
-	1    2900 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS126 U3
-U 2 1 5472278D
-P 2900 2050
-F 0 "U3" H 3000 2250 60  0000 C CNN
-F 1 "74ALVC126" H 3150 1900 60  0000 C CNN
-F 2 "~" H 2900 2050 60  0000 C CNN
-F 3 "~" H 2900 2050 60  0000 C CNN
-	2    2900 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS126 U4
-U 1 1 547227AB
-P 2900 4000
-F 0 "U4" H 3000 4200 60  0000 C CNN
-F 1 "74ALVC126" H 3150 3850 60  0000 C CNN
-F 2 "~" H 2900 4000 60  0000 C CNN
-F 3 "~" H 2900 4000 60  0000 C CNN
-	1    2900 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS126 U4
-U 2 1 547227B1
-P 2900 4600
-F 0 "U4" H 3000 4800 60  0000 C CNN
-F 1 "74ALVC126" H 3150 4450 60  0000 C CNN
-F 2 "~" H 2900 4600 60  0000 C CNN
-F 3 "~" H 2900 4600 60  0000 C CNN
-	2    2900 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS126 U4
-U 3 1 547227B7
-P 2900 5150
-F 0 "U4" H 3000 5350 60  0000 C CNN
-F 1 "74ALVC126" H 3150 5000 60  0000 C CNN
-F 2 "~" H 2900 5150 60  0000 C CNN
-F 3 "~" H 2900 5150 60  0000 C CNN
-	3    2900 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS126 U4
-U 4 1 547227BD
-P 2900 5750
-F 0 "U4" H 3000 5950 60  0000 C CNN
-F 1 "74ALVC126" H 3150 5600 60  0000 C CNN
-F 2 "~" H 2900 5750 60  0000 C CNN
-F 3 "~" H 2900 5750 60  0000 C CNN
-	4    2900 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74LS126 U3
-U 3 1 547227D5
-P 2900 2600
-F 0 "U3" H 3000 2800 60  0000 C CNN
-F 1 "74ALVC126" H 3150 2450 60  0000 C CNN
-F 2 "~" H 2900 2600 60  0000 C CNN
-F 3 "~" H 2900 2600 60  0000 C CNN
-	3    2900 2600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L 74LS126 U3
-U 4 1 547227DB
-P 2900 3150
-F 0 "U3" H 3000 3350 60  0000 C CNN
-F 1 "74ALVC126" H 3150 3000 60  0000 C CNN
-F 2 "~" H 2900 3150 60  0000 C CNN
-F 3 "~" H 2900 3150 60  0000 C CNN
-	4    2900 3150
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7350 5050 8050 5050
 Wire Wire Line
@@ -282,13 +117,13 @@ Wire Wire Line
 	8950 5150 9100 5150
 Text GLabel 7900 5450 0    60   Input ~ 0
 CC_CONTROL
-Text GLabel 7550 2450 0    60   Input ~ 0
+Text GLabel 8250 3150 0    60   Input ~ 0
 I2C_DA_CC
-Text GLabel 7550 2600 0    60   Input ~ 0
+Text GLabel 8250 3300 0    60   Input ~ 0
 I2C_CL_CC
-Text GLabel 9200 2450 2    60   Input ~ 0
+Text GLabel 8550 3150 2    60   Input ~ 0
 I2C_DA
-Text GLabel 9200 2600 2    60   Input ~ 0
+Text GLabel 8550 3300 2    60   Input ~ 0
 I2C_CL
 $Comp
 L PCA9515B U6
@@ -333,133 +168,313 @@ Wire Wire Line
 	7950 5550 7950 5700
 Wire Wire Line
 	7900 5450 8050 5450
-Connection ~ 2250 1750
-$Comp
-L 3V3 #PWR055
-U 1 1 54723FF2
-P 2250 750
-F 0 "#PWR055" H 2250 850 40  0001 C CNN
-F 1 "3V3" H 2250 875 40  0000 C CNN
-F 2 "" H 2250 750 60  0000 C CNN
-F 3 "" H 2250 750 60  0000 C CNN
-	1    2250 750 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	2250 850  2250 750 
-Wire Wire Line
-	7550 2450 7950 2450
-Wire Wire Line
-	7950 2450 7950 2700
-Wire Wire Line
-	7550 2600 7900 2600
-Wire Wire Line
-	7900 2600 7900 2800
-Wire Wire Line
-	7900 2800 8800 2800
-Wire Wire Line
-	7550 2750 7850 2750
-Wire Wire Line
-	7850 2750 7850 2900
-Wire Wire Line
-	7850 2900 8850 2900
-Wire Wire Line
-	7550 2900 7800 2900
-Wire Wire Line
-	7800 2900 7800 3000
-Wire Wire Line
-	7800 3000 8900 3000
-Wire Wire Line
-	7550 3200 9200 3200
-Wire Wire Line
-	7550 3050 7750 3050
-Wire Wire Line
-	7750 3050 7750 3100
-Wire Wire Line
-	7750 3100 8950 3100
-Wire Wire Line
-	7550 3800 7950 3800
-Wire Wire Line
-	7950 3800 7950 3600
-Wire Wire Line
-	7550 3650 7900 3650
-Wire Wire Line
-	7900 3650 7900 3500
-Wire Wire Line
-	7900 3500 8800 3500
-Wire Wire Line
-	7550 3500 7850 3500
-Wire Wire Line
-	7850 3500 7850 3400
-Wire Wire Line
-	7850 3400 8850 3400
-Wire Wire Line
-	7550 3350 7800 3350
-Wire Wire Line
-	7800 3350 7800 3300
-Wire Wire Line
-	7800 3300 8900 3300
-Wire Wire Line
-	9200 3800 8750 3800
-Wire Wire Line
-	8750 3800 8750 3600
-Wire Wire Line
-	9200 3650 8800 3650
-Wire Wire Line
-	8800 3650 8800 3500
-Wire Wire Line
-	9200 3500 8850 3500
-Wire Wire Line
-	8850 3500 8850 3400
-Wire Wire Line
-	9200 3350 8900 3350
-Wire Wire Line
-	8900 3350 8900 3300
-Wire Wire Line
-	9200 2450 8750 2450
-Wire Wire Line
-	8750 2450 8750 2700
-Wire Wire Line
-	9200 2600 8800 2600
-Wire Wire Line
-	8800 2600 8800 2800
-Wire Wire Line
-	9200 2750 8850 2750
-Wire Wire Line
-	8850 2750 8850 2900
-Wire Wire Line
-	9200 2900 8900 2900
-Wire Wire Line
-	8900 2900 8900 3000
-Wire Wire Line
-	9200 3050 8950 3050
-Wire Wire Line
-	8950 3050 8950 3100
-Text GLabel 2000 6850 0    60   Input ~ 0
+	8250 3900 8550 3900
+Text GLabel 5250 5600 2    60   Input ~ 0
 GLCD_A0_LP
-Text GLabel 3600 6850 2    60   Input ~ 0
+Text GLabel 2750 3750 0    60   Input ~ 0
 GLCD_A0
+Text GLabel 5250 5450 2    60   Input ~ 0
+SPI_CS1
+Text GLabel 5250 5300 2    60   Input ~ 0
+SPI_CS2
+Text GLabel 5250 5150 2    60   Input ~ 0
+SPI_CS3
+Text GLabel 5250 5000 2    60   Input ~ 0
+SPI_CS4
+Text GLabel 5250 4850 2    60   Input ~ 0
+SPI_CS5
+Text GLabel 5250 4700 2    60   Input ~ 0
+SPI_CS6
+Text GLabel 5250 4550 2    60   Input ~ 0
+SPI_CS7
 Wire Wire Line
-	3600 6850 3350 6850
+	8250 4050 8550 4050
 Wire Wire Line
-	2000 6850 2450 6850
+	8250 3750 8550 3750
+Wire Wire Line
+	8550 3600 8250 3600
+Wire Wire Line
+	8250 3450 8550 3450
+Wire Wire Line
+	8550 3300 8250 3300
+Wire Wire Line
+	8250 3150 8550 3150
 $Comp
-L 74LS126 U5
-U 1 1 547262C6
-P 2900 6850
-F 0 "U5" H 3000 7050 60  0000 C CNN
-F 1 "74ALVC126" H 3150 6700 60  0000 C CNN
-F 2 "~" H 2900 6850 60  0000 C CNN
-F 3 "~" H 2900 6850 60  0000 C CNN
-	1    2900 6850
+L XC2C32A U?
+U 1 1 54DD81D8
+P 4000 4150
+F 0 "U?" H 4000 4150 60  0000 C CNN
+F 1 "XC2C32A" H 4000 5400 60  0000 C CNN
+F 2 "~" H 4000 4800 60  0000 C CNN
+F 3 "~" H 4000 4800 60  0000 C CNN
+	1    4000 4150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2250 7150 2900 7150
+	2750 3300 3200 3300
 Wire Wire Line
-	2250 7150 2250 1350
+	3200 3200 3000 3200
 Wire Wire Line
-	8750 2700 7950 2700
+	3000 3200 3000 3150
 Wire Wire Line
-	8750 3600 7950 3600
+	3000 3150 2750 3150
+Wire Wire Line
+	3200 3100 3050 3100
+Wire Wire Line
+	3050 3100 3050 3000
+Wire Wire Line
+	3050 3000 2750 3000
+Wire Wire Line
+	2750 3600 3200 3600
+Wire Wire Line
+	2750 3450 2950 3450
+Wire Wire Line
+	2950 3450 2950 3500
+Wire Wire Line
+	2950 3500 3200 3500
+Wire Wire Line
+	2900 5200 3200 5200
+Wire Wire Line
+	3200 5100 2950 5100
+Wire Wire Line
+	2950 5100 2950 5050
+Wire Wire Line
+	2950 5050 2900 5050
+Wire Wire Line
+	4800 3500 5250 3500
+Wire Wire Line
+	5250 3650 5200 3650
+Wire Wire Line
+	5200 3650 5200 3600
+Wire Wire Line
+	5200 3600 4800 3600
+Wire Wire Line
+	5250 3800 5150 3800
+Wire Wire Line
+	5150 3800 5150 3700
+Wire Wire Line
+	5150 3700 4800 3700
+Wire Wire Line
+	4800 3800 5100 3800
+Wire Wire Line
+	5100 3800 5100 3950
+Wire Wire Line
+	5100 3950 5250 3950
+Wire Wire Line
+	4800 3900 5050 3900
+Wire Wire Line
+	5050 3900 5050 4100
+Wire Wire Line
+	5050 4100 5250 4100
+Wire Wire Line
+	4800 4000 5000 4000
+Wire Wire Line
+	5000 4000 5000 4250
+Wire Wire Line
+	5000 4250 5250 4250
+Wire Wire Line
+	5250 4400 4950 4400
+Wire Wire Line
+	4950 4400 4950 4100
+Wire Wire Line
+	4950 4100 4800 4100
+Wire Wire Line
+	4900 4400 4800 4400
+Wire Wire Line
+	5250 4550 5200 4550
+Wire Wire Line
+	5200 4550 5200 4450
+Wire Wire Line
+	5200 4450 4900 4450
+Wire Wire Line
+	4900 4450 4900 4400
+Wire Wire Line
+	5250 4700 5150 4700
+Wire Wire Line
+	5150 4700 5150 4500
+Wire Wire Line
+	5150 4500 4800 4500
+Wire Wire Line
+	5250 4850 5100 4850
+Wire Wire Line
+	5100 4850 5100 4600
+Wire Wire Line
+	5100 4600 4800 4600
+Wire Wire Line
+	5250 5000 5050 5000
+Wire Wire Line
+	5050 5000 5050 4700
+Wire Wire Line
+	5050 4700 4800 4700
+Wire Wire Line
+	5250 5150 5000 5150
+Wire Wire Line
+	5000 5150 5000 4800
+Wire Wire Line
+	5000 4800 4800 4800
+Wire Wire Line
+	5250 5300 4950 5300
+Wire Wire Line
+	4950 5300 4950 4900
+Wire Wire Line
+	4950 4900 4800 4900
+Wire Wire Line
+	5250 5450 4900 5450
+Wire Wire Line
+	4900 5450 4900 5000
+Wire Wire Line
+	4900 5000 4800 5000
+$Comp
+L 3V3 #PWR?
+U 1 1 54DD88EA
+P 4850 2750
+F 0 "#PWR?" H 4850 2850 40  0001 C CNN
+F 1 "3V3" H 4850 2875 40  0000 C CNN
+F 2 "" H 4850 2750 60  0000 C CNN
+F 3 "" H 4850 2750 60  0000 C CNN
+	1    4850 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 4300 4800 4300
+Wire Wire Line
+	4850 2750 4850 2800
+Wire Wire Line
+	4850 2800 4850 3400
+Wire Wire Line
+	4850 3400 4850 4300
+Wire Wire Line
+	4800 3400 4850 3400
+Connection ~ 4850 3400
+$Comp
+L GND #PWR?
+U 1 1 54DD89FD
+P 6100 3500
+F 0 "#PWR?" H 6100 3500 30  0001 C CNN
+F 1 "GND" H 6100 3430 30  0001 C CNN
+F 2 "" H 6100 3500 60  0000 C CNN
+F 3 "" H 6100 3500 60  0000 C CNN
+	1    6100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3300 6100 3300
+Wire Wire Line
+	6100 3300 6100 3500
+Wire Wire Line
+	3200 3700 3150 3700
+Wire Wire Line
+	3150 3700 3150 2800
+Wire Wire Line
+	3150 2800 4850 2800
+Connection ~ 4850 2800
+Wire Wire Line
+	2850 3400 3200 3400
+$Comp
+L GND #PWR?
+U 1 1 54DD8C2C
+P 1950 4950
+F 0 "#PWR?" H 1950 4950 30  0001 C CNN
+F 1 "GND" H 1950 4880 30  0001 C CNN
+F 2 "" H 1950 4950 60  0000 C CNN
+F 3 "" H 1950 4950 60  0000 C CNN
+	1    1950 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4850 1950 4950
+$Comp
+L 1V8 #PWR?
+U 1 1 54DD8CFA
+P 1950 4550
+F 0 "#PWR?" H 1950 4690 20  0001 C CNN
+F 1 "1V8" H 1950 4660 30  0000 C CNN
+F 2 "" H 1950 4550 60  0000 C CNN
+F 3 "" H 1950 4550 60  0000 C CNN
+	1    1950 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4550 1950 4800
+Text GLabel 5250 3200 2    60   Input ~ 0
+CPLD_TDO
+Text GLabel 2750 3900 0    60   Input ~ 0
+CPLD_TDI
+Text GLabel 2750 4050 0    60   Input ~ 0
+CPLD_TMS
+Text GLabel 2750 4200 0    60   Input ~ 0
+CPLD_TCK
+Wire Wire Line
+	2750 3900 3200 3900
+Wire Wire Line
+	2900 4000 3200 4000
+Wire Wire Line
+	5250 3200 4800 3200
+Wire Wire Line
+	5250 5600 4850 5600
+Wire Wire Line
+	4850 5600 4850 5200
+Wire Wire Line
+	4850 5200 4800 5200
+NoConn ~ 4800 5100
+NoConn ~ 4800 3100
+Wire Wire Line
+	2750 3750 3150 3750
+Wire Wire Line
+	3150 3750 3150 3800
+Wire Wire Line
+	3150 3800 3200 3800
+Wire Wire Line
+	2850 4700 3200 4700
+Wire Wire Line
+	2850 3400 2850 4700
+Wire Wire Line
+	2850 4700 2850 4850
+Wire Wire Line
+	2850 4850 1950 4850
+Connection ~ 2850 4700
+Wire Wire Line
+	2900 4000 2900 4050
+Wire Wire Line
+	2900 4050 2750 4050
+Wire Wire Line
+	2750 4200 2950 4200
+Wire Wire Line
+	2950 4200 2950 4100
+Wire Wire Line
+	2950 4100 3200 4100
+Wire Wire Line
+	3200 4200 3000 4200
+Wire Wire Line
+	3000 4200 3000 4350
+Wire Wire Line
+	3000 4350 2750 4350
+Wire Wire Line
+	3200 4300 3050 4300
+Wire Wire Line
+	3050 4300 3050 4500
+Wire Wire Line
+	3050 4500 2750 4500
+Wire Wire Line
+	3200 4400 3100 4400
+Wire Wire Line
+	3100 4400 3100 4650
+Wire Wire Line
+	3100 4650 2750 4650
+Wire Wire Line
+	3200 4500 3150 4500
+Wire Wire Line
+	3150 4500 3150 4800
+Wire Wire Line
+	3150 4800 1950 4800
+NoConn ~ 3200 4800
+NoConn ~ 3200 4900
+NoConn ~ 3200 5000
+Text GLabel 8250 3000 0    60   Input ~ 0
+SPI_CS5
+Text GLabel 8550 3000 2    60   Input ~ 0
+SPI_CS_CC
+Wire Wire Line
+	8250 3000 8550 3000
 $EndSCHEMATC
