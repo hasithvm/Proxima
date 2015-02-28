@@ -65,17 +65,17 @@ Text GLabel 2750 4350 0    60   Input ~ 0
 UART_RX_LP
 Text GLabel 2750 4500 0    60   Input ~ 0
 UART_TX_LP
-Text GLabel 5250 3400 2    60   Input ~ 0
+Text GLabel 5250 4300 2    60   Input ~ 0
 SPI_SCK
-Text GLabel 5250 3550 2    60   Input ~ 0
+Text GLabel 5250 4150 2    60   Input ~ 0
 SPI_MOSI
-Text GLabel 5250 3700 2    60   Input ~ 0
+Text GLabel 5250 4000 2    60   Input ~ 0
 SPI_MISO
 Text GLabel 5250 5500 2    60   Input ~ 0
 UART_RX
 Text GLabel 5250 5650 2    60   Input ~ 0
 UART_TX
-Text GLabel 5250 4300 2    60   Input ~ 0
+Text GLabel 5250 3850 2    60   Input ~ 0
 CC_CONTROL
 Text GLabel 8250 3450 0    60   Input ~ 0
 SPI_SCK_CC
@@ -83,11 +83,11 @@ Text GLabel 8250 3600 0    60   Input ~ 0
 SPI_MOSI_CC
 Text GLabel 8250 3750 0    60   Input ~ 0
 SPI_MISO_CC
-Text GLabel 5250 3850 2    60   Input ~ 0
+Text GLabel 5250 3400 2    60   Input ~ 0
 SPI_SEL0_CC
-Text GLabel 5250 4000 2    60   Input ~ 0
+Text GLabel 5250 3550 2    60   Input ~ 0
 SPI_SEL1_CC
-Text GLabel 5250 4150 2    60   Input ~ 0
+Text GLabel 5250 3700 2    60   Input ~ 0
 SPI_SEL2_CC
 Text GLabel 8250 3900 0    60   Input ~ 0
 UART_RX_CC
