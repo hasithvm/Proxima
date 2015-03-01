@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 7
+Sheet 3 8
 Title ""
-Date "26 feb 2015"
+Date "1 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -510,8 +510,6 @@ Wire Wire Line
 	2450 1450 2450 1200
 Wire Wire Line
 	2300 2500 2300 1300
-Wire Wire Line
-	1850 1300 2450 1300
 Connection ~ 2450 1300
 Wire Wire Line
 	2550 3100 2150 3100
@@ -584,22 +582,6 @@ Wire Wire Line
 	1650 2650 2550 2650
 Wire Wire Line
 	1650 2950 2550 2950
-$Comp
-L R R10
-U 1 1 5472863C
-P 1850 1700
-F 0 "R10" V 1930 1700 40  0000 C CNN
-F 1 "47k" V 1857 1701 40  0000 C CNN
-F 2 "~" V 1780 1700 30  0000 C CNN
-F 3 "~" H 1850 1700 30  0000 C CNN
-	1    1850 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1850 1450 1850 1300
-Connection ~ 2000 1300
-Wire Wire Line
-	1850 2200 1850 1950
 Connection ~ 1850 2200
 Wire Wire Line
 	9500 2800 9400 2800
@@ -661,4 +643,6 @@ Wire Wire Line
 	5450 4500 5450 4600
 Wire Wire Line
 	5450 4600 5300 4600
+Wire Wire Line
+	2000 1300 2450 1300
 $EndSCHEMATC

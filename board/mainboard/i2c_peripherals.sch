@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 7
+Sheet 2 8
 Title ""
-Date "26 feb 2015"
+Date "1 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -490,10 +490,6 @@ Wire Wire Line
 Wire Wire Line
 	10050 2800 10050 2900
 Wire Wire Line
-	8150 3800 7950 3800
-Wire Wire Line
-	7950 3800 7950 3500
-Wire Wire Line
 	8150 4000 7700 4000
 Wire Wire Line
 	7700 4150 8150 4150
@@ -728,4 +724,8 @@ Wire Wire Line
 Connection ~ 2650 3250
 Wire Wire Line
 	5700 6400 5700 6350
+Wire Wire Line
+	7950 3800 7950 3500
+Wire Wire Line
+	8150 3800 7950 3800
 $EndSCHEMATC

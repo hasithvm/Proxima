@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 5 8
 Title ""
-Date "26 feb 2015"
+Date "1 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -231,7 +231,6 @@ Text GLabel 2750 4050 0    60   Input ~ 0
 CPLD_TMS
 Text GLabel 2750 4200 0    60   Input ~ 0
 CPLD_TCK
-NoConn ~ 4500 6000
 NoConn ~ 3200 3800
 NoConn ~ 3200 4800
 NoConn ~ 3200 4900
@@ -335,14 +334,6 @@ Wire Wire Line
 	2950 3450 2950 3500
 Wire Wire Line
 	2950 3500 3200 3500
-Wire Wire Line
-	2900 5200 3200 5200
-Wire Wire Line
-	3200 5100 2950 5100
-Wire Wire Line
-	2950 5100 2950 5050
-Wire Wire Line
-	2950 5050 2900 5050
 Wire Wire Line
 	4800 3700 5250 3700
 Wire Wire Line
@@ -661,4 +652,6 @@ Wire Wire Line
 	4850 5650 4850 5100
 Wire Wire Line
 	4850 5100 4800 5100
+NoConn ~ 3200 5200
+NoConn ~ 3200 5100
 $EndSCHEMATC

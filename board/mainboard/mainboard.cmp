@@ -1,4 +1,11 @@
-Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = Wed 25 Feb 2015 11:11:52 PM EST
+Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = Sat 28 Feb 2015 07:38:11 PM EST
+
+BeginCmp
+TimeStamp = /54F1578F/54F158CD;
+Reference = AUD1;
+ValeurCmp = LM4808;
+IdModule  = LM4808;
+EndCmp
 
 BeginCmp
 TimeStamp = /5447238D/54485D29;
@@ -106,6 +113,83 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /5472C13B/54F23B41;
+Reference = C16;
+ValeurCmp = 1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F25903;
+Reference = C17;
+ValeurCmp = 0.47uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F25923;
+Reference = C18;
+ValeurCmp = 680nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F2593D;
+Reference = C19;
+ValeurCmp = 680nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F25943;
+Reference = C20;
+ValeurCmp = 2.2nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15B71;
+Reference = C21;
+ValeurCmp = 2.2uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15E4B;
+Reference = C22;
+ValeurCmp = 2.2uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F2598A;
+Reference = C23;
+ValeurCmp = 1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F25969;
+Reference = C24;
+ValeurCmp = 1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15D73;
+Reference = C25;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15BD3;
+Reference = C26;
+ValeurCmp = 100uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /5472C13B/5472BC2B;
 Reference = C27;
 ValeurCmp = 10uF;
@@ -116,6 +200,13 @@ BeginCmp
 TimeStamp = /5472C13B/5472BBE8;
 Reference = C28;
 ValeurCmp = 10uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15DDC;
+Reference = C29;
+ValeurCmp = 100uF;
 IdModule  = SM0805;
 EndCmp
 
@@ -159,6 +250,13 @@ TimeStamp = /54487774/54618A74;
 Reference = GLCD1;
 ValeurCmp = NHD-C12832A1Z-NSW-BBW-3V3;
 IdModule  = 2x10_Headers;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F162A5;
+Reference = HP1;
+ValeurCmp = HP_JACK;
+IdModule  = HeadphoneJack;
 EndCmp
 
 BeginCmp
@@ -208,6 +306,13 @@ TimeStamp = /5447238D/544871A6;
 Reference = MC2;
 ValeurCmp = DRV8830;
 IdModule  = DRV8830MSOP;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F24EE5;
+Reference = MIC1;
+ValeurCmp = CMA-4544PF-W;
+IdModule  = CMA-4544;
 EndCmp
 
 BeginCmp
@@ -306,6 +411,20 @@ TimeStamp = /5467DA0A/54EE088E;
 Reference = P13;
 ValeurCmp = UART;
 IdModule  = PIN_ARRAY_4x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15FD1;
+Reference = P14;
+ValeurCmp = AUDIO;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F2599A;
+Reference = P15;
+ValeurCmp = MIC;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
@@ -477,9 +596,72 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /54F1578F/54F258EE;
+Reference = R24;
+ValeurCmp = 2.2k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15E9D;
+Reference = R25;
+ValeurCmp = 100k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15E8E;
+Reference = R26;
+ValeurCmp = 100k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /54725E9B/54ED26EB;
 Reference = R27;
 ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15B86;
+Reference = R28;
+ValeurCmp = 3.9k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15D21;
+Reference = R29;
+ValeurCmp = 3.9k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15BBA;
+Reference = R30;
+ValeurCmp = 3.9k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F15D1B;
+Reference = R31;
+ValeurCmp = 3.9k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F2544D;
+Reference = R32;
+ValeurCmp = 150k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F2545C;
+Reference = R33;
+ValeurCmp = 150k;
 IdModule  = SM0805;
 EndCmp
 
@@ -544,6 +726,20 @@ TimeStamp = /54722340/54DD81D8;
 Reference = U1;
 ValeurCmp = XC2C32A;
 IdModule  = CoolrunnerII;
+EndCmp
+
+BeginCmp
+TimeStamp = /5472C13B/54F23A79;
+Reference = U2;
+ValeurCmp = TLV702;
+IdModule  = SOT23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F1578F/54F2493E;
+Reference = U3;
+ValeurCmp = MAX9814;
+IdModule  = MAX9814;
 EndCmp
 
 BeginCmp

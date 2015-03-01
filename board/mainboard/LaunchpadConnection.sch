@@ -35,9 +35,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 4 8
 Title ""
-Date "26 feb 2015"
+Date "1 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1071,9 +1071,9 @@ Wire Wire Line
 	1800 4750 1800 4950
 Wire Wire Line
 	1800 4750 1900 4750
-Text GLabel 1550 4350 0    60   Input ~ 0
-UART_RX
 Text GLabel 1550 4500 0    60   Input ~ 0
+UART_RX
+Text GLabel 1550 4350 0    60   Input ~ 0
 UART_TX
 Wire Wire Line
 	1900 4550 1700 4550
