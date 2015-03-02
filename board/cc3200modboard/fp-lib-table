@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name fp-cc3200)(type Legacy)(uri "$(KIPRJMOD)/cc3200mod.mod")(options "")(descr ""))
+)

@@ -48,4 +48,4 @@ footprint = () ->
 
   name = new Name(module_dy+1)
 
-  combine [r1, r2, gp1, gp2, gp3, pin1, name]
+  combine [r1, r2, gp1, gp2, pin1, name]
