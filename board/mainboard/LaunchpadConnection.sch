@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 8
 Title ""
-Date "1 mar 2015"
+Date "2 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -142,8 +142,6 @@ Text GLabel 7150 3050 2    60   Input ~ 0
 LED2
 Text GLabel 7150 2900 2    60   Input ~ 0
 LED1
-Text GLabel 7150 1700 2    60   Input ~ 0
-NMI
 $Comp
 L 3V3 #PWR038
 U 1 1 546A82AF
@@ -578,8 +576,6 @@ Wire Wire Line
 	6850 3050 7150 3050
 Wire Wire Line
 	6850 3200 7150 3200
-Wire Wire Line
-	6850 1700 7150 1700
 Wire Wire Line
 	1750 5950 1900 5950
 Wire Wire Line
@@ -1089,4 +1085,5 @@ Wire Wire Line
 	1900 4650 1600 4650
 Wire Wire Line
 	1600 4650 1600 4200
+NoConn ~ 6850 1700
 $EndSCHEMATC
