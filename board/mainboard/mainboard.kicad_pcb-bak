@@ -4840,7 +4840,7 @@
     )
   )
 
-  (gr_text "IrDA Module Jumper Note:\nConnecting PWRDN to 3V3 powers on the IrDA Module.\nConnecting PWRDN to GND powers off the IrDA Module." (at 240.2 143.8) (layer B.SilkS)
+  (gr_text "IrDA Module Jumper Note:\nConnecting PWRDN to 3V3 powers on the IrDA Module.\nConnecting PWRDN to GND powers off the IrDA Module." (at 164 116.6) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_text UART (at 176.8 147.6) (layer F.SilkS)
