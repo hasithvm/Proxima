@@ -1,0 +1,17 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 05/03/2015 2:52:34 PM
+
+BeginCmp
+TimeStamp = /54F8A940;
+Reference = GLCD1;
+ValeurCmp = NHD-C12832A1Z-NSW-BBW-3V3;
+IdModule  = NHD-C12832A1Z-NSW-BBW-3V3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F8A98D;
+Reference = P1;
+ValeurCmp = CONN_10X2;
+IdModule  = 2x10_Headers;
+EndCmp
+
+EndListe

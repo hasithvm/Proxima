@@ -1,0 +1,235 @@
+EESchema Schematic File Version 2
+LIBS:mainboard
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:lcdboard-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "5 mar 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_10X2 P1
+U 1 1 54F8A98D
+P 5450 4450
+F 0 "P1" H 5450 5000 60  0000 C CNN
+F 1 "CONN_10X2" V 5450 4350 50  0000 C CNN
+F 2 "" H 5450 4450 60  0000 C CNN
+F 3 "" H 5450 4450 60  0000 C CNN
+	1    5450 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L NHD-C12832A1Z-NSW-BBW-3V3 GLCD1
+U 1 1 54F8A940
+P 5300 2350
+F 0 "GLCD1" H 5300 2250 60  0000 C CNN
+F 1 "NHD-C12832A1Z-NSW-BBW-3V3" H 5300 2450 60  0000 C CNN
+F 2 "~" H 5300 2450 60  0000 C CNN
+F 3 "~" H 5300 2450 60  0000 C CNN
+	1    5300 2350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5050 4900
+Wire Wire Line
+	6650 2050 7450 2050
+Wire Wire Line
+	7450 2050 7450 4000
+Wire Wire Line
+	7450 4000 5850 4000
+Wire Wire Line
+	6650 2200 7300 2200
+Wire Wire Line
+	7300 2200 7300 3850
+Wire Wire Line
+	7300 3850 5050 3850
+Wire Wire Line
+	5050 3850 5050 4000
+Wire Wire Line
+	6650 2350 7150 2350
+Wire Wire Line
+	7150 2350 7150 4100
+Wire Wire Line
+	7150 4100 5850 4100
+Wire Wire Line
+	6650 2500 7000 2500
+Wire Wire Line
+	7000 2500 7000 3750
+Wire Wire Line
+	7000 3750 4950 3750
+Wire Wire Line
+	4950 3750 4950 4100
+Wire Wire Line
+	4950 4100 5050 4100
+Wire Wire Line
+	6650 2650 6850 2650
+Wire Wire Line
+	6850 2650 6850 4200
+Wire Wire Line
+	6850 4200 5850 4200
+Wire Wire Line
+	6200 3300 6200 3700
+Wire Wire Line
+	6200 3700 4850 3700
+Wire Wire Line
+	4850 3700 4850 4200
+Wire Wire Line
+	4850 4200 5050 4200
+Wire Wire Line
+	6050 3300 6050 4300
+Wire Wire Line
+	6050 4300 5850 4300
+Wire Wire Line
+	5900 3300 5900 3650
+Wire Wire Line
+	5900 3650 4750 3650
+Wire Wire Line
+	4750 3650 4750 4300
+Wire Wire Line
+	4750 4300 5050 4300
+Wire Wire Line
+	5600 3300 5600 3600
+Wire Wire Line
+	5600 3600 4700 3600
+Wire Wire Line
+	4700 3600 4700 4400
+Wire Wire Line
+	4700 4400 5050 4400
+Wire Wire Line
+	5450 3300 5450 3500
+Wire Wire Line
+	5450 3500 6300 3500
+Wire Wire Line
+	6300 3500 6300 4500
+Wire Wire Line
+	6300 4500 5850 4500
+Wire Wire Line
+	5300 3300 5300 3550
+Wire Wire Line
+	5300 3550 4650 3550
+Wire Wire Line
+	4650 3550 4650 4500
+Wire Wire Line
+	4650 4500 5050 4500
+Wire Wire Line
+	5150 3300 5150 3450
+Wire Wire Line
+	5150 3450 6350 3450
+Wire Wire Line
+	6350 3450 6350 4600
+Wire Wire Line
+	6350 4600 5850 4600
+Wire Wire Line
+	5000 3300 5000 3500
+Wire Wire Line
+	5000 3500 4600 3500
+Wire Wire Line
+	4600 3500 4600 4600
+Wire Wire Line
+	4600 4600 5050 4600
+Wire Wire Line
+	4850 3300 4850 3400
+Wire Wire Line
+	4850 3400 6400 3400
+Wire Wire Line
+	6400 3400 6400 4700
+Wire Wire Line
+	6400 4700 5850 4700
+Wire Wire Line
+	4700 3300 4700 3450
+Wire Wire Line
+	4700 3450 4550 3450
+Wire Wire Line
+	4550 3450 4550 4700
+Wire Wire Line
+	4550 4700 5050 4700
+Wire Wire Line
+	4550 3300 4550 3350
+Wire Wire Line
+	4550 3350 6450 3350
+Wire Wire Line
+	6450 3350 6450 4800
+Wire Wire Line
+	6450 4800 5850 4800
+Wire Wire Line
+	4050 2350 4050 4800
+Wire Wire Line
+	4050 4800 5050 4800
+Wire Wire Line
+	4050 2200 3950 2200
+Wire Wire Line
+	3950 2200 3950 5000
+Wire Wire Line
+	3950 5000 6000 5000
+Wire Wire Line
+	6000 5000 6000 4900
+Wire Wire Line
+	6000 4900 5850 4900
+Wire Wire Line
+	5750 3300 5750 3600
+Wire Wire Line
+	5750 3600 5950 3600
+Wire Wire Line
+	5950 3600 5950 4400
+Wire Wire Line
+	5950 4400 5850 4400
+$Comp
+L CONN_1 P?
+U 1 1 54F8BE45
+P 6350 5300
+F 0 "P?" H 6430 5300 40  0000 L CNN
+F 1 "CONN_1" H 6350 5355 30  0001 C CNN
+F 2 "" H 6350 5300 60  0000 C CNN
+F 3 "" H 6350 5300 60  0000 C CNN
+	1    6350 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P?
+U 1 1 54F8BE5C
+P 4900 5300
+F 0 "P?" H 4980 5300 40  0000 L CNN
+F 1 "CONN_1" H 4900 5355 30  0001 C CNN
+F 2 "" H 4900 5300 60  0000 C CNN
+F 3 "" H 4900 5300 60  0000 C CNN
+	1    4900 5300
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
