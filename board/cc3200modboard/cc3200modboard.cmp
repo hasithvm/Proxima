@@ -1,0 +1,143 @@
+Cmp-Mod V01 Created by Cvpcb (2014-10-30 BZR 5240)-product   date = Sun 01 Mar 2015 11:11:26 PM EST
+
+BeginCmp
+TimeStamp = /54F2D882;
+Reference = C1;
+ValeurCmp = 22uF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F2DBAB;
+Reference = C2;
+ValeurCmp = 22uF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F2DBCC;
+Reference = C3;
+ValeurCmp = 22uF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F2DBE5;
+Reference = C4;
+ValeurCmp = 22uF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F2DC0C;
+Reference = C5;
+ValeurCmp = 22uF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F321E8;
+Reference = C6;
+ValeurCmp = 1.0pF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F4BAEA;
+Reference = D1;
+ValeurCmp = PWR;
+IdModule  = LEDs:LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F4BE54;
+Reference = D2;
+ValeurCmp = ACT;
+IdModule  = LEDs:LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F3247D;
+Reference = E1;
+ValeurCmp = 2.45GHz;
+IdModule  = fp-cc3200:2.4GHz_ANT_AH316M245001-T;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F3204D;
+Reference = L1;
+ValeurCmp = 3.6nH;
+IdModule  = fp-cc3200:IND_RF_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F338FE;
+Reference = P1;
+ValeurCmp = PROG;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F364BE;
+Reference = P2;
+ValeurCmp = JTAG;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F3664E;
+Reference = P3;
+ValeurCmp = BOOTLDR;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F3B002;
+Reference = R1;
+ValeurCmp = 100K;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F37274;
+Reference = R2;
+ValeurCmp = 2.7K;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F4C828;
+Reference = R3;
+ValeurCmp = 560;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F4F986;
+Reference = R4;
+ValeurCmp = 560;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F348BD;
+Reference = SW1;
+ValeurCmp = RESET;
+IdModule  = fp-cc3200:PTS645;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F2D4FD;
+Reference = U1;
+ValeurCmp = CC3200MOD;
+IdModule  = fp-cc3200:CC3200MOD;
+EndCmp
+
+BeginCmp
+TimeStamp = /54F3D6BB;
+Reference = WB1;
+ValeurCmp = WIFI_BOARD;
+IdModule  = fp-cc3200:DaughterBoard;
+EndCmp
+
+EndListe

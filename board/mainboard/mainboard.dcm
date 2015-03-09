@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 EESchema-DOCLIB  Version 2.0  Date: 2015-03-02 12:58:17 AM
+=======
+EESchema-DOCLIB  Version 2.0
+>>>>>>> cc3200mod
 #
 $CMP MCP4902
 D MCP4922, Dual 12-bit Digital to Analog Converter, SPI Interface, SO14
