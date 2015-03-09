@@ -30,14 +30,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:lcdboard-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "5 mar 2015"
+Date "9 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -211,10 +210,10 @@ Wire Wire Line
 Wire Wire Line
 	5950 4400 5850 4400
 $Comp
-L CONN_1 P?
+L CONN_1 P3
 U 1 1 54F8BE45
 P 6350 5300
-F 0 "P?" H 6430 5300 40  0000 L CNN
+F 0 "P3" H 6430 5300 40  0000 L CNN
 F 1 "CONN_1" H 6350 5355 30  0001 C CNN
 F 2 "" H 6350 5300 60  0000 C CNN
 F 3 "" H 6350 5300 60  0000 C CNN
@@ -222,14 +221,16 @@ F 3 "" H 6350 5300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 P?
+L CONN_1 P2
 U 1 1 54F8BE5C
 P 4900 5300
-F 0 "P?" H 4980 5300 40  0000 L CNN
+F 0 "P2" H 4980 5300 40  0000 L CNN
 F 1 "CONN_1" H 4900 5355 30  0001 C CNN
 F 2 "" H 4900 5300 60  0000 C CNN
 F 3 "" H 4900 5300 60  0000 C CNN
 	1    4900 5300
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	6200 5300 5050 5300
 $EndSCHEMATC
