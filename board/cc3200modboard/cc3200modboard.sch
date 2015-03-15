@@ -30,8 +30,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:cc3200modboard
-LIBS:mainboard
-LIBS:cc3200modboard-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -308,7 +306,7 @@ F 3 "" H 1600 2625 60  0000 C CNN
 	1    1600 2625
 	1    0    0    -1  
 $EndComp
-Text Label 2725 2450 2    60   ~ 0
+Text Label 3300 2450 2    60   ~ 0
 nRESET
 $Comp
 L CONN_01X04 P2
@@ -610,7 +608,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 2450 1600 2625
 Wire Wire Line
-	2400 2450 2725 2450
+	2400 2450 3300 2450
 Wire Wire Line
 	1850 3650 2275 3650
 Wire Wire Line
@@ -848,4 +846,31 @@ Wire Wire Line
 	10900 1525 10900 1450
 Text Label 8075 5400 0    60   ~ 0
 RF_FEED
+$Comp
+L R R5
+U 1 1 5501FBFB
+P 2875 2175
+F 0 "R5" V 2955 2175 40  0000 C CNN
+F 1 "10K" V 2882 2176 40  0000 C CNN
+F 2 "" V 2805 2175 30  0000 C CNN
+F 3 "" H 2875 2175 30  0000 C CNN
+	1    2875 2175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2875 2450 2875 2425
+Wire Wire Line
+	2875 1925 2875 1825
+$Comp
+L 3V3 #PWR017
+U 1 1 5502039C
+P 2875 1825
+F 0 "#PWR017" H 2875 1925 40  0001 C CNN
+F 1 "3V3" H 2875 1950 40  0000 C CNN
+F 2 "" H 2875 1825 60  0000 C CNN
+F 3 "" H 2875 1825 60  0000 C CNN
+	1    2875 1825
+	1    0    0    -1  
+$EndComp
+Connection ~ 2875 2450
 $EndSCHEMATC

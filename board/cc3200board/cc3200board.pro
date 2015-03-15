@@ -1,4 +1,4 @@
-update=Mon 01 Dec 2014 11:18:03 PM EST
+update=Sun 15 Mar 2015 05:43:18 PM EDT
 last_client=kicad
 [general]
 version=1
@@ -52,3 +52,4 @@ LibName30=valves
 LibName31=cc3200board
 LibName32=/home/hasith/development/Proxima/board/mainboard/mainboard
 LibName33=cc3200board-extra
+LibName34=mainboard
