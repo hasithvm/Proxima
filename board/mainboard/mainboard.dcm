@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-EESchema-DOCLIB  Version 2.0  Date: 2015-03-02 12:58:17 AM
-=======
-EESchema-DOCLIB  Version 2.0
->>>>>>> cc3200mod
-#
-$CMP MCP4902
-D MCP4922, Dual 12-bit Digital to Analog Converter, SPI Interface, SO14
-K Dual DAC 1ch 12bit SPI
-F http://ww1.microchip.com/downloads/en/devicedoc/21897a.pdf
-$ENDCMP
+EESchema-DOCLIB  Version 2.0  Date: Wed 18 Mar 2015 12:33:39 PM EDT
 #
 #End Doc Library
