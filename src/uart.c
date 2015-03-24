@@ -22,9 +22,9 @@ uint32_t ClockRate = 80000000;
 
 uint32_t getUartSysctl(ProximaUartEnum uart) {
     switch (uart) {
-        case proximaUartUsb:
+        case PROXIMA_UART_USB:
             return SYSCTL_PERIPH_UART0;
-        case proximaUart1:
+        case PROXIMA_UART1:
             return SYSCTL_PERIPH_UART1;
     }
     return -1;
@@ -32,9 +32,9 @@ uint32_t getUartSysctl(ProximaUartEnum uart) {
 
 uint32_t getUartBase(ProximaUartEnum uart) {
     switch (uart) {
-        case proximaUartUsb:
+        case PROXIMA_UART_USB:
             return UART0_BASE;
-        case proximaUart1:
+        case PROXIMA_UART1:
             return UART1_BASE;
     }
     return -1;
@@ -42,9 +42,9 @@ uint32_t getUartBase(ProximaUartEnum uart) {
 
 uint32_t getUartGpioSysctl(ProximaUartEnum uart) {
     switch (uart) {
-        case proximaUartUsb:
+        case PROXIMA_UART_USB:
             return SYSCTL_PERIPH_GPIOA;
-        case proximaUart1:
+        case PROXIMA_UART1:
             return SYSCTL_PERIPH_GPIOB;
     }
     return -1;
@@ -52,9 +52,9 @@ uint32_t getUartGpioSysctl(ProximaUartEnum uart) {
 
 uint32_t getUartGpioBase(ProximaUartEnum uart) {
     switch (uart) {
-        case proximaUartUsb:
+        case PROXIMA_UART_USB:
             return GPIO_PORTA_BASE;
-        case proximaUart1:
+        case PROXIMA_UART1:
             return GPIO_PORTB_BASE;
     }
     return -1;
@@ -73,11 +73,11 @@ void proximaUartInit(ProximaUartEnum uart) {
     MAP_SysCtlPeripheralEnable(gpioSysctl);
 
     switch(uart) {
-        case proximaUartUsb:
+        case PROXIMA_UART_USB:
             MAP_GPIOPinConfigure(GPIO_PA0_U0RX);
             MAP_GPIOPinConfigure(GPIO_PA1_U0TX);
             break;
-        case proximaUart1:
+        case PROXIMA_UART1:
             MAP_GPIOPinConfigure(GPIO_PB0_U1RX);
             MAP_GPIOPinConfigure(GPIO_PB1_U1TX);
             break;
@@ -88,8 +88,8 @@ void proximaUartInit(ProximaUartEnum uart) {
     MAP_UARTClockSourceSet(uartBase, UART_CLOCK_PIOSC);
 
     switch (uart) {
-        case proximaUartUsb:
-        case proximaUart1:
+        case PROXIMA_UART_USB:
+        case PROXIMA_UART1:
             MAP_GPIOPinTypeUART(gpioBase, GPIO_PIN_0 | GPIO_PIN_1);
     }
 

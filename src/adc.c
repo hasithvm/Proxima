@@ -15,19 +15,19 @@
 
 uint32_t getGpioSysctl(ProximaAdcEnum proximaAdc) {
     switch(proximaAdc) {
-        case proximaAdc1:
+        case PROXIMA_ADC1:
             return SYSCTL_PERIPH_GPIOB;
-        case proximaAdc2:
+        case PROXIMA_ADC2:
             return SYSCTL_PERIPH_GPIOE;
-        case proximaAdcPot:
+        case PROXIMA_ADC_POT:
             return SYSCTL_PERIPH_GPIOE;
-        case proximaAdcTemp:
+        case PROXIMA_ADC_TEMP:
             return PROXIMA_INVALID;
-        case proximaAdcLineL:
+        case PROXIMA_ADC_LINE_L:
             return SYSCTL_PERIPH_GPIOD;
-        case proximaAdcLineR:
+        case PROXIMA_ADC_LINE_R:
             return SYSCTL_PERIPH_GPIOD;
-        case proximaAdcLineC:
+        case PROXIMA_ADC_LINE_C:
             return SYSCTL_PERIPH_GPIOE;
     }
     return PROXIMA_INVALID;
@@ -35,19 +35,19 @@ uint32_t getGpioSysctl(ProximaAdcEnum proximaAdc) {
 
 uint32_t getGpioBase(ProximaAdcEnum proximaAdc) {
     switch(proximaAdc) {
-        case proximaAdc1:
+        case PROXIMA_ADC1:
             return GPIO_PORTB_BASE;
-        case proximaAdc2:
+        case PROXIMA_ADC2:
             return GPIO_PORTE_BASE;
-        case proximaAdcPot:
+        case PROXIMA_ADC_POT:
             return GPIO_PORTE_BASE;
-        case proximaAdcTemp:
+        case PROXIMA_ADC_TEMP:
             return PROXIMA_INVALID;
-        case proximaAdcLineL:
+        case PROXIMA_ADC_LINE_L:
             return GPIO_PORTD_BASE;
-        case proximaAdcLineR:
+        case PROXIMA_ADC_LINE_R:
             return GPIO_PORTD_BASE;
-        case proximaAdcLineC:
+        case PROXIMA_ADC_LINE_C:
             return GPIO_PORTE_BASE;
     }
     return PROXIMA_INVALID;
@@ -55,19 +55,19 @@ uint32_t getGpioBase(ProximaAdcEnum proximaAdc) {
 
 uint32_t getGpioPin(ProximaAdcEnum proximaAdc) {
     switch (proximaAdc) {
-        case proximaAdc1:
+        case PROXIMA_ADC1:
             return GPIO_PIN_5;
-        case proximaAdc2:
+        case PROXIMA_ADC2:
             return GPIO_PIN_5;
-        case proximaAdcPot:
+        case PROXIMA_ADC_POT:
             return GPIO_PIN_2;
-        case proximaAdcTemp:
+        case PROXIMA_ADC_TEMP:
             return PROXIMA_INVALID;
-        case proximaAdcLineL:
+        case PROXIMA_ADC_LINE_L:
             return GPIO_PIN_2;
-        case proximaAdcLineR:
+        case PROXIMA_ADC_LINE_R:
             return GPIO_PIN_3;
-        case proximaAdcLineC:
+        case PROXIMA_ADC_LINE_C:
             return GPIO_PIN_1;
     }
     return PROXIMA_INVALID;
@@ -75,19 +75,19 @@ uint32_t getGpioPin(ProximaAdcEnum proximaAdc) {
 
 uint32_t getAdcChannel(ProximaAdcEnum proximaAdc) {
     switch (proximaAdc) {
-        case proximaAdc1:
+        case PROXIMA_ADC1:
             return ADC_CTL_CH11;
-        case proximaAdc2:
+        case PROXIMA_ADC2:
             return ADC_CTL_CH8;
-        case proximaAdcPot:
+        case PROXIMA_ADC_POT:
             return ADC_CTL_CH1;
-        case proximaAdcTemp:
+        case PROXIMA_ADC_TEMP:
             return ADC_CTL_TS;
-        case proximaAdcLineL:
+        case PROXIMA_ADC_LINE_L:
             return ADC_CTL_CH5;
-        case proximaAdcLineR:
+        case PROXIMA_ADC_LINE_R:
             return ADC_CTL_CH4;
-        case proximaAdcLineC:
+        case PROXIMA_ADC_LINE_C:
             return ADC_CTL_CH2;
     }
     return PROXIMA_INVALID;
@@ -95,19 +95,19 @@ uint32_t getAdcChannel(ProximaAdcEnum proximaAdc) {
 
 uint32_t getAdcSysctl(ProximaAdcEnum proximaAdc) {
     switch (proximaAdc) {
-        case proximaAdc1:
+        case PROXIMA_ADC1:
             return SYSCTL_PERIPH_ADC0;
-        case proximaAdc2:
+        case PROXIMA_ADC2:
             return SYSCTL_PERIPH_ADC0;
-        case proximaAdcPot:
+        case PROXIMA_ADC_POT:
             return SYSCTL_PERIPH_ADC0;
-        case proximaAdcTemp:
+        case PROXIMA_ADC_TEMP:
             return SYSCTL_PERIPH_ADC0;
-        case proximaAdcLineL:
+        case PROXIMA_ADC_LINE_L:
             return SYSCTL_PERIPH_ADC1;
-        case proximaAdcLineR:
+        case PROXIMA_ADC_LINE_R:
             return SYSCTL_PERIPH_ADC1;
-        case proximaAdcLineC:
+        case PROXIMA_ADC_LINE_C:
             return SYSCTL_PERIPH_ADC1;
     }
     return PROXIMA_INVALID;
@@ -115,19 +115,19 @@ uint32_t getAdcSysctl(ProximaAdcEnum proximaAdc) {
 
 uint32_t getAdcBase(ProximaAdcEnum proximaAdc) {
     switch (proximaAdc) {
-        case proximaAdc1:
+        case PROXIMA_ADC1:
             return ADC0_BASE;
-        case proximaAdc2:
+        case PROXIMA_ADC2:
             return ADC0_BASE;
-        case proximaAdcPot:
+        case PROXIMA_ADC_POT:
             return ADC0_BASE;
-        case proximaAdcTemp:
+        case PROXIMA_ADC_TEMP:
             return ADC0_BASE;
-        case proximaAdcLineL:
+        case PROXIMA_ADC_LINE_L:
             return ADC1_BASE;
-        case proximaAdcLineR:
+        case PROXIMA_ADC_LINE_R:
             return ADC1_BASE;
-        case proximaAdcLineC:
+        case PROXIMA_ADC_LINE_C:
             return ADC1_BASE;
     }
     return PROXIMA_INVALID;
@@ -135,19 +135,19 @@ uint32_t getAdcBase(ProximaAdcEnum proximaAdc) {
 
 uint32_t getSequence(ProximaAdcEnum proximaAdc) {
     switch (proximaAdc) {
-        case proximaAdc1:
+        case PROXIMA_ADC1:
             return 0;
-        case proximaAdc2:
+        case PROXIMA_ADC2:
             return 1;
-        case proximaAdcPot:
+        case PROXIMA_ADC_POT:
             return 2;
-        case proximaAdcTemp:
+        case PROXIMA_ADC_TEMP:
             return 3;
-        case proximaAdcLineL:
+        case PROXIMA_ADC_LINE_L:
             return 0;
-        case proximaAdcLineR:
+        case PROXIMA_ADC_LINE_R:
             return 1;
-        case proximaAdcLineC:
+        case PROXIMA_ADC_LINE_C:
             return 2;
     }
     return PROXIMA_INVALID;
@@ -169,11 +169,11 @@ void proximaAdcInit(ProximaAdcEnum proximaAdc, ProximaSampleType sampleType) {
     sequence = getSequence(proximaAdc);
 
     switch(sampleType) {
-        case proximaSample:
+        case PROXIMA_ADC_SAMPLE:
             sequenceConfig = ADC_TRIGGER_PROCESSOR;
             stepConfig = adcChannel | ADC_CTL_IE | ADC_CTL_END;
             break;
-        case proximaInterrupt:
+        case PROXIMA_ADC_INTERRUPT:
             sequenceConfig = ADC_TRIGGER_TIMER;
             stepConfig = adcChannel | ADC_CTL_IE | ADC_CTL_END;
             // TODO: Make a timer here too

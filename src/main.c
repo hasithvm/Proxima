@@ -23,12 +23,12 @@
 int main(void) {
     uint32_t tempC;
 
-    proximaAdcInit(proximaAdcTemp, proximaSample);
+    proximaAdcInit(PROXIMA_ADC_TEMP, PROXIMA_ADC_SAMPLE);
 
-    proximaUartInit(proximaUartUsb);
+    proximaUartInit(PROXIMA_UART_USB);
 
     while(1) {
-        tempC = ((147.5) - ((75 * 3.0) * (float)proximaAdcSample(proximaAdcTemp)) / 4096);
+        tempC = ((147.5) - ((75 * 3.0) * (float)proximaAdcSample(PROXIMA_ADC_TEMP)) / 4096);
         UARTprintf("The current temperature is: %d\n\r", tempC);
     }
 }

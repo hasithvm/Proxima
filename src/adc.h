@@ -4,18 +4,18 @@
 #include <stdint.h>
 
 typedef enum {
-    proximaAdc1,
-    proximaAdc2,
-    proximaAdcPot,
-    proximaAdcTemp,
-    proximaAdcLineL,
-    proximaAdcLineR,
-    proximaAdcLineC,
+    PROXIMA_ADC1,
+    PROXIMA_ADC2,
+    PROXIMA_ADC_POT,
+    PROXIMA_ADC_TEMP,
+    PROXIMA_ADC_LINE_L,
+    PROXIMA_ADC_LINE_R,
+    PROXIMA_ADC_LINE_C,
 } ProximaAdcEnum;
 
 typedef enum {
-    proximaSample,
-    proximaInterrupt,
+    PROXIMA_ADC_SAMPLE,
+    PROXIMA_ADC_INTERRUPT,
 } ProximaSampleType;
 
 void proximaAdcInit(ProximaAdcEnum proximaAdc, ProximaSampleType sampleType);

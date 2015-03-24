@@ -4,8 +4,8 @@
 #include <stdint.h>
 
 typedef enum {
-    proximaUartUsb,
-    proximaUart1,
+    PROXIMA_UART_USB,
+    PROXIMA_UART1,
 } ProximaUartEnum;
 
 
