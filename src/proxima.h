@@ -1,1 +1,1 @@
-#define PROXIMA_INVALID 0xffffffff
+#define PROXIMA_INVALID 0x0

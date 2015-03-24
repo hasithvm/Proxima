@@ -13,7 +13,7 @@
 #include "driverlib/rom.h"
 #include "driverlib/rom_map.h"
 
-uint32_t getGpioSysctl(ProximaAdcEnum proximaAdc) {
+uint32_t getAdcGpioSysctl(ProximaAdcEnum proximaAdc) {
     switch(proximaAdc) {
         case PROXIMA_ADC1:
             return SYSCTL_PERIPH_GPIOB;
@@ -33,7 +33,7 @@ uint32_t getGpioSysctl(ProximaAdcEnum proximaAdc) {
     return PROXIMA_INVALID;
 }
 
-uint32_t getGpioBase(ProximaAdcEnum proximaAdc) {
+uint32_t getAdcGpioBase(ProximaAdcEnum proximaAdc) {
     switch(proximaAdc) {
         case PROXIMA_ADC1:
             return GPIO_PORTB_BASE;
@@ -53,7 +53,7 @@ uint32_t getGpioBase(ProximaAdcEnum proximaAdc) {
     return PROXIMA_INVALID;
 }
 
-uint32_t getGpioPin(ProximaAdcEnum proximaAdc) {
+uint32_t getAdcGpioPin(ProximaAdcEnum proximaAdc) {
     switch (proximaAdc) {
         case PROXIMA_ADC1:
             return GPIO_PIN_5;
@@ -162,9 +162,9 @@ void proximaAdcInit(ProximaAdcEnum proximaAdc, ProximaSampleType sampleType) {
     adcBase = getAdcBase(proximaAdc);
     adcChannel = getAdcChannel(proximaAdc);
 
-    gpioSysctl = getGpioSysctl(proximaAdc);
-    gpioBase = getGpioBase(proximaAdc);
-    gpioPin = getGpioPin(proximaAdc);
+    gpioSysctl = getAdcGpioSysctl(proximaAdc);
+    gpioBase = getAdcGpioBase(proximaAdc);
+    gpioPin = getAdcGpioPin(proximaAdc);
 
     sequence = getSequence(proximaAdc);
 
