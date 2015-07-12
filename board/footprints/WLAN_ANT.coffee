@@ -43,7 +43,7 @@ footprint = () ->
   gp3.y = (pad_vadj - 0.5) + 2.3
   gp3.dy = 3
   pin1 = new Disc(0.25)
-  pin1.x = -module_dx
+  pin1.x = module_dx
   pin1.y = module_dy/2
 
   name = new Name(module_dy+1)

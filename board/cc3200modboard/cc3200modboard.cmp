@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-30 BZR 5240)-product   date = Sun 01 Mar 2015 11:11:26 PM EST
+Cmp-Mod V01 Created by Cvpcb (2014-10-30 BZR 5240)-product   date = Thu 12 Mar 2015 04:45:32 PM EDT
 
 BeginCmp
 TimeStamp = /54F2D882;
@@ -120,6 +120,13 @@ IdModule  = Resistors_SMD:R_0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /5501FBFB;
+Reference = R5;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /54F348BD;
 Reference = SW1;
 ValeurCmp = RESET;
@@ -131,13 +138,6 @@ TimeStamp = /54F2D4FD;
 Reference = U1;
 ValeurCmp = CC3200MOD;
 IdModule  = fp-cc3200:CC3200MOD;
-EndCmp
-
-BeginCmp
-TimeStamp = /54F3D6BB;
-Reference = WB1;
-ValeurCmp = WIFI_BOARD;
-IdModule  = fp-cc3200:DaughterBoard;
 EndCmp
 
 EndListe
