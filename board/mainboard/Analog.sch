@@ -45,20 +45,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L CONN_01X02 P7
-U 1 1 55A47551
-P 3100 3775
-F 0 "P7" V 3050 3775 40  0000 C CNN
-F 1 "ANALOG" V 3150 3775 40  0000 C CNN
-F 2 "" H 3100 3775 60  0000 C CNN
-F 3 "" H 3100 3775 60  0000 C CNN
-	1    3100 3775
-	-1   0    0    1   
-$EndComp
 Text GLabel 3650 3875 2    60   Input ~ 0
 AIN1
-Text GLabel 3650 3675 2    60   Input ~ 0
+Text GLabel 3650 3750 2    60   Input ~ 0
 AIN2
 $Comp
 L CONN_01X05 P6
@@ -100,10 +89,6 @@ LINE_SENSOR_C
 Text GLabel 3800 2875 2    60   Input ~ 0
 LINE_SENSOR_L
 Wire Wire Line
-	3300 3875 3650 3875
-Wire Wire Line
-	3300 3675 3650 3675
-Wire Wire Line
 	3150 2875 3550 2875
 Wire Wire Line
 	3550 2875 3550 3075
@@ -125,10 +110,6 @@ Wire Wire Line
 	3650 2775 3650 2875
 Wire Wire Line
 	3650 2875 3800 2875
-Wire Wire Line
-	3300 3675 3300 3725
-Wire Wire Line
-	3300 3875 3300 3825
 $Comp
 L CAP_TOUCH CAP1
 U 1 1 55A47B35
@@ -185,11 +166,7 @@ F 3 "" H 6925 2725 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6625 2375 6725 2375
-Wire Wire Line
-	6725 2375 6925 2375
-Wire Wire Line
-	6925 2375 9550 2375
+	6625 2375 9550 2375
 $Comp
 L C C11
 U 1 1 55A4885C
@@ -204,9 +181,7 @@ $EndComp
 Wire Wire Line
 	6725 2375 6725 2550
 Wire Wire Line
-	6725 3100 6825 3100
-Wire Wire Line
-	6825 3100 6925 3100
+	6725 3100 6925 3100
 Wire Wire Line
 	6725 3100 6725 2950
 $Comp
@@ -245,9 +220,7 @@ $EndComp
 Wire Wire Line
 	8050 2625 8050 2775
 Wire Wire Line
-	8050 3325 8150 3325
-Wire Wire Line
-	8150 3325 8250 3325
+	8050 3325 8250 3325
 Wire Wire Line
 	8050 3325 8050 3175
 $Comp
@@ -294,9 +267,7 @@ Connection ~ 9475 2850
 Wire Wire Line
 	9475 3475 9475 3450
 Wire Wire Line
-	9275 3475 9375 3475
-Wire Wire Line
-	9375 3475 9475 3475
+	9275 3475 9475 3475
 Wire Wire Line
 	9275 3475 9275 3425
 $Comp
@@ -314,11 +285,7 @@ Wire Wire Line
 	9375 3550 9375 3475
 Connection ~ 9375 3475
 Wire Wire Line
-	7975 2625 8050 2625
-Wire Wire Line
-	8050 2625 8250 2625
-Wire Wire Line
-	8250 2625 9550 2625
+	7975 2625 9550 2625
 Wire Wire Line
 	8250 2625 8250 2700
 Connection ~ 8250 2625
@@ -331,11 +298,7 @@ Connection ~ 8050 2625
 Text GLabel 9225 2850 0    60   Input ~ 0
 LINE_SENSOR_L
 Wire Wire Line
-	9225 2850 9275 2850
-Wire Wire Line
-	9275 2850 9475 2850
-Wire Wire Line
-	9475 2850 9550 2850
+	9225 2850 9550 2850
 Connection ~ 9275 2850
 Wire Wire Line
 	8250 3325 8250 3200
@@ -347,4 +310,31 @@ Connection ~ 6925 2375
 Wire Wire Line
 	6825 3100 6825 3175
 Connection ~ 6825 3100
+Text GLabel 3650 3625 2    60   Input ~ 0
+AIN3
+$Comp
+L CONN_01X03 P7
+U 1 1 55A47551
+P 3100 3750
+F 0 "P7" V 3050 3750 40  0000 C CNN
+F 1 "ANALOG" V 3150 3750 40  0000 C CNN
+F 2 "" H 3100 3750 60  0000 C CNN
+F 3 "" H 3100 3750 60  0000 C CNN
+	1    3100 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 3750 3300 3750
+Wire Wire Line
+	3300 3650 3500 3650
+Wire Wire Line
+	3500 3650 3500 3625
+Wire Wire Line
+	3500 3625 3650 3625
+Wire Wire Line
+	3650 3875 3500 3875
+Wire Wire Line
+	3500 3875 3500 3850
+Wire Wire Line
+	3500 3850 3300 3850
 $EndSCHEMATC
