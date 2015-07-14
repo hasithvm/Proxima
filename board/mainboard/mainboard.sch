@@ -35,7 +35,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 8
+Sheet 1 9
 Title ""
 Date "3 mar 2015"
 Rev ""
@@ -86,5 +86,11 @@ S 3450 2700 2350 1450
 U 54F1578F
 F0 "Audio" 50
 F1 "Audio.sch" 50
+$EndSheet
+$Sheet
+S 3450 4550 2350 1450
+U 55A4709C
+F0 "Analog" 60
+F1 "Analog.sch" 60
 $EndSheet
 $EndSCHEMATC
