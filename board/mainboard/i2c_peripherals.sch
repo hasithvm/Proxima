@@ -35,7 +35,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 9
+Sheet 2 10
 Title ""
 Date "3 mar 2015"
 Rev ""
@@ -106,165 +106,12 @@ Text GLabel 3950 1950 2    60   Input ~ 0
 I2C_CL
 Text GLabel 3950 1800 2    60   Input ~ 0
 I2C_DA
-$Comp
-L DRV8830 MC1
-U 1 1 544869FB
-P 9000 1850
-F 0 "MC1" H 9000 1700 60  0000 C CNN
-F 1 "DRV8830" H 9000 1950 60  0000 C CNN
-F 2 "~" H 8950 2050 60  0000 C CNN
-F 3 "~" H 8950 2050 60  0000 C CNN
-	1    9000 1850
-	1    0    0    -1  
-$EndComp
 Text Notes 2550 1250 0    60   ~ 0
 Real Time Clock\nAddress 60-6F
-Text GLabel 10150 1750 2    60   Input ~ 0
-MOTOR1-
-Text GLabel 10150 1600 2    60   Input ~ 0
-MOTOR1+
-$Comp
-L 3V3 #PWR19
-U 1 1 54486A99
-P 7950 1100
-F 0 "#PWR19" H 7950 1200 40  0001 C CNN
-F 1 "3V3" H 7950 1225 40  0000 C CNN
-F 2 "" H 7950 1100 60  0000 C CNN
-F 3 "" H 7950 1100 60  0000 C CNN
-	1    7950 1100
-	1    0    0    -1  
-$EndComp
-Text GLabel 7700 1750 0    60   Input ~ 0
+Text GLabel 7625 1925 0    60   Input ~ 0
 I2C_CL
-Text GLabel 7700 1600 0    60   Input ~ 0
+Text GLabel 7625 1775 0    60   Input ~ 0
 I2C_DA
-$Comp
-L GND #PWR17
-U 1 1 54486B17
-P 7900 2550
-F 0 "#PWR17" H 7900 2550 30  0001 C CNN
-F 1 "GND" H 7900 2480 30  0001 C CNN
-F 2 "" H 7900 2550 60  0000 C CNN
-F 3 "" H 7900 2550 60  0000 C CNN
-	1    7900 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR21
-U 1 1 54486B7F
-P 9000 2800
-F 0 "#PWR21" H 9000 2800 30  0001 C CNN
-F 1 "GND" H 9000 2730 30  0001 C CNN
-F 2 "" H 9000 2800 60  0000 C CNN
-F 3 "" H 9000 2800 60  0000 C CNN
-	1    9000 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R5
-U 1 1 54486C37
-P 10050 2550
-F 0 "R5" V 10130 2550 40  0000 C CNN
-F 1 "0.2" V 10057 2551 40  0000 C CNN
-F 2 "~" V 9980 2550 30  0000 C CNN
-F 3 "~" H 10050 2550 30  0000 C CNN
-	1    10050 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR23
-U 1 1 54486C8F
-P 10050 2900
-F 0 "#PWR23" H 10050 2900 30  0001 C CNN
-F 1 "GND" H 10050 2830 30  0001 C CNN
-F 2 "" H 10050 2900 60  0000 C CNN
-F 3 "" H 10050 2900 60  0000 C CNN
-	1    10050 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L DRV8830 MC2
-U 1 1 544871A6
-P 9000 4250
-F 0 "MC2" H 9000 4100 60  0000 C CNN
-F 1 "DRV8830" H 9000 4350 60  0000 C CNN
-F 2 "~" H 8950 4450 60  0000 C CNN
-F 3 "~" H 8950 4450 60  0000 C CNN
-	1    9000 4250
-	1    0    0    -1  
-$EndComp
-Text GLabel 10150 4150 2    60   Input ~ 0
-MOTOR2-
-Text GLabel 10150 4000 2    60   Input ~ 0
-MOTOR2+
-$Comp
-L 3V3 #PWR20
-U 1 1 544871AE
-P 7950 3500
-F 0 "#PWR20" H 7950 3600 40  0001 C CNN
-F 1 "3V3" H 7950 3625 40  0000 C CNN
-F 2 "" H 7950 3500 60  0000 C CNN
-F 3 "" H 7950 3500 60  0000 C CNN
-	1    7950 3500
-	1    0    0    -1  
-$EndComp
-Text GLabel 7700 4150 0    60   Input ~ 0
-I2C_CL
-Text GLabel 7700 4000 0    60   Input ~ 0
-I2C_DA
-$Comp
-L GND #PWR18
-U 1 1 544871BA
-P 7900 4950
-F 0 "#PWR18" H 7900 4950 30  0001 C CNN
-F 1 "GND" H 7900 4880 30  0001 C CNN
-F 2 "" H 7900 4950 60  0000 C CNN
-F 3 "" H 7900 4950 60  0000 C CNN
-	1    7900 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR22
-U 1 1 544871C5
-P 9000 5200
-F 0 "#PWR22" H 9000 5200 30  0001 C CNN
-F 1 "GND" H 9000 5130 30  0001 C CNN
-F 2 "" H 9000 5200 60  0000 C CNN
-F 3 "" H 9000 5200 60  0000 C CNN
-	1    9000 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R6
-U 1 1 544871CE
-P 10050 4950
-F 0 "R6" V 10130 4950 40  0000 C CNN
-F 1 "0.2" V 10057 4951 40  0000 C CNN
-F 2 "~" V 9980 4950 30  0000 C CNN
-F 3 "~" H 10050 4950 30  0000 C CNN
-	1    10050 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR24
-U 1 1 544871D5
-P 10050 5300
-F 0 "#PWR24" H 10050 5300 30  0001 C CNN
-F 1 "GND" H 10050 5230 30  0001 C CNN
-F 2 "" H 10050 5300 60  0000 C CNN
-F 3 "" H 10050 5300 60  0000 C CNN
-	1    10050 5300
-	1    0    0    -1  
-$EndComp
-NoConn ~ 8150 4350
-Text Notes 8550 3300 0    60   ~ 0
-Motor 2 Driver Circuit\nI2C ADDR = 0xC2-0xC3
-Text Notes 8450 900  0    60   ~ 0
-Motor 1 Driver Circuit\nI2C ADDR = 0xC0-0xC1
-Text GLabel 7700 2300 0    60   Input ~ 0
-MOTOR1F
-Text GLabel 7700 4700 0    60   Input ~ 0
-MOTOR2F
 Text GLabel 4600 2100 2    60   Input ~ 0
 RTCINT2
 $Comp
@@ -444,141 +291,6 @@ F 3 "" H 6650 6400 60  0000 C CNN
 	1    6650 6400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2100 1650 1650 1650
-Wire Wire Line
-	1600 1950 2100 1950
-Wire Wire Line
-	1850 1950 1850 2250
-Wire Wire Line
-	1850 2650 1850 2700
-Wire Wire Line
-	2050 2350 2050 2100
-Wire Wire Line
-	2050 2100 2100 2100
-Wire Wire Line
-	3800 1450 3800 1650
-Wire Wire Line
-	3800 1650 3700 1650
-Wire Wire Line
-	3950 1950 3700 1950
-Wire Wire Line
-	3700 1800 3950 1800
-Wire Wire Line
-	8150 1400 7950 1400
-Wire Wire Line
-	7950 1400 7950 1100
-Wire Wire Line
-	8150 1600 7700 1600
-Wire Wire Line
-	7700 1750 8150 1750
-Wire Wire Line
-	8150 1950 7900 1950
-Wire Wire Line
-	7900 1950 7900 2550
-Wire Wire Line
-	8150 2100 7900 2100
-Connection ~ 7900 2100
-Wire Wire Line
-	9000 2700 9000 2800
-Wire Wire Line
-	10150 1600 9850 1600
-Wire Wire Line
-	9850 1750 10150 1750
-Wire Wire Line
-	9850 2300 10050 2300
-Wire Wire Line
-	10050 2800 10050 2900
-Wire Wire Line
-	8150 4000 7700 4000
-Wire Wire Line
-	7700 4150 8150 4150
-Wire Wire Line
-	8150 4500 7900 4500
-Wire Wire Line
-	9000 5100 9000 5200
-Wire Wire Line
-	10150 4000 9850 4000
-Wire Wire Line
-	9850 4150 10150 4150
-Wire Wire Line
-	9850 4700 10050 4700
-Wire Wire Line
-	10050 5200 10050 5300
-Wire Wire Line
-	7900 4500 7900 4950
-Wire Wire Line
-	7700 2300 8150 2300
-Wire Wire Line
-	7700 4700 8150 4700
-Wire Wire Line
-	3700 2100 4600 2100
-Wire Wire Line
-	2900 3200 2900 3650
-Wire Wire Line
-	3150 3200 3150 3650
-Wire Wire Line
-	3800 4350 4700 4350
-Wire Wire Line
-	4700 4350 4700 4500
-Wire Wire Line
-	3800 4500 4450 4500
-Wire Wire Line
-	2900 5800 2900 5550
-Wire Wire Line
-	2650 5550 2650 5650
-Wire Wire Line
-	2650 5650 3150 5650
-Connection ~ 2900 5650
-Wire Wire Line
-	3150 5650 3150 5550
-Wire Wire Line
-	2000 4800 1750 4800
-Wire Wire Line
-	1750 4800 1750 5000
-Wire Wire Line
-	1650 4600 2000 4600
-Wire Wire Line
-	1850 4500 1850 4400
-Wire Wire Line
-	1850 4400 2000 4400
-Wire Wire Line
-	1700 4050 2000 4050
-Wire Wire Line
-	1700 4200 2000 4200
-Wire Wire Line
-	4600 5150 4600 5000
-Wire Wire Line
-	4450 5000 4700 5000
-Wire Wire Line
-	4450 5000 4450 4900
-Wire Wire Line
-	4700 5000 4700 4900
-Connection ~ 4600 5000
-Wire Wire Line
-	3150 3250 3450 3250
-Wire Wire Line
-	3450 3250 3450 3300
-Connection ~ 3150 3250
-Wire Wire Line
-	2350 3700 2350 3800
-Wire Wire Line
-	3450 3700 3450 3800
-Wire Wire Line
-	2900 3250 2350 3250
-Wire Wire Line
-	2350 3250 2350 3300
-Connection ~ 2900 3250
-Wire Wire Line
-	3950 5150 3950 4900
-Wire Wire Line
-	3950 4900 3800 4900
-Wire Wire Line
-	5200 6400 5700 6400
-Wire Wire Line
-	5200 6250 6450 6250
-Wire Wire Line
-	5700 6350 6450 6350
 $Comp
 L 3V3 #PWR15
 U 1 1 546AB46C
@@ -590,10 +302,6 @@ F 3 "" H 6200 6150 60  0000 C CNN
 	1    6200 6150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 6450 6450 6450
-Wire Wire Line
-	6200 6450 6200 6150
 $Comp
 L GND #PWR16
 U 1 1 546AB4C5
@@ -605,18 +313,6 @@ F 3 "" H 6200 6700 60  0000 C CNN
 	1    6200 6700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 6700 6200 6550
-Wire Wire Line
-	6200 6550 6450 6550
-Text GLabel 9150 6250 0    60   Input ~ 0
-MOTOR1-
-Text GLabel 9150 6050 0    60   Input ~ 0
-MOTOR1+
-Text GLabel 9150 6750 0    60   Input ~ 0
-MOTOR2-
-Text GLabel 9150 6550 0    60   Input ~ 0
-MOTOR2+
 $Comp
 L CRYSTAL X1
 U 1 1 546AD855
@@ -628,13 +324,6 @@ F 3 "~" H 1200 2100 60  0000 C CNN
 	1    1200 2100
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2100 1800 1200 1800
-Wire Wire Line
-	1200 2400 1600 2400
-Wire Wire Line
-	1600 2400 1600 1950
-Connection ~ 1850 1950
 $Comp
 L R R2
 U 1 1 54727DCC
@@ -680,6 +369,131 @@ F 3 "" H 1950 850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+	1650 1650 1950 1650
+Wire Wire Line
+	1950 1650 2100 1650
+Wire Wire Line
+	1600 1950 1850 1950
+Wire Wire Line
+	1850 1950 2100 1950
+Wire Wire Line
+	1850 1950 1850 2250
+Wire Wire Line
+	1850 2650 1850 2700
+Wire Wire Line
+	2050 2350 2050 2100
+Wire Wire Line
+	2050 2100 2100 2100
+Wire Wire Line
+	3800 1450 3800 1650
+Wire Wire Line
+	3800 1650 3700 1650
+Wire Wire Line
+	3950 1950 3700 1950
+Wire Wire Line
+	3700 1800 3950 1800
+Wire Wire Line
+	7625 1775 8225 1775
+Wire Wire Line
+	7625 1925 8225 1925
+Wire Wire Line
+	3700 2100 4450 2100
+Wire Wire Line
+	4450 2100 4600 2100
+Wire Wire Line
+	2900 3200 2900 3250
+Wire Wire Line
+	2900 3250 2900 3650
+Wire Wire Line
+	3150 3200 3150 3250
+Wire Wire Line
+	3150 3250 3150 3650
+Wire Wire Line
+	3800 4350 4700 4350
+Wire Wire Line
+	4700 4350 4700 4500
+Wire Wire Line
+	3800 4500 4450 4500
+Wire Wire Line
+	2900 5550 2900 5650
+Wire Wire Line
+	2900 5650 2900 5800
+Wire Wire Line
+	2650 5550 2650 5650
+Wire Wire Line
+	2650 5650 2900 5650
+Wire Wire Line
+	2900 5650 3150 5650
+Connection ~ 2900 5650
+Wire Wire Line
+	3150 5650 3150 5550
+Wire Wire Line
+	2000 4800 1750 4800
+Wire Wire Line
+	1750 4800 1750 5000
+Wire Wire Line
+	1650 4600 2000 4600
+Wire Wire Line
+	1850 4500 1850 4400
+Wire Wire Line
+	1850 4400 2000 4400
+Wire Wire Line
+	1700 4050 2000 4050
+Wire Wire Line
+	1700 4200 2000 4200
+Wire Wire Line
+	4600 5150 4600 5000
+Wire Wire Line
+	4450 5000 4600 5000
+Wire Wire Line
+	4600 5000 4700 5000
+Wire Wire Line
+	4450 5000 4450 4900
+Wire Wire Line
+	4700 5000 4700 4900
+Connection ~ 4600 5000
+Wire Wire Line
+	3150 3250 3450 3250
+Wire Wire Line
+	3450 3250 3450 3300
+Connection ~ 3150 3250
+Wire Wire Line
+	2350 3700 2350 3800
+Wire Wire Line
+	3450 3700 3450 3800
+Wire Wire Line
+	2350 3250 2650 3250
+Wire Wire Line
+	2650 3250 2900 3250
+Wire Wire Line
+	2350 3250 2350 3300
+Connection ~ 2900 3250
+Wire Wire Line
+	3950 5150 3950 4900
+Wire Wire Line
+	3950 4900 3800 4900
+Wire Wire Line
+	5200 6400 5700 6400
+Wire Wire Line
+	5200 6250 6450 6250
+Wire Wire Line
+	5700 6350 6450 6350
+Wire Wire Line
+	6200 6450 6450 6450
+Wire Wire Line
+	6200 6450 6200 6150
+Wire Wire Line
+	6200 6700 6200 6550
+Wire Wire Line
+	6200 6550 6450 6550
+Wire Wire Line
+	2100 1800 1200 1800
+Wire Wire Line
+	1200 2400 1600 2400
+Wire Wire Line
+	1600 2400 1600 1950
+Connection ~ 1850 1950
+Wire Wire Line
 	4450 1450 4450 1250
 Wire Wire Line
 	1950 1050 1950 850 
@@ -690,60 +504,16 @@ Wire Wire Line
 	4450 1950 4450 2100
 Connection ~ 4450 2100
 Wire Wire Line
-	9150 6050 9300 6050
-Wire Wire Line
-	9150 6250 9300 6250
-$Comp
-L CONN_01X02 P3
-U 1 1 54728242
-P 9650 6650
-F 0 "P3" V 9600 6650 40  0000 C CNN
-F 1 "Motor2" V 9700 6650 40  0000 C CNN
-F 2 "" H 9650 6650 60  0000 C CNN
-F 3 "" H 9650 6650 60  0000 C CNN
-	1    9650 6650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9150 6550 9300 6550
-Wire Wire Line
-	9150 6750 9300 6750
-Wire Wire Line
 	2650 3650 2650 3250
 Connection ~ 2650 3250
 Wire Wire Line
 	5700 6400 5700 6350
-Wire Wire Line
-	7950 3800 7950 3500
-Wire Wire Line
-	8150 3800 7950 3800
-$Comp
-L CONN_01X02 P2
-U 1 1 55A1DE1A
-P 9600 6150
-F 0 "P2" H 9600 6300 50  0000 C CNN
-F 1 "CONN_01X02" V 9700 6150 50  0000 C CNN
-F 2 "" H 9600 6150 60  0000 C CNN
-F 3 "" H 9600 6150 60  0000 C CNN
-	1    9600 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9400 6100 9300 6100
-Wire Wire Line
-	9300 6100 9300 6050
-Wire Wire Line
-	9400 6200 9300 6200
-Wire Wire Line
-	9300 6200 9300 6250
-Wire Wire Line
-	9450 6550 9450 6600
-Wire Wire Line
-	9300 6550 9300 6600
-Wire Wire Line
-	9300 6600 9450 6600
-Wire Wire Line
-	9300 6750 9300 6700
-Wire Wire Line
-	9300 6700 9450 6700
+$Sheet
+S 8225 1375 1350 1175
+U 55A5F84E
+F0 "MotorDrivers" 60
+F1 "MotorDrivers.sch" 60
+F2 "I2C_DA" I L 8225 1775 60 
+F3 "I2C_CL" I L 8225 1925 60 
+$EndSheet
 $EndSCHEMATC
