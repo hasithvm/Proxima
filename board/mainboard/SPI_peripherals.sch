@@ -169,12 +169,12 @@ $EndComp
 $Comp
 L GND #PWR030
 U 1 1 54726C24
-P 5700 4950
-F 0 "#PWR030" H 5700 4950 30  0001 C CNN
-F 1 "GND" H 5700 4880 30  0001 C CNN
-F 2 "" H 5700 4950 60  0000 C CNN
-F 3 "" H 5700 4950 60  0000 C CNN
-	1    5700 4950
+P 5825 4725
+F 0 "#PWR030" H 5825 4725 30  0001 C CNN
+F 1 "GND" H 5825 4655 30  0001 C CNN
+F 2 "" H 5825 4725 60  0000 C CNN
+F 3 "" H 5825 4725 60  0000 C CNN
+	1    5825 4725
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -188,14 +188,10 @@ F 3 "" H 5800 3100 60  0000 C CNN
 	1    5800 3100
 	1    0    0    -1  
 $EndComp
-Text GLabel 5300 4000 0    60   Input ~ 0
-SPI_SCK
-Text GLabel 5300 4150 0    60   Input ~ 0
+Text GLabel 5325 4450 0    60   Input ~ 0
 SPI_MOSI
-Text GLabel 5300 4300 0    60   Input ~ 0
+Text GLabel 5325 4100 0    60   Input ~ 0
 SPI_MISO
-Text GLabel 5300 4450 0    60   Input ~ 0
-SPI_CS6
 Text GLabel 5300 4600 0    60   Input ~ 0
 SPI_CS7
 $Comp
@@ -254,14 +250,14 @@ F 3 "" H 8600 2900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X07 P4
+L CONN_01X06 P4
 U 1 1 5472B1C0
-P 6200 4400
-F 0 "P4" V 6170 4400 60  0000 C CNN
-F 1 "SPI" V 6270 4400 60  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x07" H 6200 4400 60  0001 C CNN
-F 3 "" H 6200 4400 60  0000 C CNN
-	1    6200 4400
+P 6200 4350
+F 0 "P4" V 6170 4350 60  0000 C CNN
+F 1 "SPI" V 6270 4350 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x07" H 6200 4350 60  0001 C CNN
+F 3 "" H 6200 4350 60  0000 C CNN
+	1    6200 4350
 	1    0    0    -1  
 $EndComp
 Text GLabel 8600 4475 0    60   Input ~ 0
@@ -344,22 +340,6 @@ Wire Wire Line
 	5550 3300 5550 3200
 Wire Wire Line
 	5700 3300 5700 3200
-Connection ~ 5550 4300
-Wire Wire Line
-	5550 3800 5550 4300
-Connection ~ 5700 4200
-Wire Wire Line
-	5700 3800 5700 4200
-Wire Wire Line
-	5450 4100 6000 4100
-Wire Wire Line
-	5400 4200 6000 4200
-Wire Wire Line
-	5300 4300 6000 4300
-Wire Wire Line
-	5700 4700 5700 4950
-Wire Wire Line
-	5700 4700 6000 4700
 Wire Wire Line
 	7400 2050 8150 2050
 Wire Wire Line
@@ -383,7 +363,7 @@ Wire Wire Line
 Wire Wire Line
 	8600 2300 8600 2900
 Wire Wire Line
-	9950 1200 9950 2350
+	9950 2350 9950 1200
 Wire Wire Line
 	9300 1950 9400 1950
 Wire Wire Line
@@ -395,7 +375,7 @@ Wire Wire Line
 Wire Wire Line
 	8750 1200 8750 1400
 Wire Wire Line
-	8600 1200 9950 1200
+	9950 1200 8600 1200
 Wire Wire Line
 	8750 2350 8750 2300
 Wire Wire Line
@@ -473,24 +453,6 @@ Wire Wire Line
 Connection ~ 8600 2400
 Connection ~ 8600 2550
 Connection ~ 8600 2800
-Wire Wire Line
-	5800 4600 6000 4600
-Wire Wire Line
-	5800 3100 5800 4600
-Wire Wire Line
-	5400 4200 5400 4150
-Wire Wire Line
-	5400 4150 5300 4150
-Wire Wire Line
-	5450 4100 5450 4000
-Wire Wire Line
-	5450 4000 5300 4000
-Wire Wire Line
-	5400 4400 6000 4400
-Wire Wire Line
-	5400 4400 5400 4450
-Wire Wire Line
-	5400 4450 5300 4450
 Wire Wire Line
 	5450 4500 6000 4500
 Wire Wire Line
@@ -575,7 +537,7 @@ $EndComp
 Wire Wire Line
 	4250 5400 4250 5150
 Wire Wire Line
-	3375 5150 4500 5150
+	2625 5150 4500 5150
 Connection ~ 3375 5150
 Wire Wire Line
 	4250 5900 4250 5950
@@ -601,4 +563,74 @@ Wire Wire Line
 	4100 6625 4500 6625
 Wire Wire Line
 	4500 6625 4500 6550
+Wire Wire Line
+	5800 4200 6000 4200
+Connection ~ 5800 4200
+Wire Wire Line
+	6000 4600 5825 4600
+Wire Wire Line
+	5825 4600 5825 4725
+Wire Wire Line
+	5800 3100 5800 4200
+Text GLabel 5275 4300 0    60   Input ~ 0
+SPI_SCK
+Wire Wire Line
+	5275 4300 6000 4300
+Wire Wire Line
+	6000 4100 5325 4100
+Wire Wire Line
+	6000 4400 5400 4400
+Wire Wire Line
+	5400 4400 5400 4450
+Wire Wire Line
+	5400 4450 5325 4450
+Wire Wire Line
+	5700 3800 5700 4100
+Connection ~ 5700 4100
+Wire Wire Line
+	5550 3800 5550 4500
+Connection ~ 5550 4500
+$Comp
+L R R?
+U 1 1 55ABEC9A
+P 2625 5550
+F 0 "R?" V 2705 5550 40  0000 C CNN
+F 1 "47k" V 2632 5551 40  0000 C CNN
+F 2 "" V 2555 5550 30  0000 C CNN
+F 3 "" H 2625 5550 30  0000 C CNN
+	1    2625 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2625 5150 2625 5300
+Wire Wire Line
+	2625 5800 2625 5950
+Connection ~ 2625 5950
+$Comp
+L C C?
+U 1 1 55ABF050
+P 3125 5425
+F 0 "C?" H 3125 5525 40  0000 L CNN
+F 1 "0.1uF" H 3131 5340 40  0000 L CNN
+F 2 "" H 3163 5275 30  0001 C CNN
+F 3 "~" H 3125 5425 60  0000 C CNN
+	1    3125 5425
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 55ABF2C2
+P 3125 5700
+F 0 "#PWR?" H 3125 5700 30  0001 C CNN
+F 1 "GND" H 3125 5630 30  0001 C CNN
+F 2 "" H 3125 5700 60  0000 C CNN
+F 3 "" H 3125 5700 60  0000 C CNN
+	1    3125 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3125 5700 3125 5625
+Wire Wire Line
+	3125 5225 3125 5150
+Connection ~ 3125 5150
 $EndSCHEMATC
